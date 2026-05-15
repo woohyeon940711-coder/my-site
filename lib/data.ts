@@ -52,7 +52,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-05-04",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://www.cannabisbusinesstimes.com/hemp/news/15824298/trump-administration-claims-new-legal-authority-to-dismantle-intoxicating-hemp-products",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
   },
   {
@@ -63,7 +63,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-05-05",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://www.cannabisbusinesstimes.com/hemp/news/15823852/s-house-passes-2026-farm-bill-intoxicating-hemp-product-ban-remains",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
   },
   {
@@ -74,7 +74,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-05-04",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://www.cannabisbusinesstimes.com/us-states/texas/news/15822051/thca-flower-sales-resume-in-texas-after-judge-grants-tro",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
   },
   {
@@ -85,7 +85,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-05-05",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://mjbizdaily.com/news/feds-hand-loss-to-missouri-cannabis-operator-in-labor-fight/615835/",
     image: "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=800&q=80",
   },
   {
@@ -96,7 +96,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-05-04",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://www.cannabisbusinesstimes.com/us-states/virginia/news/15822985/virginia-lawmakers-reject-governors-substitute-for-cannabis-sales-bill",
     image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&q=80",
   },
   {
@@ -107,7 +107,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-05-06",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://mjbizdaily.com/news/fbi-raids-virginia-lawmaker-connected-to-hemp-thc-shop/615882/",
     image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
   },
   {
@@ -118,7 +118,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-05-07",
     country: "독일",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://businessofcannabis.com/deals-courts-and-coalition-splits-germanys-cannabis-market-braces-for-change/",
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
   },
   {
@@ -129,7 +129,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-05-07",
     country: "캐나다",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://stratcann.com/news/pei-cannabis-age-of-access-21/",
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
   },
   {
@@ -140,7 +140,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-05-04",
     country: "호주",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://www.penington.org.au/medicinal-cannabis-sales-fall-nearly-30-as-enforcement-crackdown-takes-effect/",
     image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80",
   },
   // 산업·비즈니스 → global
@@ -152,7 +152,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-05-09",
     country: "캐나다",
-    link: "https://247wallst.com/",
+    link: "https://canopygrowth.com/investors/news-releases/canopy-growth-and-spectrum-therapeutics-expand-medical-portfolio-with-new-30-and-90-pack-softgels-and-enhanced-dosing-options/",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
   },
   {
@@ -163,7 +163,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-05-09",
     country: "캐나다/독일",
-    link: "https://247wallst.com/",
+    link: "https://hightideinc.com/high-tide-reports-record-quarterly-distribution-of-7-6-tonnes-of-medical-cannabis-through-remexian-pharma-gmbh-accelerating-german-market-leadership/",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
   },
   {
@@ -174,7 +174,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-05-09",
     country: "캐나다",
-    link: "https://247wallst.com/",
+    link: "https://www.newcannabisventures.com/organigram-global-closes-european-acquisition/",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
   },
   {
@@ -185,7 +185,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-05-05",
     country: "캐나다/독일",
-    link: "https://247wallst.com/",
+    link: "https://www.newcannabisventures.com/organigram-global-closes-european-acquisition/",
     image: "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=800&q=80",
   },
   {
@@ -196,7 +196,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-05-06",
     country: "미국",
-    link: "https://247wallst.com/",
+    link: "https://www.cannabisbusinesstimes.com/finance/news/15820777/jushi-holdings-refinances-credit-facilities-with-160-million-nondilutive-debt-financing",
     image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&q=80",
   },
   {
@@ -207,7 +207,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-05-04",
     country: "이스라엘",
-    link: "https://mjbizdaily.com/",
+    link: "https://mjbizdaily.com/news/should-medical-cannabis-be-smoked-israel-debates-removing-smokeable-flower/615816/",
     image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
   },
   {
@@ -218,7 +218,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-05-08",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://www.marijuanamoment.net/target-is-launching-hemp-thc-drink-sales-in-three-of-the-u-s-s-most-populous-states/",
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
   },
   {
@@ -229,7 +229,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-05-09",
     country: "캐나다",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://stratcann.com/news/canadas-cannabis-industry-positioned-global-industry/",
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
   },
   {
@@ -240,7 +240,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-05-07",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://www.cannabisbusinesstimes.com/us-states/michigan/news/15818403/8-michigan-senators-plan-to-repeal-states-24-cannabis-tax",
     image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80",
   },
   {
@@ -251,7 +251,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-05-09",
     country: "캐나다",
-    link: "https://247wallst.com/",
+    link: "https://stratcann.com/news/canadas-cannabis-industry-positioned-global-industry/",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
   },
   // R&D
@@ -263,7 +263,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-05-04",
     country: "호주",
-    link: "https://cedclinic.com/",
+    link: "https://cedclinic.com/high-potency-cannabis-linked-to-dramatically-higher-risk-of-psychotic-episodes/",
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
   },
 
@@ -286,7 +286,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-05-07",
     country: "미국",
-    link: "https://www.marijuanamoment.net/",
+    link: "https://www.marijuanamoment.net/psychedelics-have-demonstrated-potential-for-treating-drug-addiction-and-alcoholism-new-research-shows/",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
   },
   {
@@ -297,7 +297,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-05-08",
     country: "캐나다",
-    link: "https://www.marijuanamoment.net/",
+    link: "https://www.marijuanamoment.net/marijuana-sales-are-rising-and-alcohol-is-on-the-decline-as-consumer-preferences-evolve-government-data-in-canada-shows/",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
   },
   {
@@ -308,7 +308,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-05-06",
     country: "이스라엘",
-    link: "https://www.marijuanamoment.net/",
+    link: "https://www.timesofisrael.com/israeli-researchers-find-cannabis-compounds-could-lead-to-1st-drug-for-fatty-liver-disease/",
     image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&q=80",
   },
 
@@ -320,7 +320,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-05-06",
     country: "체코",
-    link: "https://www.marijuanamoment.net/",
+    link: "https://www.cochrane.org/about-us/news/no-clear-evidence-cannabis-based-medicines-relieve-chronic-nerve-pain",
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
   },
   {
@@ -331,7 +331,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-05-05",
     country: "미국",
-    link: "https://www.politifact.com/",
+    link: "https://theconversation.com/reclassification-of-marijuana-opens-doors-for-much-needed-medical-research-into-the-benefits-and-risks-of-the-drug-281403",
     image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
   },
   {
@@ -342,7 +342,7 @@ const ARTICLES_20260511: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-05-04",
     country: "미국",
-    link: "https://www.politifact.com/",
+    link: "https://www.marijuanamoment.net/theres-strong-public-demand-for-bigger-marijuana-reform-than-trumps-rescheduling-move-federally-funded-study-shows/",
     image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80",
   },
 ];
@@ -372,7 +372,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-04-30",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://www.cannabisbusinesstimes.com/cannabis-rescheduling/news/15750787/us-house-subcommittee-advances-bill-to-prevent-cannabis-rescheduling-under-doj",
     image: "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=800&q=80",
   },
   {
@@ -383,7 +383,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-04-30",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://www.marijuanamoment.net/idaho-lawmakers-approve-resolution-asking-voters-to-reject-medical-cannabis-ballot-measure/",
     image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&q=80",
   },
   {
@@ -394,7 +394,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-04-28",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://mjbizdaily.com/news/second-state-level-effort-to-recriminalize-adult-use-marijuana-sales-fails/615867/",
     image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
   },
   {
@@ -405,7 +405,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-04-29",
     country: "영국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://cannabishealthnews.co.uk/2026/04/29/industry-publishes-new-guidance-for-patients-travelling-with-medical-cannabis/",
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
   },
   {
@@ -416,7 +416,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-04-29",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://finance.yahoo.com/economy/policy/articles/california-marks-10-years-cannabis-185947664.html",
     image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80",
   },
   {
@@ -427,7 +427,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-04-30",
     country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://www.marijuanamoment.net/arizona-lawmakers-advance-bill-to-punish-people-over-excessive-marijuana-odor-or-smoke/",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
   },
   {
@@ -438,7 +438,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "정책·규제",
     date: "2026-05-01",
     country: "프랑스/스페인",
-    link: "https://www.cannabisbusinesstimes.com/",
+    link: "https://businessofcannabis.com/is-europe-moving-away-from-cannabis-flower/",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
   },
   // 산업·비즈니스 → global
@@ -475,7 +475,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-04-30",
     country: "독일",
-    link: "https://247wallst.com/",
+    link: "https://www.eqs-news.com/news/corporate/cantourage-group-se-cantourage-significantly-increases-profitability-in-the-first-quarter-of-2026/4a85886d-3630-4e6e-9dc7-7c8dfaaa192c",
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
   },
   {
@@ -486,7 +486,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-04-27",
     country: "영국/독일",
-    link: "https://247wallst.com/",
+    link: "https://businessofcannabis.com/new-report-uk-and-germany-medical-cannabis-markets-both-double-in-2025/",
     image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80",
   },
   {
@@ -497,7 +497,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-04-29",
     country: "미국",
-    link: "https://247wallst.com/",
+    link: "https://investors.charlottesweb.com/press-releases/press-release-details/2026/Charlottes-Web-Announces-Transaction-with-BAT-Debenture-Conversion-and-US10M-Equity-Investment-to-Strengthen-Balance-Sheet/default.aspx",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
   },
   {
@@ -519,7 +519,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "글로벌",
     date: "2026-05-01",
     country: "브라질",
-    link: "https://247wallst.com/",
+    link: "https://internationalcbc.com/brazilian-medical-cannabis-decree-takes-effect/",
     image: "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=800&q=80",
   },
   // R&D
@@ -543,7 +543,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-04-28",
     country: "미국",
-    link: "https://www.marijuanamoment.net/",
+    link: "https://www.marijuanamoment.net/teen-marijuana-use-continues-to-drop-as-more-states-legalize-federally-funded-study-shows-contradicting-opponents-claims/",
     image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&q=80",
   },
   {
@@ -554,7 +554,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-04-27",
     country: "미국",
-    link: "https://www.marijuanamoment.net/",
+    link: "https://www.marijuanamoment.net/medical-marijuana-helps-people-stop-using-opioids-sleeping-aids-and-other-prescription-drugs-study-shows/",
     image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80",
   },
 
@@ -567,7 +567,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-04-30",
     country: "미국",
-    link: "https://www.marijuanamoment.net/",
+    link: "https://www.scientificamerican.com/article/medical-cannabis-isnt-an-effective-treatment-for-anxiety-depression-or-ptsd/",
     image: "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=800&q=80",
   },
   {
@@ -578,7 +578,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-04-28",
     country: "국제",
-    link: "https://www.marijuanamoment.net/",
+    link: "https://www.cochrane.org/about-us/news/no-clear-evidence-cannabis-based-medicines-relieve-chronic-nerve-pain",
     image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
   },
   {
@@ -589,7 +589,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-05-01",
     country: "미국",
-    link: "https://www.marijuanamoment.net/",
+    link: "https://cmcr.ucsd.edu/index.php/news-2/homeblog/484-featured-publication-is-cannabis-a-solution-for-chronic-low-back-pain",
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
   },
   {
@@ -600,7 +600,7 @@ const ARTICLES_20260504: Article[] = [
     categoryLabel: "R&D·기술",
     date: "2026-05-02",
     country: "프랑스",
-    link: "https://www.marijuanamoment.net/",
+    link: "https://theconversation.com/reclassification-of-marijuana-opens-doors-for-much-needed-medical-research-into-the-benefits-and-risks-of-the-drug-281403",
     image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80",
   },
 ];
