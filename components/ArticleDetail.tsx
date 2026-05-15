@@ -3,6 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+// URL에서 도메인(언론사명) 추출 헬퍼
+function extractDomain(url: string): string {
+  try {
+    const hostname = new URL(url).hostname.replace(/^www\./, "");
+    return hostname;
+  } catch {
+    return url;
+  }
+}
+
 interface Props {
   category: Category;
   id: number;
@@ -85,23 +95,36 @@ export default function ArticleDetail({ category, id }: Props) {
             </p>
           </div>
 
-          {/* Source link */}
+          {/* Source / Copyright notice */}
           {article.link && article.link !== "None" && (
-            <div className="mt-8 p-4 border border-gray-200 rounded-sm bg-gray-50 flex items-center justify-between">
-              <div>
-                <p className="text-xs text-gray-400 mb-0.5">원문 출처</p>
-                <p className="text-sm text-gray-600 truncate max-w-sm">
-                  {article.link}
+            <div className="mt-8 space-y-3">
+              {/* 출처 표기 박스 */}
+              <div className="p-4 border-l-4 border-[#2d6a4f] bg-[#f0faf4] rounded-r-sm">
+                <p className="text-xs text-gray-500 mb-1 font-semibold uppercase tracking-wide">출처 (Source)</p>
+                <p className="text-sm text-gray-700 font-medium">
+                  {extractDomain(article.link)}
+                </p>
+                <p className="text-xs text-gray-400 mt-1">
+                  본 콘텐츠는 위 출처의 기사를 바탕으로 CannabisInsight가 요약·편집한 것입니다. 원문의 저작권은 해당 언론사에 있습니다.
                 </p>
               </div>
-              <a
-                href={article.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shrink-0 ml-4 text-sm font-bold text-white bg-[#2d6a4f] hover:bg-[#1e4d38] transition-colors px-4 py-2 rounded-sm"
-              >
-                원문 보기 →
-              </a>
+              {/* 원문 보기 버튼 */}
+              <div className="p-4 border border-gray-200 rounded-sm bg-gray-50 flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-gray-400 mb-0.5">원문 링크</p>
+                  <p className="text-sm text-gray-600 truncate max-w-sm">
+                    {article.link}
+                  </p>
+                </div>
+                <a
+                  href={article.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 ml-4 text-sm font-bold text-white bg-[#2d6a4f] hover:bg-[#1e4d38] transition-colors px-4 py-2 rounded-sm"
+                >
+                  원문 보기 →
+                </a>
+              </div>
             </div>
           )}
 
