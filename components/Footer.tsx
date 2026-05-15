@@ -57,7 +57,6 @@ export default function Footer() {
           <div className="text-xs space-y-1">
             <p className="text-white font-semibold mb-3">안내</p>
             <p>이메일: contact@cannabisinsight.kr</p>
-            <p>제보: press@cannabisinsight.kr</p>
             <div className="flex gap-3 mt-3">
               <Link
                 href="/terms"
