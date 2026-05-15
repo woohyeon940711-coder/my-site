@@ -503,12 +503,12 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 49,
     title: "이스라엘 2025년 의료 대마 매출 3.72억 달러 — 캐나다발 수입 30.1톤 사상 최대",
-    summary: "이스라엘의 2025년 의료 대마 총매출이 3억 7,200만 달러를 기록했다. 캐나다에서 수입한 의료대마가 30.1톤으로 사상 최대치를 달성했으며, 이스라엘이 주요 의료대마 수입국으로 자리매김했다.",
+    summary: "이스라엘의 2025년 의료 대마 매출이 3억 7,200만 달러를 기록했다. 캐나다에서 수입한 의료대마가 30.1톤으로 사상 최대치를 달성했으며, 이스라엘이 주요 의료대마 수입국으로 자리매김했다.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-04-29",
     country: "이스라엘",
-    link: "https://mjbizdaily.com/",
+    link: "https://mjbizdaily.com/news/israel-threatens-tariffs-on-canadian-medical-marijuana-imports/403340/",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
   },
   {
