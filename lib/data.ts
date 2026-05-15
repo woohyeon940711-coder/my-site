@@ -705,7 +705,47 @@ const ARTICLES_20260504: Article[] = [
   },
 ];
 
+// ── 국내 기사 ──────────────────────────────────────────────────────────────
+
+const ARTICLES_DOMESTIC: Article[] = [
+  {
+    id: 61,
+    title: "첨단 바이오소재 헴프 산업 중심지 부상 경북 북부권",
+    summary: "경북 북부권이 산업용 헴프(HEMP) 중심지로 자리매김하고 있다. 과거 삼베 생산에 머물렀던 대마 산업을 첨단 바이오소재 산업으로 전환해 국산 품종 개발부터 완제의약품 제조까지 전주기 가치사슬을 구축했다. 6월 신규 규제자유특구 지정 최종 절차를 앞두고 있다.",
+    category: "domestic",
+    categoryLabel: "국내",
+    date: "2026-05-13",
+    country: "한국",
+    link: "https://www.fnnews.com/news/202605130930110673",
+    image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80",
+    featured: true,
+  },
+  {
+    id: 62,
+    title: "정부, 의료용 대마 CBD 국산화 첫발 — 농식품부 57억 규모 사업 착수",
+    summary: "정부가 그간 해외 수입에 의존해온 의료용 대마 성분 칸나비디올(CBD) 원료의약품 국산화에 본격 착수했다. 네오켄바이오 주관 컨소시엄이 총 57억원 규모로 재배·추출·허가 전 과정을 수행하며, HLB생명과학R&D가 비임상·CMC·IND 준비를 맡는다.",
+    category: "domestic",
+    categoryLabel: "국내",
+    date: "2026-04-25",
+    country: "한국",
+    link: "https://www.inews24.com/view/1963211",
+    image: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80",
+  },
+  {
+    id: 63,
+    title: "강원대 최익영·엄태영 교수팀, 의료용 대마 CBD 생합성 조절 메커니즘 규명",
+    summary: "강원대학교 공동연구팀이 의료용 대마의 주요 기능성 물질인 칸나비디올(CBD) 생합성 조절 메커니즘을 규명했다. 개화 단계와 품종에 따라 약 2,400개 이상의 유전자 발현 차이가 확인됐으며, 연구 성과는 농업학 분야 상위 5% 국제학술지 'Industrial Crops & Products'에 게재됐다.",
+    category: "domestic",
+    categoryLabel: "국내",
+    date: "2026-03-15",
+    country: "한국",
+    link: "https://www.lecturernews.com/news/articleView.html?idxno=198687",
+    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
+  },
+];
+
 export const ARTICLES: Article[] = [
+  ...ARTICLES_DOMESTIC,
   ...ARTICLES_20260511,
   ...ARTICLES_20260504,
 ];
