@@ -266,17 +266,7 @@ const ARTICLES_20260511: Article[] = [
     link: "https://cedclinic.com/",
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
   },
-  {
-    id: 22,
-    title: "이스라엘 보건부 데이터: 의료 대마 라이선스 14만 명 — 2019년 3.3만에서 5년 만에 4배",
-    summary: "이스라엘 보건부 위원회 데이터에 따르면 2019년 3만 3천 명이었던 의료대마 라이선스 보유자가 2025년 14만 명으로 5년 만에 4배 이상 증가했다. 62%가 월 30g 이상 소비하는 것으로 나타났다.",
-    category: "rnd",
-    categoryLabel: "R&D·기술",
-    date: "2026-05-04",
-    country: "이스라엘",
-    link: "https://mjbizdaily.com/news/should-medical-cannabis-be-smoked-israel-debates-removing-smokeable-flower/615816/",
-    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
-  },
+
   {
     id: 23,
     title: "Bloomwell 독일 환자 2,500명 설문: 47.5% '약국 대마가 불법 시장보다 저렴' — 합법 시장 정착",
@@ -321,17 +311,7 @@ const ARTICLES_20260511: Article[] = [
     link: "https://www.marijuanamoment.net/",
     image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&q=80",
   },
-  {
-    id: 27,
-    title: "연구: 베이핑이 흡연보다 유해 화학물질 훨씬 적게 방출 — 이스라엘 흡연 폐지 논의의 과학적 근거",
-    summary: "대마 베이핑이 흡연에 비해 유해 화학물질을 훨씬 적게 방출한다는 연구 결과가 이스라엘의 흡연 의료대마 폐지 논의에 과학적 근거를 제공하고 있다.",
-    category: "rnd",
-    categoryLabel: "R&D·기술",
-    date: "2026-05-05",
-    country: "미국",
-    link: "https://www.marijuanamoment.net/",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
-  },
+
   {
     id: 28,
     title: "체코 화학기술대학 후속 연구: CBDV + CBG/CBN 조합, 만성 장 염증에 시너지 효과",
@@ -382,28 +362,8 @@ const ARTICLES_20260504: Article[] = [
     link: "https://foleyhoag.com/news-and-insights/publications/alerts-and-updates/2026/april/cannabis-rescheduling-doj-treasury-and-dea-updates-since-the-april-23-order/",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
   },
-  {
-    id: 32,
-    title: "DEA 의료 대마 디스펜서리 등록 포털 4월 29일 개시 — $794 연회비",
-    summary: "DEA가 4월 29일 오전 9시(EST)부터 의료 대마 디스펜서리 등록 포털 운영을 시작했다. 60일 내(6월 27일까지) 신청 시 우선심사를 받을 수 있으며, 연회비는 $794(PayPal 결제)다.",
-    category: "policy",
-    categoryLabel: "정책·규제",
-    date: "2026-04-29",
-    country: "미국",
-    link: "https://foleyhoag.com/news-and-insights/publications/alerts-and-updates/2026/april/cannabis-rescheduling-doj-treasury-and-dea-updates-since-the-april-23-order/",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
-  },
-  {
-    id: 33,
-    title: "DEA, 6월 29일~7월 15일 광범위 재분류(기호용 포함) 청문회 일정 확정",
-    summary: "DEA가 모든 마리화나의 Schedule III 이전을 위한 새 청문회 통지를 게재했다. 6월 29일 오전 9시 ET, Arlington 소재 DEA 청문시설에서 시작하며 7월 15일까지 종료 의무가 있다. 참가 신청 기한은 5월 24일(전자) 또는 5월 20일(우편)이다.",
-    category: "policy",
-    categoryLabel: "정책·규제",
-    date: "2026-04-28",
-    country: "미국",
-    link: "https://foleyhoag.com/news-and-insights/publications/alerts-and-updates/2026/april/cannabis-rescheduling-doj-treasury-and-dea-updates-since-the-april-23-order/",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
-  },
+
+
   {
     id: 34,
     title: "하원 세출소위, DOJ의 대마 재분류 권한 차단하는 예산안 조항 통과",
@@ -482,17 +442,7 @@ const ARTICLES_20260504: Article[] = [
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
   },
   // 산업·비즈니스 → global
-  {
-    id: 41,
-    title: "Curaleaf·Trulieve·Green Thumb 등 미국 MSO, 280E 폐지 효과로 분기 흑자 전환 기대",
-    summary: "4월 28일 연방관보 게재로 Schedule III 공식 발효되면서 Section 280E가 즉시 폐지됐다. 효과적 세율이 60~70%에서 정상 21%로 회귀함에 따라 미국 주요 MSO들의 분기 흑자 전환이 기대된다.",
-    category: "global",
-    categoryLabel: "글로벌",
-    date: "2026-04-28",
-    country: "미국",
-    link: "https://247wallst.com/investing/2026/04/23/finally-marijuana-gets-reclassified-but-are-pot-stocks-still-too-risky/",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-  },
+
   {
     id: 42,
     title: "Tilray·Aurora·Canopy Growth: 재분류 호재에도 52주 고점 대비 67%, 46%, 48% 하락 — 구조적 약점 노출",
@@ -504,17 +454,7 @@ const ARTICLES_20260504: Article[] = [
     link: "https://247wallst.com/investing/2026/04/23/finally-marijuana-gets-reclassified-but-are-pot-stocks-still-too-risky/",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
   },
-  {
-    id: 43,
-    title: "MSOS ETF: 4/23 +19.39% 후 일부 차익실현 — Curaleaf +26.30%, Jushi +26.53%, Cresco +24.21%",
-    summary: "재분류 발표 후 차익실현 흐름이 나타나고 있다. 2025년 12월 Trump 행정명령 후 동일 ETF가 +24% 반등했다가 수개월 만에 모두 반납된 전례가 있어, 5월 이후 실질 실적 회복이 관건이다.",
-    category: "global",
-    categoryLabel: "글로벌",
-    date: "2026-04-28",
-    country: "미국",
-    link: "https://businessofcannabis.com/",
-    image: "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=800&q=80",
-  },
+
   {
     id: 44,
     title: "Cornbread Hemp, Medicare CBD 파일럿 프로그램 독점 공급권 확보 — 6.8만 헬스케어 거점",
@@ -526,17 +466,7 @@ const ARTICLES_20260504: Article[] = [
     link: "https://sorsetech.com/hemp-and-cannabis-regulatory-roundup-april-2026/",
     image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&q=80",
   },
-  {
-    id: 45,
-    title: "텍사스, 향정 헴프(THCA 플라워) 판매 금지 시행 — 3/31 자정부 단속 본격화",
-    summary: "텍사스주에서 3월 31일 자정부터 향정신성 헴프(THCA 플라워) 판매 금지가 시행되며 단속이 본격화됐다. 수천 개의 헴프 판매점이 영향을 받을 것으로 예상된다.",
-    category: "global",
-    categoryLabel: "글로벌",
-    date: "2026-04-28",
-    country: "미국",
-    link: "https://www.cannabisbusinesstimes.com/",
-    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
-  },
+
   {
     id: 46,
     title: "Cantourage Group, 베를린 발 의료 대마 'Fast Track' 유럽 공급망 구축 발표",
@@ -604,17 +534,7 @@ const ARTICLES_20260504: Article[] = [
     link: "https://cedclinic.com/research-digest-10-recent-studies-april-22-2026/",
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
   },
-  {
-    id: 52,
-    title: "PolitiFact 분석: 의료 대마 Schedule III 재분류는 '연방 합법화 아니다' — 4가지 오해 해소",
-    summary: "PolitiFact가 대마 Schedule III 재분류에 관한 4가지 오해를 해소하는 분석을 게재했다. RAND·미시시피대·UCSF 등 전문가 인터뷰를 통해 재분류가 연방 합법화와 다르다는 점을 명확히 했다.",
-    category: "rnd",
-    categoryLabel: "R&D·기술",
-    date: "2026-04-30",
-    country: "미국",
-    link: "https://www.politifact.com/article/2026/apr/30/medical-marijuana-cannabis-rescheduling/",
-    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
-  },
+
   {
     id: 53,
     title: "연구: 청소년 대마 합법화 우려와 달리 실제 청소년 사용량 감소 또는 안정",
@@ -637,28 +557,8 @@ const ARTICLES_20260504: Article[] = [
     link: "https://www.marijuanamoment.net/",
     image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80",
   },
-  {
-    id: 55,
-    title: "연구: 32명 의원 연합, FDA에 사이키델릭 치료제 검토 가속 촉구 — 대마 연구와 시너지",
-    summary: "미국 의회 32명 의원 연합이 FDA에 사이키델릭 치료제 검토 가속을 촉구하는 서한을 발송했다. 대마 연구와의 시너지 효과가 기대되며, 정신건강 약물 연구의 새로운 모멘텀이 형성되고 있다.",
-    category: "rnd",
-    categoryLabel: "R&D·기술",
-    date: "2026-04-29",
-    country: "미국",
-    link: "https://www.marijuanamoment.net/",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
-  },
-  {
-    id: 56,
-    title: "히브리대 후속 인용 확산: CBD·CBG, 지방간 질환(MASLD) 개선 메커니즘 (BJP 게재)",
-    summary: "히브리대학교의 CBD·CBG가 지방간 질환(MASLD) 개선에 효과적이라는 연구가 British Journal of Pharmacology(BJP)에 게재된 후 후속 인용이 확산되고 있다. 카나비노이드의 대사 질환 치료 가능성이 주목받고 있다.",
-    category: "rnd",
-    categoryLabel: "R&D·기술",
-    date: "2026-04-30",
-    country: "이스라엘",
-    link: "https://www.marijuanamoment.net/",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
-  },
+
+
   {
     id: 57,
     title: "UCLA JAMA 연구 재조명: 의료 대마, 불안·우울·PTSD에 효과 미흡 — 2,500편 메타분석",
