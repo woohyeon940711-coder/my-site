@@ -51,7 +51,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-black text-gray-900 mb-3">제4조 (개인정보의 보유 및 이용 기간)</h2>
           <p>
-            자동 수집되는 서버 로그 데이터는 최대 <strong>90일 이내</strong> 보관 후 자동 삭제됩니다.
+            서버 로그는 Vercel 플랫폼의 정책에 따라 보관·삭제되며, 회사는 별도의 개인정보를 직접 수집·저장하지 않습니다.
             법령에 의해 보존이 필요한 경우에는 해당 기간 동안 보관합니다.
           </p>
         </section>
