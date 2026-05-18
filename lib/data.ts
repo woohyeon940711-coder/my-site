@@ -862,7 +862,7 @@ export const ARTICLES: Article[] = [
   ...ARTICLES_20260518,
   ...ARTICLES_20260511,
   ...ARTICLES_20260504,
-];
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export const BREAKING_NEWS = [
   "속보: 이스라엘 보건부장관, 흡연 의료대마 폐지 권고 동결 — 산업계 안도",
