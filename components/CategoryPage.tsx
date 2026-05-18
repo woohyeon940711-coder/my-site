@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import ArticleCard from "@/components/ArticleCard";
 import { ARTICLES, CATEGORIES, Category } from "@/lib/data";
 import Link from "next/link";
@@ -6,10 +9,19 @@ interface Props {
   slug: Category;
 }
 
+const ARTICLES_PER_PAGE = 12;
+
 export default function CategoryPage({ slug }: Props) {
   const catInfo = CATEGORIES.find((c) => c.slug === slug)!;
   const articles = ARTICLES.filter((a) => a.category === slug);
   const otherCats = CATEGORIES.filter((c) => c.slug !== slug);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(Math.max(articles.length - 1, 0) / ARTICLES_PER_PAGE);
+  const paginatedArticles = articles.slice(
+    1 + (currentPage - 1) * ARTICLES_PER_PAGE,
+    1 + currentPage * ARTICLES_PER_PAGE
+  );
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -47,11 +59,44 @@ export default function CategoryPage({ slug }: Props) {
               </div>
 
               {/* Grid */}
-              {articles.length > 1 && (
+              {paginatedArticles.length > 0 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                  {articles.slice(1).map((article) => (
+                  {paginatedArticles.map((article) => (
                     <ArticleCard key={article.id} article={article} variant="card" />
                   ))}
+                </div>
+              )}
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="flex items-center justify-center gap-2 mt-10">
+                  <button
+                    onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                    disabled={currentPage === 1}
+                    className="px-3 py-1.5 text-sm border border-gray-300 rounded-sm hover:border-[#2d6a4f] hover:text-[#2d6a4f] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                  >
+                    이전
+                  </button>
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => setCurrentPage(page)}
+                      className={`w-8 h-8 text-sm rounded-sm transition-colors ${
+                        currentPage === page
+                          ? "bg-[#2d6a4f] text-white font-bold"
+                          : "border border-gray-300 hover:border-[#2d6a4f] hover:text-[#2d6a4f]"
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                  <button
+                    onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                    disabled={currentPage === totalPages}
+                    className="px-3 py-1.5 text-sm border border-gray-300 rounded-sm hover:border-[#2d6a4f] hover:text-[#2d6a4f] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                  >
+                    다음
+                  </button>
                 </div>
               )}
             </>
