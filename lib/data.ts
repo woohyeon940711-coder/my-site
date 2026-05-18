@@ -643,6 +643,32 @@ const ARTICLES_DOMESTIC: Article[] = [
     link: "https://www.lecturernews.com/news/articleView.html?idxno=198687",
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
   },
+  {
+    id: 79,
+    title: "경북도, 의료용 헴프 산업기지 본격 추진 — CBD 원료의약품 GMP 시설 2027년 가동 목표",
+    summary: "경북도가 북부권을 산업용 헴프(HEMP) 산업 거점으로 육성. 6월 신규 규제자유특구 최종 지정 여부 결정 전망. 네오켄바이오가 150억원 규모 CBD 원료의약품 GMP 제조시설 조성 중(2027년 가동 목표). 농림축산식품부 57억원 규모 공모사업 선정.",
+    category: "domestic",
+    categoryLabel: "국내",
+    date: "2026-05-13",
+    country: "한국",
+    link: "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4072683",
+    image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80",
+    source: "경북일보 5/13",
+    featured: false,
+  },
+  {
+    id: 80,
+    title: "식약처, 해외직구 마약류 의심 식품 정기 기획검사 착수 — CBD·THC 등 55종 검사",
+    summary: "식품의약품안전처가 대마 합법 국가의 온라인 쇼핑몰에서 판매되는 직구 젤리·음료 등 마약류 의심 제품에 대해 5~6월 기획검사 실시. 검사 항목은 CBD, THC 등 대마 성분과 암페타민·미트라지닌 등 55종.",
+    category: "domestic",
+    categoryLabel: "국내",
+    date: "2026-05-11",
+    country: "한국",
+    link: "https://www.asiatoday.co.kr/kn/view.php?key=20260511010002340",
+    image: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80",
+    source: "아시아투데이 5/11",
+    featured: false,
+  },
 ];
 
 
