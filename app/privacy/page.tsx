@@ -51,7 +51,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-black text-gray-900 mb-3">제4조 (개인정보의 보유 및 이용 기간)</h2>
           <p>
-            자동 수집되는 서버 로그 데이터는 최대 <strong>90일</strong> 보관 후 자동 삭제됩니다.
+            자동 수집되는 서버 로그 데이터는 최대 <strong>90일 이내</strong> 보관 후 자동 삭제됩니다.
             법령에 의해 보존이 필요한 경우에는 해당 기간 동안 보관합니다.
           </p>
         </section>
@@ -67,8 +67,8 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-black text-gray-900 mb-3">제6조 (쿠키(Cookie) 사용)</h2>
           <p>
-            사이트는 현재 별도의 마케팅·추적 쿠키를 사용하지 않습니다.
-            향후 서비스 개선을 위해 쿠키를 도입할 경우 본 방침을 업데이트하고 이용자에게 고지합니다.
+            사이트는 서비스 운영을 위한 최소한의 기술적 정보가 자동 수집될 수 있습니다.
+            향후 분석·통계 기능 추가 시 본 방침을 업데이트합니다.
           </p>
         </section>
 
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
           <table className="w-full text-sm border border-gray-200 rounded-sm overflow-hidden mt-2">
             <tbody>
               <tr className="border-b border-gray-100">
-                <td className="bg-gray-50 px-4 py-2 font-semibold w-1/3">성명</td>
+                <td className="bg-gray-50 px-4 py-2 font-semibold w-1/3">개인정보 보호 담당</td>
                 <td className="px-4 py-2">CannabisInsight 운영팀</td>
               </tr>
               <tr className="border-b border-gray-100">
@@ -108,7 +108,11 @@ export default function PrivacyPage() {
 
       </div>
 
-      <div className="mt-12 pt-6 border-t border-gray-200 text-xs text-gray-400">
+      <div className="mt-10 p-4 bg-gray-50 border border-gray-200 rounded-sm text-xs text-gray-500 leading-relaxed">
+        본 사이트의 콘텐츠는 산업 정보 제공 목적이며, 법률·의학·투자 자문에 해당하지 않습니다.
+      </div>
+
+      <div className="mt-6 pt-6 border-t border-gray-200 text-xs text-gray-400">
         <Link href="/terms" className="hover:text-[#2d6a4f] transition-colors mr-4">이용약관 보기</Link>
         <Link href="/" className="hover:text-[#2d6a4f] transition-colors">← 홈으로</Link>
       </div>
