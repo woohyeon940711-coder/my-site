@@ -4,9 +4,20 @@ import { ARTICLES, CATEGORIES } from "@/lib/data";
 import Link from "next/link";
 
 export default function HomePage() {
+  // 1. 피처드 기사: featured=true인 기사 or 최신 1개
   const featured = ARTICLES.find((a) => a.featured) ?? ARTICLES[0];
-  const subArticles = ARTICLES.filter((a) => !a.featured).slice(0, 4);
-  const todayNews = ARTICLES.slice(0, 5);
+
+  // 2. 사이드 기사: 피처드 제외 최신 3개
+  const usedIds = new Set([featured.id]);
+  const sideArticles = ARTICLES.filter((a) => !usedIds.has(a.id)).slice(0, 3);
+  sideArticles.forEach((a) => usedIds.add(a.id));
+
+  // 3. 최신 기사 (2x2): 피처드+사이드 제외 다음 4개
+  const latestArticles = ARTICLES.filter((a) => !usedIds.has(a.id)).slice(0, 4);
+  latestArticles.forEach((a) => usedIds.add(a.id));
+
+  // 4. 오늘의 뉴스: 위 모두 제외 다음 5개
+  const todayNews = ARTICLES.filter((a) => !usedIds.has(a.id)).slice(0, 5);
 
   return (
     <>
@@ -18,7 +29,7 @@ export default function HomePage() {
             <ArticleCard article={featured} variant="featured" />
           </div>
           <div className="flex flex-col gap-5">
-            {subArticles.slice(0, 3).map((article) => (
+            {sideArticles.map((article) => (
               <Link
                 key={article.id}
                 href={`/${article.category}/${article.id}`}
@@ -47,7 +58,7 @@ export default function HomePage() {
             최신 기사
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-            {subArticles.map((article) => (
+            {latestArticles.map((article) => (
               <ArticleCard key={article.id} article={article} variant="card" />
             ))}
           </div>

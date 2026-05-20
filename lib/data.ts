@@ -906,22 +906,22 @@ export const ARTICLES: Article[] = [
 export const BREAKING_NEWS = [
   {
     text: "속보: 이스라엘 2025년 의료 대마 매출 3.72억 달러 — 캐나다발 수입 사상 최대",
-    link: "/article/49",
+    link: "/global/49",
   },
   {
     text: "속보: DEA Schedule III 재분류 연방관보 게재 — 4월 28일부 공식 발효",
-    link: "/article/36",
+    link: "/policy/36",
   },
   {
     text: "속보: 하원 세출위, DOJ의 대마 재분류 권한 차단하는 예산안 조항 통과",
-    link: "/article/37",
+    link: "/policy/37",
   },
   {
     text: "속보: 독일 1분기 의료대마 수입량 50톤 돌파 — 캐나다산이 53% 점유",
-    link: "/article/82",
+    link: "/global/82",
   },
   {
     text: "속보: 브라질 2026년 의료 대마 시장 +45% 성장 — 신규 규정으로 확장 본격화",
-    link: "/article/50",
+    link: "/global/50",
   },
 ];
