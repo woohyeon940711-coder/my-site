@@ -904,9 +904,24 @@ export const ARTICLES: Article[] = [
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export const BREAKING_NEWS = [
-  "속보: 이스라엘 보건부장관, 흡연 의료대마 폐지 권고 동결 — 산업계 안도",
-  "속보: DEA Schedule III 재분류 공식 발효 — 280E 세금 즉시 폐지",
-  "속보: 미국 하원 2026 Farm Bill 통과 — 향정 헴프 규제 강화 포함",
-  "속보: 독일 MedCanG 개정안 Q2 시행 임박 — 가격 통제 도입",
-  "속보: 브라질 의료 대마 시장 2026년 +45% 성장 전망",
+  {
+    text: "속보: 이스라엘 2025년 의료 대마 매출 3.72억 달러 — 캐나다발 수입 사상 최대",
+    link: "/article/49",
+  },
+  {
+    text: "속보: DEA Schedule III 재분류 연방관보 게재 — 4월 28일부 공식 발효",
+    link: "/article/36",
+  },
+  {
+    text: "속보: 하원 세출위, DOJ의 대마 재분류 권한 차단하는 예산안 조항 통과",
+    link: "/article/37",
+  },
+  {
+    text: "속보: 독일 1분기 의료대마 수입량 50톤 돌파 — 캐나다산이 53% 점유",
+    link: "/article/82",
+  },
+  {
+    text: "속보: 브라질 2026년 의료 대마 시장 +45% 성장 — 신규 규정으로 확장 본격화",
+    link: "/article/50",
+  },
 ];
