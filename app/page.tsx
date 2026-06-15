@@ -4,8 +4,8 @@ import { ARTICLES, CATEGORIES } from "@/lib/data";
 import Link from "next/link";
 
 export default function HomePage() {
-  // 1. 피처드 기사: featured=true인 기사 or 최신 1개
-  const featured = ARTICLES.find((a) => a.featured) ?? ARTICLES[0];
+  // 1. 피처드 기사: 전체 최신 기사 자동 선정 (날짜 역순 정렬이므로 첫 번째)
+  const featured = ARTICLES[0];
 
   // 2. 사이드 기사: 피처드 제외 최신 3개
   const usedIds = new Set([featured.id]);
@@ -68,7 +68,7 @@ export default function HomePage() {
         <section className="mb-10">
           <h2 className="text-base font-black text-gray-900 mb-4 flex items-center gap-2">
             <span className="w-1 h-5 bg-[#2d6a4f] rounded-full inline-block" />
-            오늘의 뉴스
+            주요 뉴스
           </h2>
           <div className="border-t-2 border-[#2d6a4f]">
             {todayNews.map((article, i) => (

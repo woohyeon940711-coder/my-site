@@ -723,7 +723,7 @@ const ARTICLES_20260525: Article[] = [
     date: "2026-05-19",
     country: "독일/미국",
     link: "https://www.prnewswire.com/news-releases/fda-grants-breakthrough-therapy-designation-to-vertanicals-ver-01-a-first-in-class-non-opioid-investigational-treatment-for-chronic-low-back-pain-302774617.html",
-    image: "https://images.unsplash.com/photo-1532187875605-1ef6c237ddc4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80",
     source: "MM 뉴스레터 5/19",
     featured: false,
   },
@@ -1012,7 +1012,7 @@ const ARTICLES_20260518: Article[] = [
     date: "2026-05-18",
     country: "미국",
     link: "https://businessofcannabis.com/cannabis-news-today-monday-18-may-2026-rico-class-action-names-three-us-operators-as-canada-leads-germanys-medical-cannabis-imports/",
-    image: "https://images.unsplash.com/photo-1532187875605-1ef6c237ddc4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80",
     source: "Business of Cannabis 5/18",
     featured: false,
   },
@@ -1027,7 +1027,7 @@ const ARTICLES_20260608: Article[] = [
     categoryLabel: "정책·규제",
     country: "미국",
     date: "2026-06-05",
-    image: "https://images.unsplash.com/photo-1501776553610-5f5a2e670f1e?w=800",
+    image: "https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?w=800&q=80",
     link: "https://www.marijuanamoment.net/white-house-pushes-congress-to-keep-hemp-cbd-products-legal-by-amending-broad-ban-thats-set-to-take-effect-later-this-year/",
     source: "Marijuana Moment 6/5",
     featured: false,
@@ -1192,23 +1192,23 @@ export const ARTICLES: Article[] = [
 
 export const BREAKING_NEWS = [
   {
-    text: "속보: 이스라엘 2025년 의료 대마 매출 3.72억 달러 — 캐나다발 수입 사상 최대",
-    link: "/global/49",
+    text: "속보: INCB 비공개 서한 — 'CBD는 국제 마약 조약 적용 대상 아니다'",
+    link: "/global/94",
   },
   {
-    text: "속보: DEA Schedule III 재분류 연방관보 게재 — 4월 28일부 공식 발효",
-    link: "/policy/36",
+    text: "속보: Trulieve, NYSE 상장 — Schedule III 후 대마 기업 메이저 거래소 입성 가속",
+    link: "/global/95",
   },
   {
-    text: "속보: 하원 세출위, DOJ의 대마 재분류 권한 차단하는 예산안 조항 통과",
-    link: "/policy/37",
+    text: "속보: 백악관 OMB, 의회에 헴프 CBD 합법 유지 촉구 — 광범위 금지법 수정 요청",
+    link: "/policy/93",
   },
   {
-    text: "속보: 독일 1분기 의료대마 수입량 50톤 돌파 — 캐나다산이 53% 점유",
-    link: "/global/82",
+    text: "속보: 의료 대마 추출물, 암환자 증상 '의미있게' 개선 — 환자 50% 호전",
+    link: "/rnd/100",
   },
   {
-    text: "속보: 브라질 2026년 의료 대마 시장 +45% 성장 — 신규 규정으로 확장 본격화",
-    link: "/global/50",
+    text: "속보: 미주리, 5월 합법 대마 매출 $1.351억 — 사상 최대치 경신",
+    link: "/global/102",
   },
 ];
