@@ -669,6 +669,19 @@ const ARTICLES_DOMESTIC: Article[] = [
     source: "아시아투데이 5/11",
     featured: false,
   },
+  {
+    id: 105,
+    title: "'대마 아닌 홉에서 추출한 CBD'…반려동물 헬스케어 새 시장 열리나",
+    summary: "대마가 아닌 홉(Hops)에서 추출한 CBD가 반려동물 헬스케어 분야의 새로운 소재로 주목받고 있다. 17일 국회의원회관에서 열린 '홉 유래 바이오산업 육성 포럼'에서 홉 유래 CBD의 과학적 특성과 산업적 활용 가능성이 소개됐다. 비대마 CBD 시장은 2030년 80조원 규모로 성장할 것으로 전망된다.",
+    category: "domestic",
+    categoryLabel: "국내",
+    date: "2026-06-17",
+    country: "한국",
+    link: "https://n.news.naver.com/article/421/0009009387?sid=101",
+    image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80",
+    source: "뉴스1 6/17",
+    featured: false,
+  },
 ];
 
 
