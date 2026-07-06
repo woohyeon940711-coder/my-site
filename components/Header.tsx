@@ -5,11 +5,14 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { CATEGORIES } from "@/lib/data";
 
-const NAV_ITEMS = CATEGORIES.map((c) => ({
-  href: `/${c.slug}`,
-  label: c.label,
-  labelEn: c.labelEn,
-}));
+const NAV_ITEMS = [
+  ...CATEGORIES.map((c) => ({
+    href: `/${c.slug}`,
+    label: c.label,
+    labelEn: c.labelEn,
+  })),
+  { href: "/legislation", label: "입법동향", labelEn: "Legislation" },
+];
 
 export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
   const [menuOpen, setMenuOpen] = useState(false);

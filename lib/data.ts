@@ -1328,6 +1328,66 @@ const ARTICLES_20260622: Article[] = [
   },
 ];
 
+// ── 입법동향 데이터 ──────────────────────────────────────────────────────
+
+export type LegislationStatus = "접수" | "위원회 심사" | "체계자구 심사" | "본회의 심의" | "정부이송" | "공포";
+
+export interface Legislation {
+  id: number;
+  billNo: string;
+  title: string;
+  proposer: string;
+  proposerCount: number;
+  committee: string;
+  proposedDate: string;
+  status: LegislationStatus;
+  summary: string;
+  keyPoints: string[];
+  link: string;
+  tags: string[];
+}
+
+export const LEGISLATIONS: Legislation[] = [
+  {
+    id: 1,
+    billNo: "2217773",
+    title: "마약류 관리에 관한 법률 일부개정법률안",
+    proposer: "서미화의원",
+    proposerCount: 10,
+    committee: "보건복지위원회",
+    proposedDate: "2026-03-26",
+    status: "위원회 심사",
+    summary: "CBD 등 의료적 효용성이 있는 대마 성분을 향정신성의약품으로 분류하여 국내 제조·품목허가를 허용하고, 의료용 목적 대마 재배자 허가 제도를 신설하는 법안. 대법원 판례(2022두60776)에 따라 대마 정의를 명확히 하고, 의료용 마약류 원료 관리 지원센터 지정 근거를 마련한다.",
+    keyPoints: [
+      "CBD 등 대마 성분을 향정신성의약품으로 분류 → 국내 의약품 제조·품목허가 가능",
+      "의료용 목적 대마 재배자 정의 확대 및 식약처 허가 절차 신설",
+      "의료용 마약류 원료 관리 지원센터 지정 (전담기관)",
+      "대법원 판례 반영: CBD도 대마 정의에 포함 명확화",
+    ],
+    link: "https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_B2Z6Y0G3H2F0E0D9Z5A7Y4X0V7M3N8",
+    tags: ["CBD", "의료대마", "마약류관리법", "국내제조"],
+  },
+  {
+    id: 2,
+    billNo: "2219769",
+    title: "마약류 관리에 관한 법률 일부개정법률안",
+    proposer: "김형동의원",
+    proposerCount: 13,
+    committee: "미확정",
+    proposedDate: "2026-07-06",
+    status: "접수",
+    summary: "CBD 등 의료적 효용성이 있는 대마 성분을 향정신성의약품으로 분류하여 국내 제조를 허용하고, 의료용 대마 재배자 허가 제도를 신설하는 법안. 국가 주도의 의료용 마약류 원료관리센터를 설립하여 재배부터 추출·제조·원료 배정까지 엄격히 관리하는 체계를 구축한다.",
+    keyPoints: [
+      "CBD 등 대마 성분을 향정신성의약품으로 분류 → 국내 의약품 제조·품목허가 가능",
+      "의료용 목적 대마 재배자 허가 제도 신설 (식약처 허가)",
+      "의료용 마약류 원료관리센터 설립 (국가 주도 공급망 구축)",
+      "재배 단계부터 추출·정제·제조·원료 배정까지 국가 주도 관리 체계",
+    ],
+    link: "https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_O2N6C0Z5M2J2I0F9N5M4L2K6R6P3L9",
+    tags: ["CBD", "의료대마", "마약류관리법", "국내제조", "원료관리센터"],
+  },
+];
+
 export const ARTICLES: Article[] = [
   ...ARTICLES_DOMESTIC,
   ...ARTICLES_20260622,
@@ -1340,6 +1400,10 @@ export const ARTICLES: Article[] = [
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export const BREAKING_NEWS = [
+  {
+    text: "국내 속보: CBD 국내 제조 허용 법안 2건 동시 발의 — 여야 의원 공동 추진",
+    link: "/legislation",
+  },
   {
     text: "속보: INCB 비공개 서한 — 'CBD는 국제 마약 조약 적용 대상 아니다'",
     link: "/global/94",
