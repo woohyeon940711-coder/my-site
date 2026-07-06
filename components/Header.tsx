@@ -5,13 +5,19 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { CATEGORIES } from "@/lib/data";
 
+const domesticIdx = CATEGORIES.findIndex((c) => c.slug === "domestic");
 const NAV_ITEMS = [
-  ...CATEGORIES.map((c) => ({
+  ...CATEGORIES.slice(0, domesticIdx + 1).map((c) => ({
     href: `/${c.slug}`,
     label: c.label,
     labelEn: c.labelEn,
   })),
   { href: "/legislation", label: "입법동향", labelEn: "Legislation" },
+  ...CATEGORIES.slice(domesticIdx + 1).map((c) => ({
+    href: `/${c.slug}`,
+    label: c.label,
+    labelEn: c.labelEn,
+  })),
 ];
 
 export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
