@@ -682,6 +682,19 @@ const ARTICLES_DOMESTIC: Article[] = [
     source: "뉴스1 6/17",
     featured: false,
   },
+  {
+    id: 121,
+    title: "HLB생명과학R&D, 경북 산업용 헴프 규제자유특구 참여 — 미량 칸나비노이드 신약 개발 착수",
+    summary: "HLB생명과학R&D가 중소벤처기업부·국무조정실 지정 '경북 산업용 헴프(대마) 규제자유특구' 공동 참여기관으로 선정돼 미량 칸나비노이드 기반 차세대 신약개발에 착수했다. 네오켄바이오·에이팩·엔비더팜·토포랩·아이엔지알 등이 공동 수행하며, KIST·경북바이오산업연구원 등과 함께 4년간 총 296억원을 투입한다. 기존 CBD 중심에서 CBG·CBC·CBN 등 미량 칸나비노이드로 실증 범위를 확대하는 것이 핵심으로, 국내 헴프 산업의 고도화를 보여주는 대표 사례다.",
+    category: "domestic",
+    categoryLabel: "국내",
+    date: "2026-07-06",
+    country: "한국",
+    link: "https://www.hankyung.com/article/202607066881i",
+    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
+    source: "한국경제 7/6",
+    featured: false,
+  },
 ];
 
 
@@ -1354,6 +1367,50 @@ const ARTICLES_20260622: Article[] = [
   },
 ];
 
+// ── 2026-06-29 주간 뉴스 ──────────────────────────────────────────────────
+
+const ARTICLES_20260629: Article[] = [
+  {
+    id: 118,
+    title: "백악관, 의회에 '헴프 공정 대우' 촉구 — 11월 재범죄화법 최소 연기 요청",
+    summary: "백악관이 의회에 서한을 보내 11월 발효 예정인 광범위한 헴프 재범죄화법을 '최소한' 연기해 '헴프 제품의 공정한 대우를 보장'하라고 촉구했다. THC 제품을 합법 유지하되 규제를 추가하는 최근 수정안을 인용하며, 업계의 법적 불확실성 해소를 위한 유예 기간이 필요하다는 입장을 밝혔다. 이미 속보 배너에 등록된 OMB 촉구 서한의 후속 조치로, 행정부 차원의 헴프 보호 의지가 재확인됐다.",
+    category: "policy",
+    categoryLabel: "정책·규제",
+    date: "2026-06-25",
+    country: "미국",
+    link: "https://www.marijuanamoment.net/white-house-pushes-congress-to-ensure-fair-treatment-of-hemp-products-by-calling-off-broad-recriminalization-law-set-for-november/",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
+    source: "Marijuana Moment 6/25",
+    featured: false,
+  },
+  {
+    id: 119,
+    title: "DEA 재분류 청문회 첫날: DEA·FDA '대마가 알코올·오피오이드보다 안전' 증언 부각",
+    summary: "DEA와 FDA 측 변호인이 대마 재분류 청문회 첫날 대마의 의학적 효용과 알코올·오피오이드 대비 상대적 안전성에 관한 증언을 부각했다. 초당파 의원들은 의회의 재분류 차단 시도가 성공하지 못할 것이라 전망했다. 이번 청문회는 미국 대마 정책 역사상 가장 중요한 공개 심리 중 하나로, DEA의 Schedule III 재분류 절차가 사실상 돌이킬 수 없는 단계에 접어들었다는 평가가 나온다.",
+    category: "policy",
+    categoryLabel: "정책·규제",
+    date: "2026-06-30",
+    country: "미국",
+    link: "https://www.marijuanamoment.net/dea-and-fda-highlight-how-marijuana-is-safer-than-alcohol-and-opioids-during-rescheduling-hearings-opening-day/",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
+    source: "Marijuana Moment 6/30",
+    featured: false,
+  },
+  {
+    id: 120,
+    title: "버지니아, 성인용 대마 판매 합법화 최종 통과 — 예산안에 포함되어 정식 발효",
+    summary: "버지니아 상·하원이 Spanberger(D) 주지사의 예산안 수정안을 수용하면서 성인용 대마 판매 합법화가 최종 확정됐다. 주지사의 추가 조치 없이 법률로 정식 발효되며 수년간의 법적 공백이 종료됐다. 앞서 주지사가 독립 법안에 거부권을 행사한 바 있으나, 예산안에 포함시키는 우회 전략으로 합법화가 성사됐다. 버지니아는 미국 동부 주요 주 중 성인용 대마 판매를 합법화한 최신 사례가 됐다.",
+    category: "policy",
+    categoryLabel: "정책·규제",
+    date: "2026-06-30",
+    country: "미국",
+    link: "https://www.marijuanamoment.net/virginia-lawmakers-give-final-approval-to-marijuana-sales-legalization-as-part-of-budget/",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    source: "Marijuana Moment 6/30",
+    featured: false,
+  },
+];
+
 // ── 입법동향 데이터 ──────────────────────────────────────────────────────
 
 export type LegislationStatus = "접수" | "위원회 심사" | "체계자구 심사" | "본회의 심의" | "정부이송" | "공포";
@@ -1436,6 +1493,7 @@ export const LEGISLATIONS: Legislation[] = [
 
 export const ARTICLES: Article[] = [
   ...ARTICLES_DOMESTIC,
+  ...ARTICLES_20260629,
   ...ARTICLES_20260622,
   ...ARTICLES_20260615,
   ...ARTICLES_20260608,
@@ -1469,5 +1527,17 @@ export const BREAKING_NEWS = [
   {
     text: "속보: 미주리, 5월 합법 대마 매출 $1.351억 — 사상 최대치 경신",
     link: "/global/102",
+  },
+  {
+    text: "국내 속보: HLB생명과학R&D, 경북 헴프 규제자유특구 참여 — CBG·CBC 등 미량 칸나비노이드 신약 296억 투자",
+    link: "/domestic/121",
+  },
+  {
+    text: "속보: 버지니아, 성인용 대마 판매 합법화 최종 통과 — 예산안 포함 정식 발효",
+    link: "/policy/120",
+  },
+  {
+    text: "속보: DEA 재분류 청문회 개시 — DEA·FDA '대마가 알코올·오피오이드보다 안전' 증언",
+    link: "/policy/119",
   },
 ];
