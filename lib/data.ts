@@ -1326,6 +1326,32 @@ const ARTICLES_20260622: Article[] = [
     source: "Springer 6/15",
     featured: false,
   },
+  {
+    id: 116,
+    title: "인도 히마찰프라데시주 내각, 산업용 헴프·의료용 대마 재배 합법화 승인",
+    summary: "인도 히마찰프라데시주 내각이 산업용 헴프와 의료용 대마 재배를 합법화하는 제안을 승인했다. 히말라야 산악 지대에 위치한 이 주는 전통적으로 대마 재배가 성행했던 지역으로, 이번 합법화로 농민들이 고부가가치 작물에 합법적으로 접근할 수 있게 됐다. 아시아 최대 민주주의 국가인 인도에서 주(州) 차원의 대마 합법화 움직임이 본격화되고 있다는 점에서 주목된다.",
+    category: "global",
+    categoryLabel: "글로벌",
+    date: "2026-06-22",
+    country: "인도",
+    link: "https://www.aninews.in/news/national/general-news/himachal-cabinet-approves-regulated-cannabis-farming-farmers-to-benefit-from-high-value-crop-jagat-singh-negi20260620225532/",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    source: "ANI 6/22",
+    featured: false,
+  },
+  {
+    id: 117,
+    title: "아일랜드 의회 마약사용위원회, 모든 마약 비범죄화 권고",
+    summary: "아일랜드 입법부의 마약사용 합동위원회(Joint Committee on Drugs Use)가 대마를 포함한 모든 마약의 비범죄화를 권고했다. 유럽에서 포르투갈의 전면 비범죄화 모델을 따르는 국가가 늘어나는 가운데, 아일랜드 의회 차원의 공식 권고가 나온 것은 이례적이다. 실제 입법으로 이어질지는 미지수이나, 유럽 대마 정책 흐름의 변화를 보여주는 상징적 사례로 평가된다.",
+    category: "global",
+    categoryLabel: "글로벌",
+    date: "2026-06-25",
+    country: "아일랜드",
+    link: "https://www.rte.ie/news/politics/2026/0624/1580028-drugs-committee/",
+    image: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=800&q=80",
+    source: "RTE 6/25",
+    featured: false,
+  },
 ];
 
 // ── 입법동향 데이터 ──────────────────────────────────────────────────────
