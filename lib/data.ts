@@ -695,6 +695,19 @@ const ARTICLES_DOMESTIC: Article[] = [
     source: "한국경제 7/6",
     featured: false,
   },
+  {
+    id: 122,
+    title: "서미화·김형동 의원·식약처, '대마 성분 의약품 도입 방안 정책 토론회' 개최 — CBD 국내 생산 필요성 공론화",
+    summary: "서미화·김형동 의원과 식품의약품안전처가 7일 국회의원회관에서 '대마 성분 의약품 도입 방안 정책 토론회'를 공동 개최했다. 약물난치성 뇌전증 환자의 치료기회 확대를 위해 의료용 CBD(에피디올렉스) 국내 생산·공급체계 구축이 필요하다는 데 전문가들이 의견을 모았다. 현재 전량 해외 수입에 의존하는 구조의 한계와 복잡한 행정절차가 지적됐으며, 한의계는 대마 성분 한약제제 개발 기반 마련을 촉구했다. 식약처는 엄격한 안전관리를 전제로 입법 과정에 참여하겠다는 입장을 밝혔다.",
+    category: "domestic",
+    categoryLabel: "국내",
+    date: "2026-07-07",
+    country: "한국",
+    link: "https://www.akomnews.com/bbs/board.php?bo_table=news&wr_id=67689",
+    image: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80",
+    source: "한의신문 7/7",
+    featured: false,
+  },
 ];
 
 
@@ -1504,6 +1517,10 @@ export const ARTICLES: Article[] = [
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export const BREAKING_NEWS = [
+  {
+    text: "국내 속보: 국회 '대마 성분 의약품 도입' 정책 토론회 — 서미화·김형동 의원·식약처 공동 개최, CBD 국내 생산 공론화",
+    link: "/domestic/122",
+  },
   {
     text: "국내 속보: CBD 국내 제조 허용 법안 2건 동시 발의 — 여야 의원 공동 추진",
     link: "/legislation",
