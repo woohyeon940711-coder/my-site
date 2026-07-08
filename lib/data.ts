@@ -708,6 +708,19 @@ const ARTICLES_DOMESTIC: Article[] = [
     source: "한의신문 7/7",
     featured: false,
   },
+  {
+    id: 123,
+    title: "신성범 의원, 'THC 0.3% 이하 헴프 대마 제외' 마약류관리법 개정안 대표발의 — 전 산업 활용 기반 마련",
+    summary: "국민의힙 신성범 의원이 7일 THC 함유량이 건조 중량 기준 0.3% 이하인 헴프(Hemp)를 대마의 범위에서 완전 제외하는 '마약류 관리에 관한 법률 일부개정안'을 대표발의했다. 의료용은 물론 기능성 식품·화장품·섬유·사료 등 다양한 산업 분야에서 헴프를 합법적으로 활용할 수 있는 제도적 기반을 마련하는 것이 핵심이다. 경북 헴프 규제자유특구에서 확인된 산업화 가능성을 전국적으로 확대하는 입법으로, 서미화·윤준병·김형동 의원에 이어 네 번째 대마 관련 법안 발의로 국회 입법 동력이 가속화되고 있다.",
+    category: "domestic",
+    categoryLabel: "국내",
+    date: "2026-07-08",
+    country: "한국",
+    link: "https://www.akomnews.com/bbs/board.php?bo_table=news&wr_id=67692",
+    image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80",
+    source: "한의신문 7/8",
+    featured: false,
+  },
 ];
 
 
@@ -1502,6 +1515,25 @@ export const LEGISLATIONS: Legislation[] = [
     link: "https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_O2N6C0Z5M2J2I0F9N5M4L2K6R6P3L9",
     tags: ["CBD", "의료대마", "마약류관리법", "국내제조", "원료관리센터"],
   },
+  {
+    id: 4,
+    billNo: "2219780",
+    title: "마약류 관리에 관한 법률 일부개정법률안",
+    proposer: "신성범의원",
+    proposerCount: 10,
+    committee: "미확정",
+    proposedDate: "2026-07-06",
+    status: "접수",
+    summary: "THC 함유량이 건조 중량 기준 0.3% 이하인 헴프(Cannabis sativa L)를 대마의 범위에서 완전 제외하여 의료용은 물론 기능성 식품·화장품·섬유·사료 등 다양한 산업 분야에서 합법적으로 활용할 수 있도록 하는 법안. WHO 권고와 UN 마약위원회의 대마 고위험 마약류 제외 결정을 반영하며, 경북 헴프 규제자유특구에서 확인된 산업화 가능성을 전국적으로 확대하는 것이 핵심이다.",
+    keyPoints: [
+      "THC 0.3% 이하 헴프를 대마 범위에서 완전 제외 (마약류관리법 제2조 개정)",
+      "의료용·기능성 식품·화장품·섬유·사료 등 전 산업 분야 합법 활용 가능",
+      "WHO 권고 및 UN 마약위원회 결정 국내법 반영",
+      "경북 헴프 규제자유특구 성과를 전국 제도화로 확대",
+    ],
+    link: "https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_J2K6J0H7X0Y3W1E3D3E0D2B0J8I2J3",
+    tags: ["헴프", "THC0.3%", "마약류관리법", "대마제외", "산업화"],
+  },
 ];
 
 export const ARTICLES: Article[] = [
@@ -1517,6 +1549,10 @@ export const ARTICLES: Article[] = [
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export const BREAKING_NEWS = [
+  {
+    text: "국내 속보: 신성범 의원, 'THC 0.3% 이하 헴프 대마 제외' 마약류관리법 개정안 대표발의 — 전 산업 활용 기반 마련",
+    link: "/domestic/123",
+  },
   {
     text: "국내 속보: 국회 '대마 성분 의약품 도입' 정책 토론회 — 서미화·김형동 의원·식약처 공동 개최, CBD 국내 생산 공론화",
     link: "/domestic/122",
