@@ -74,8 +74,18 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* 사업자 정보 */}
         <div className="border-t border-gray-800 mt-8 pt-6 text-xs text-center space-y-1">
-          <p>© {new Date().getFullYear()} CannabisInsight. All rights reserved.</p>
+          <p className="text-gray-500 leading-relaxed">
+            운영자: 우현균 &nbsp;|&nbsp; 상호: 카나비스인사이트 (Cannabis Insight) &nbsp;|&nbsp; 사업자등록번호: 499-03-04172
+          </p>
+          <p className="text-gray-500">
+            이메일: contact@cannabisinsight.kr
+          </p>
+          <p className="text-gray-600 text-[10px] mt-1">
+            ※ Cannabis Insight는 별도 사업자가 운영하며, 네오켄바이오는 홈페이지 연계 및 정보 확산을 지원합니다.
+          </p>
+          <p className="text-gray-600 mt-2">© {new Date().getFullYear()} CannabisInsight. All rights reserved.</p>
           <p className="text-gray-600">
             본 사이트는 정보 제공 목적으로 운영되며, 대마 관련 법령 준수는 이용자 본인의 책임입니다.
           </p>
