@@ -56,6 +56,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.cannabisinsight.kr",
   },
+  verification: {
+    other: {
+      "naver-site-verification": "04b6e38171371a2c9d272dbd0cbd6612d3d509cf",
+    },
+  },
 };
 
 export default function RootLayout({
