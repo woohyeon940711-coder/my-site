@@ -102,9 +102,9 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-6 text-xs text-center space-y-1">
           <p className="text-gray-500 leading-relaxed">
             {isEn ? (
-              <>Operator: 우현균 &nbsp;|&nbsp; Business Name: 카나비스인사이트 (Cannabis Insight) &nbsp;|&nbsp; Business Reg. No.: 499-03-04172</>
+              <>Operator: 우현균 &nbsp;|&nbsp; Business Name: 카나비스인사이트 (CannabisInsight) &nbsp;|&nbsp; Business Reg. No.: 499-03-04172</>
             ) : (
-              <>운영자: 우현균 &nbsp;|&nbsp; 상호: 카나비스인사이트 (Cannabis Insight) &nbsp;|&nbsp; 사업자등록번호: 499-03-04172</>
+              <>운영자: 우현균 &nbsp;|&nbsp; 상호: 카나비스인사이트 (CannabisInsight) &nbsp;|&nbsp; 사업자등록번호: 499-03-04172</>
             )}
           </p>
           <p className="text-gray-500">
