@@ -1,18 +1,37 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CATEGORIES } from "@/lib/data";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isEn = pathname.startsWith("/en");
+
+  const base = isEn ? "/en" : "";
+
   return (
     <footer className="bg-gray-900 text-gray-400 mt-16">
       {/* ── 법적 고지 (Disclaimer) 배너 ── */}
       <div className="bg-[#1a3d2b] border-t-2 border-[#2d6a4f]">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <p className="text-xs text-[#74c69d] leading-relaxed">
-            <span className="font-bold text-[#95d5b2] mr-1">[법적 고지]</span>
-            본 사이트는 대마(Cannabis) 관련 산업·정책·과학 정보를 <strong className="text-[#95d5b2]">정보 제공 목적</strong>으로만 제공합니다.
-            본 콘텐츠는 법적·의학적·투자 조언이 아니며, 대마의 생산·소지·유통·사용은 국가 및 지역 법령에 따라 엄격히 규제됩니다.
-            대한민국에서 대마는 「마약류 관리에 관한 법률」에 의해 규제되며, 관련 행위는 형사 처벌 대상이 될 수 있습니다.
-            실제 행동 전 반드시 해당 지역의 법률 전문가와 상담하시기 바랍니다.
+            {isEn ? (
+              <>
+                <span className="font-bold text-[#95d5b2] mr-1">[Legal Notice]</span>
+                This site provides cannabis-related industry, policy, and scientific information for{" "}
+                <strong className="text-[#95d5b2]">informational purposes only</strong>. The content does not constitute legal, medical, or investment advice. The production, possession, distribution, and use of cannabis are strictly regulated under applicable national and local laws. In the Republic of Korea, cannabis is regulated under the{" "}
+                <em>Narcotics Control Act</em>, and related activities may be subject to criminal penalties. Please consult a qualified legal professional before taking any action.
+              </>
+            ) : (
+              <>
+                <span className="font-bold text-[#95d5b2] mr-1">[법적 고지]</span>
+                본 사이트는 대마(Cannabis) 관련 산업·정책·과학 정보를 <strong className="text-[#95d5b2]">정보 제공 목적</strong>으로만 제공합니다.
+                본 콘텐츠는 법적·의학적·투자 조언이 아니며, 대마의 생산·소지·유통·사용은 국가 및 지역 법령에 따라 엄격히 규제됩니다.
+                대한민국에서 대마는 「마약류 관리에 관한 법률」에 의해 규제되며, 관련 행위는 형사 처벌 대상이 될 수 있습니다.
+                실제 행동 전 반드시 해당 지역의 법률 전문가와 상담하시기 바랍니다.
+              </>
+            )}
           </p>
         </div>
       </div>
@@ -26,27 +45,36 @@ export default function Footer() {
               Cannabis<span className="text-white">Insight</span>
             </span>
             <p className="text-xs leading-5 max-w-xs">
-              대한민국 대마 산업·정책·과학의 신뢰할 수 있는 미디어.
-              <br />
-              Korea&apos;s leading cannabis business &amp; policy media.
+              {isEn ? (
+                <>Korea&apos;s trusted media for cannabis industry, policy &amp; science.</>
+              ) : (
+                <>
+                  대한민국 대마 산업·정책·과학의 신뢰할 수 있는 미디어.
+                  <br />
+                  Korea&apos;s leading cannabis business &amp; policy media.
+                </>
+              )}
             </p>
             <p className="text-[10px] text-gray-600 mt-1 leading-relaxed max-w-xs">
-              본 사이트에 게재된 외부 기사 요약의 저작권은 원 언론사에 있으며,
-              CannabisInsight는 출처를 명시하고 정보 제공 목적으로 인용합니다.
+              {isEn
+                ? "Copyright of external article summaries belongs to the respective publishers. CannabisInsight cites sources and uses content for informational purposes only."
+                : "본 사이트에 게재된 외부 기사 요약의 저작권은 원 언론사에 있으며, CannabisInsight는 출처를 명시하고 정보 제공 목적으로 인용합니다."}
             </p>
           </div>
 
           {/* Category links */}
           <div>
-            <p className="text-white text-sm font-semibold mb-3">카테고리</p>
+            <p className="text-white text-sm font-semibold mb-3">
+              {isEn ? "Categories" : "카테고리"}
+            </p>
             <ul className="grid grid-cols-2 gap-x-8 gap-y-1 text-xs">
               {CATEGORIES.map((c) => (
                 <li key={c.slug}>
                   <Link
-                    href={`/${c.slug}`}
+                    href={`${base}/${c.slug}`}
                     className="hover:text-[#52b788] transition-colors"
                   >
-                    {c.label}
+                    {isEn ? c.labelEn : c.label}
                   </Link>
                 </li>
               ))}
@@ -55,20 +83,16 @@ export default function Footer() {
 
           {/* Info */}
           <div className="text-xs space-y-1">
-            <p className="text-white font-semibold mb-3">안내</p>
-            <p>이메일: contact@cannabisinsight.kr</p>
+            <p className="text-white font-semibold mb-3">
+              {isEn ? "Contact" : "안내"}
+            </p>
+            <p>Email: contact@cannabisinsight.kr</p>
             <div className="flex gap-3 mt-3">
-              <Link
-                href="/terms"
-                className="hover:text-[#52b788] transition-colors"
-              >
-                이용약관
+              <Link href="/terms" className="hover:text-[#52b788] transition-colors">
+                {isEn ? "Terms of Use" : "이용약관"}
               </Link>
-              <Link
-                href="/privacy"
-                className="hover:text-[#52b788] transition-colors"
-              >
-                개인정보처리방침
+              <Link href="/privacy" className="hover:text-[#52b788] transition-colors">
+                {isEn ? "Privacy Policy" : "개인정보처리방침"}
               </Link>
             </div>
           </div>
@@ -77,17 +101,25 @@ export default function Footer() {
         {/* 사업자 정보 */}
         <div className="border-t border-gray-800 mt-8 pt-6 text-xs text-center space-y-1">
           <p className="text-gray-500 leading-relaxed">
-            운영자: 우현균 &nbsp;|&nbsp; 상호: 카나비스인사이트 (Cannabis Insight) &nbsp;|&nbsp; 사업자등록번호: 499-03-04172
+            {isEn ? (
+              <>Operator: 우현균 &nbsp;|&nbsp; Business Name: 카나비스인사이트 (Cannabis Insight) &nbsp;|&nbsp; Business Reg. No.: 499-03-04172</>
+            ) : (
+              <>운영자: 우현균 &nbsp;|&nbsp; 상호: 카나비스인사이트 (Cannabis Insight) &nbsp;|&nbsp; 사업자등록번호: 499-03-04172</>
+            )}
           </p>
           <p className="text-gray-500">
-            이메일: contact@cannabisinsight.kr
+            Email: contact@cannabisinsight.kr
           </p>
           <p className="text-gray-600 text-[10px] mt-1">
-            ※ Cannabis Insight는 별도 사업자가 운영하며, 네오켄바이오는 홈페이지 연계 및 정보 확산을 지원합니다.
+            {isEn
+              ? "※ Cannabis Insight is operated as a separate business entity. Neoken Bio supports website linkage and information dissemination."
+              : "※ Cannabis Insight는 별도 사업자가 운영하며, 네오켄바이오는 홈페이지 연계 및 정보 확산을 지원합니다."}
           </p>
           <p className="text-gray-600 mt-2">© {new Date().getFullYear()} CannabisInsight. All rights reserved.</p>
           <p className="text-gray-600">
-            본 사이트는 정보 제공 목적으로 운영되며, 대마 관련 법령 준수는 이용자 본인의 책임입니다.
+            {isEn
+              ? "This site is operated for informational purposes only. Compliance with cannabis-related laws is the sole responsibility of the user."
+              : "본 사이트는 정보 제공 목적으로 운영되며, 대마 관련 법령 준수는 이용자 본인의 책임입니다."}
           </p>
         </div>
       </div>
