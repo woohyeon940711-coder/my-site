@@ -112,7 +112,7 @@ export default function Footer() {
           </p>
           <p className="text-gray-600 text-[10px] mt-1">
             {isEn
-              ? "※ Cannabis Insight is operated as a separate business entity. Neoken Bio supports website linkage and information dissemination."
+              ? "※ Cannabis Insight is operated as a separate business entity. NeoCannBio supports website linkage and information dissemination."
               : "※ Cannabis Insight는 별도 사업자가 운영하며, 네오켄바이오는 홈페이지 연계 및 정보 확산을 지원합니다."}
           </p>
           <p className="text-gray-600 mt-2">© {new Date().getFullYear()} CannabisInsight. All rights reserved.</p>
