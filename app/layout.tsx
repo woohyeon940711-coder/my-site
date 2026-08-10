@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import HeaderWrapper from "@/components/HeaderWrapper";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -71,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className={`${notoSansKR.variable} h-full`}>
       <body className="min-h-full flex flex-col bg-white font-[var(--font-noto-sans-kr)] antialiased">
-        <Header />
+        <HeaderWrapper />
         <main className="flex-1">{children}</main>
         <Footer />
         <Analytics />
