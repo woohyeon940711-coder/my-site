@@ -40,7 +40,6 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 1,
     title: "이스라엘 보건부, 흡연 의료대마 3년 내 단계적 폐지 권고 — 5/10 보건부장관 동결",
-    titleEn: "Bill to Partially Amend the Act on the Control of Narcotics",
     titleEn: "Israel Ministry of Health Recommends Phasing Out Smoking of Medical Cannabis Within Three Years — Health Minister Freezes Recommendation on May 10",
     summary: "이스라엘 보건부 위원회가 흡연 의료대마를 3년 내 단계적으로 폐지하도록 권고했으나, 보건부장관이 5월 10일 해당 권고를 동결 조치했다. 산업계 충격과 환자 단체 반발이 동시에 나타나고 있다.",
     summaryEn: "A committee of Israel's Ministry of Health recommended phasing out the smoking route for medical cannabis over a three-year period, but the health minister suspended the recommendation on May 10. The proposal has alarmed the industry and prompted strong backlash from patient groups.",
@@ -55,7 +54,6 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 2,
     title: "Trump '2026 국가 마약 통제 전략' 발표 — Delta-8/HHC 등 향정 헴프 Schedule I 지정 포함",
-    titleEn: "Special Act on Promotion of the Hemp Industry and Safety Management of Hemp",
     titleEn: "Trump Administration Announces 2026 National Drug Control Strategy — Includes Proposal to Classify Psychoactive Hemp Derivatives like Delta‑8 THC and HHC as Schedule I",
     summary: "트럼프 행정부가 발표한 2026 국가 마약 통제 전략에 Delta-8 THC, HHC 등 향정신성 헴프 파생물을 Schedule I로 지정하는 내용이 포함되어 헴프 산업계에 파장을 일으키고 있다.",
     summaryEn: "The Trump administration's 2026 National Drug Control Strategy includes provisions to designate psychoactive hemp derivatives — including Delta‑8 THC and HHC — as Schedule I substances, a move that is reverberating through the hemp industry.",
@@ -69,7 +67,6 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 3,
     title: "미국 하원, 2026 Farm Bill 통과 — 향정 헴프 금지 유지·Sen. Rand Paul 수정안 부결",
-    titleEn: "Bill to Partially Amend the Act on the Control of Narcotics",
     titleEn: "U.S. House Passes 2026 Farm Bill — Ban on Psychoactive Hemp Retained; Sen. Rand Paul Amendment Defeated",
     summary: "미국 하원이 2026 Farm Bill을 통과시켰다. Delta-8 등 향정신성 헴프 파생물 금지 조항이 유지됐으며, Rand Paul 상원의원의 규제 완화 수정안은 부결됐다.",
     summaryEn: "The U.S. House has passed the 2026 Farm Bill. Provisions maintaining a prohibition on psychoactive hemp derivatives, such as delta-8 THC, remain in place, and Sen. Rand Paul’s deregulatory amendment was defeated.",
@@ -83,7 +80,6 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 4,
     title: "텍사스 법원: 헴프 머천트, 여름까지 THCA 플라워 판매 계속 가능 — 4일 판결",
-    titleEn: "Bill to Partially Amend the Narcotics Control Act",
     titleEn: "Texas Court: Hemp Merchants Can Continue Selling THCA Flower Through the Summer — Ruling on the 4th",
     summary: "텍사스 법원이 헴프 판매업체들이 적어도 여름까지 THCA 플라워 판매를 계속할 수 있다고 판결했다. 주 정부의 금지 시행이 일시 중단된 상태다.",
     summaryEn: "A Texas court ruled that hemp retailers may continue selling THCA flower at least through the summer. State enforcement of the ban has been temporarily stayed.",
