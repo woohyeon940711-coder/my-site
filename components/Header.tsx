@@ -2,19 +2,21 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { CATEGORIES } from "@/lib/data";
 
 const domesticIdx = CATEGORIES.findIndex((c) => c.slug === "domestic");
 const NAV_ITEMS = [
   ...CATEGORIES.slice(0, domesticIdx + 1).map((c) => ({
-    href: `/${c.slug}`,
+    hrefKr: `/${c.slug}`,
+    hrefEn: `/en/${c.slug}`,
     label: c.label,
     labelEn: c.labelEn,
   })),
-  { href: "/legislation", label: "입법동향", labelEn: "Legislation" },
+  { hrefKr: "/legislation", hrefEn: "/legislation", label: "입법동향", labelEn: "Legislation" },
   ...CATEGORIES.slice(domesticIdx + 1).map((c) => ({
-    href: `/${c.slug}`,
+    hrefKr: `/${c.slug}`,
+    hrefEn: `/en/${c.slug}`,
     label: c.label,
     labelEn: c.labelEn,
   })),
@@ -25,13 +27,33 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
+  const pathname = usePathname();
 
-  const today = new Date().toLocaleDateString("ko-KR", {
+  const isEn = lang === "EN";
+
+  const today = new Date().toLocaleDateString(isEn ? "en-US" : "ko-KR", {
     year: "numeric",
     month: "long",
     day: "numeric",
     weekday: "short",
   });
+
+  // KR/EN 전환 시 현재 경로 기반으로 상대 경로 계산
+  const switchToKr = () => {
+    if (pathname.startsWith("/en")) {
+      router.push(pathname.replace(/^\/en/, "") || "/");
+    } else {
+      router.push("/");
+    }
+  };
+
+  const switchToEn = () => {
+    if (!pathname.startsWith("/en")) {
+      router.push("/en" + (pathname === "/" ? "" : pathname));
+    } else {
+      router.push("/en");
+    }
+  };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,13 +71,15 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
         <span>{today}</span>
         <div className="flex items-center gap-2">
           <button
-            className={`font-semibold ${lang === "KR" ? "text-[#2d6a4f]" : "text-gray-400"}`}
+            onClick={switchToKr}
+            className={`font-semibold transition-colors ${!isEn ? "text-[#2d6a4f]" : "text-gray-400 hover:text-gray-600"}`}
           >
             KR
           </button>
           <span className="text-gray-300">|</span>
           <button
-            className={`font-semibold ${lang === "EN" ? "text-[#2d6a4f]" : "text-gray-400"}`}
+            onClick={switchToEn}
+            className={`font-semibold transition-colors ${isEn ? "text-[#2d6a4f]" : "text-gray-400 hover:text-gray-600"}`}
           >
             EN
           </button>
@@ -64,7 +88,7 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
 
       {/* Logo area */}
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-center py-4">
-        <Link href="/" className="flex flex-col items-center gap-1">
+        <Link href={isEn ? "/en" : "/"} className="flex flex-col items-center gap-1">
           <span className="text-2xl md:text-3xl font-black tracking-tight text-[#2d6a4f] uppercase">
             Cannabis<span className="text-gray-900">Insight</span>
           </span>
@@ -80,12 +104,12 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
           {/* Desktop nav */}
           <ul className="hidden md:flex items-center">
             {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
+              <li key={item.hrefKr}>
                 <Link
-                  href={item.href}
+                  href={isEn ? item.hrefEn : item.hrefKr}
                   className="block px-5 py-3 text-sm font-semibold text-white hover:bg-[#1b4332] transition-colors"
                 >
-                  {item.label}
+                  {isEn ? item.labelEn : item.label}
                 </Link>
               </li>
             ))}
@@ -94,7 +118,7 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
                 className="block px-4 py-3 text-white hover:bg-[#1b4332] transition-colors"
-                aria-label="검색"
+                aria-label={isEn ? "Search" : "검색"}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -105,12 +129,12 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
 
           {/* Mobile nav toggle */}
           <div className="flex md:hidden items-center justify-between py-2">
-            <span className="text-white text-sm font-semibold">카테고리</span>
+            <span className="text-white text-sm font-semibold">{isEn ? "Categories" : "카테고리"}</span>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
                 className="text-white p-1"
-                aria-label="검색"
+                aria-label={isEn ? "Search" : "검색"}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -119,28 +143,13 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="text-white p-1"
-                aria-label="메뉴 열기"
+                aria-label={isEn ? "Open menu" : "메뉴 열기"}
               >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {menuOpen ? (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   ) : (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                   )}
                 </svg>
               </button>
@@ -151,13 +160,13 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
           {menuOpen && (
             <ul className="md:hidden pb-2">
               {NAV_ITEMS.map((item) => (
-                <li key={item.href}>
+                <li key={item.hrefKr}>
                   <Link
-                    href={item.href}
+                    href={isEn ? item.hrefEn : item.hrefKr}
                     onClick={() => setMenuOpen(false)}
                     className="block px-4 py-2 text-sm text-white hover:bg-[#1b4332] transition-colors"
                   >
-                    {item.label}
+                    {isEn ? item.labelEn : item.label}
                   </Link>
                 </li>
               ))}
@@ -172,7 +181,7 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="키워드 검색..."
+                  placeholder={isEn ? "Search keywords..." : "키워드 검색..."}
                   autoFocus
                   className="flex-1 px-3 py-2 text-sm rounded-sm border-0 focus:outline-none focus:ring-2 focus:ring-[#95d5b2]"
                 />
@@ -180,7 +189,7 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
                   type="submit"
                   className="px-4 py-2 bg-[#1b4332] text-white text-sm font-semibold rounded-sm hover:bg-black transition-colors"
                 >
-                  검색
+                  {isEn ? "Search" : "검색"}
                 </button>
               </form>
             </div>

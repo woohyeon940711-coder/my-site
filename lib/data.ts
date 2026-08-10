@@ -4,12 +4,16 @@ export type Category =
   | "policy"
   | "rnd"
   | "insight"
-  | "guide";
+  | "guide"
+  | "industry"
+  | "hemp";
 
 export interface Article {
   id: number;
   title: string;
+  titleEn?: string;
   summary: string;
+  summaryEn?: string;
   category: Category;
   categoryLabel: string;
   date: string;
@@ -36,7 +40,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 1,
     title: "이스라엘 보건부, 흡연 의료대마 3년 내 단계적 폐지 권고 — 5/10 보건부장관 동결",
+    titleEn: "Israel Ministry of Health Recommends Phasing Out Smoking of Medical Cannabis Within Three Years — Health Minister Freezes Recommendation on May 10",
     summary: "이스라엘 보건부 위원회가 흡연 의료대마를 3년 내 단계적으로 폐지하도록 권고했으나, 보건부장관이 5월 10일 해당 권고를 동결 조치했다. 산업계 충격과 환자 단체 반발이 동시에 나타나고 있다.",
+    summaryEn: "A committee of Israel's Ministry of Health recommended phasing out the smoking route for medical cannabis over a three-year period, but the health minister suspended the recommendation on May 10. The proposal has alarmed the industry and prompted strong backlash from patient groups.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-10",
@@ -48,7 +54,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 2,
     title: "Trump '2026 국가 마약 통제 전략' 발표 — Delta-8/HHC 등 향정 헴프 Schedule I 지정 포함",
+    titleEn: "Trump Administration Announces 2026 National Drug Control Strategy — Includes Proposal to Classify Psychoactive Hemp Derivatives like Delta‑8 THC and HHC as Schedule I",
     summary: "트럼프 행정부가 발표한 2026 국가 마약 통제 전략에 Delta-8 THC, HHC 등 향정신성 헴프 파생물을 Schedule I로 지정하는 내용이 포함되어 헴프 산업계에 파장을 일으키고 있다.",
+    summaryEn: "The Trump administration's 2026 National Drug Control Strategy includes provisions to designate psychoactive hemp derivatives — including Delta‑8 THC and HHC — as Schedule I substances, a move that is reverberating through the hemp industry.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-04",
@@ -59,7 +67,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 3,
     title: "미국 하원, 2026 Farm Bill 통과 — 향정 헴프 금지 유지·Sen. Rand Paul 수정안 부결",
+    titleEn: "U.S. House Passes 2026 Farm Bill — Ban on Psychoactive Hemp Retained; Sen. Rand Paul Amendment Defeated",
     summary: "미국 하원이 2026 Farm Bill을 통과시켰다. Delta-8 등 향정신성 헴프 파생물 금지 조항이 유지됐으며, Rand Paul 상원의원의 규제 완화 수정안은 부결됐다.",
+    summaryEn: "The U.S. House has passed the 2026 Farm Bill. Provisions maintaining a prohibition on psychoactive hemp derivatives, such as delta-8 THC, remain in place, and Sen. Rand Paul’s deregulatory amendment was defeated.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-05",
@@ -70,7 +80,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 4,
     title: "텍사스 법원: 헴프 머천트, 여름까지 THCA 플라워 판매 계속 가능 — 4일 판결",
+    titleEn: "Texas Court: Hemp Merchants Can Continue Selling THCA Flower Through the Summer — Ruling on the 4th",
     summary: "텍사스 법원이 헴프 판매업체들이 적어도 여름까지 THCA 플라워 판매를 계속할 수 있다고 판결했다. 주 정부의 금지 시행이 일시 중단된 상태다.",
+    summaryEn: "A Texas court ruled that hemp retailers may continue selling THCA flower at least through the summer. State enforcement of the ban has been temporarily stayed.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-04",
@@ -81,7 +93,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 5,
     title: "NLRB: 대마 사전 롤·데이터 입력은 농업 노동 아닌 가공 노동 — 5/5 판결",
+    titleEn: "NLRB: Cannabis pre-roll production and data entry are processing, not agricultural work — 5–0 ruling",
     summary: "미국 노동관계위원회(NLRB)가 대마 사전 롤 제조 및 데이터 입력 작업을 농업 노동이 아닌 가공 노동으로 분류한다고 판결했다. 이에 따라 해당 노동자들에게 노동법 보호가 적용된다.",
+    summaryEn: "The U.S. National Labor Relations Board (NLRB) held that the manufacture of cannabis pre-rolls and associated data-entry tasks constitute processing/manufacturing work rather than agricultural labor. Consequently, those workers are covered by labor law protections.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-05",
@@ -92,7 +106,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 6,
     title: "버지니아 SB 164 부결: 헴프 THC 음료 별도 판매경로 무산",
+    titleEn: "Virginia SB 164 Defeated: Plan for Separate Retail Channel for Hemp THC Beverages Fails",
     summary: "버지니아주 의회에서 헴프 THC 음료에 대한 별도 판매 경로를 신설하는 SB 164 법안이 부결됐다. 헴프 음료 업계의 규제 명확화 시도가 좌절됐다.",
+    summaryEn: "SB 164, a bill in the Virginia legislature that would have established a distinct retail pathway for hemp-derived THC beverages, was defeated. The hemp beverage industry's effort to secure clearer regulatory guidance on sales and distribution was thwarted.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-04",
@@ -103,7 +119,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 7,
     title: "FBI, 버지니아 Louise Lucas 상원의원 사무실 + 헴프 THC 매장 동시 압수수색",
+    titleEn: "FBI Executes Simultaneous Search Warrants at Virginia State Senator Louise Lucas’s Office and a Hemp THC Retail Store",
     summary: "FBI가 버지니아주 Louise Lucas 상원의원 사무실과 헴프 THC 판매 매장을 동시에 압수수색했다. 헴프 THC 음료 규제 논쟁이 법적 분쟁으로 확대되는 양상이다.",
+    summaryEn: "The FBI executed simultaneous search warrants at the office of Virginia State Senator Louise Lucas and at a retail store selling hemp-derived THC products. The regulatory dispute over hemp THC beverages appears to be escalating into a legal confrontation.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-06",
@@ -114,7 +132,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 8,
     title: "독일 MedCanG 개정안, Q2 시행 임박 — 외국 처방 인정 중단·가격 통제 도입",
+    titleEn: "German MedCanG Amendment Set to Take Effect in Q2 — Foreign Prescription Recognition Suspended; Price Controls Introduced",
     summary: "독일 의료대마법(MedCanG) 개정안이 2분기 시행을 앞두고 있다. 외국 처방전 인정 중단과 가격 통제 조항 도입으로 독일 의료대마 시장 구조가 크게 변화할 전망이다.",
+    summaryEn: "The amendment to Germany’s Medical Cannabis Act (MedCanG) is scheduled to take effect in the second quarter. By suspending recognition of foreign prescriptions and introducing price-control measures, the reform is expected to substantially reshape the structure of Germany’s medical cannabis market.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-07",
@@ -125,7 +145,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 9,
     title: "캐나다 PEI주, 대마 합법 연령 19→21세 상향 검토 — 청소년 보호 명분",
+    titleEn: "Prince Edward Island Weighs Raising Legal Cannabis Age from 19 to 21 — Citing Youth Protection",
     summary: "캐나다 프린스에드워드아일랜드(PEI)주가 대마 합법 구매 연령을 현행 19세에서 21세로 상향하는 방안을 검토 중이다. 청소년 보호를 명분으로 내세우고 있으나 업계의 반발이 예상된다.",
+    summaryEn: "Prince Edward Island (PEI) is considering raising the legal minimum age for purchasing cannabis from 19 to 21. The proposal is framed as a measure to protect youth, but it is expected to face resistance from the cannabis industry.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-07",
@@ -136,7 +158,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 10,
     title: "호주 의료 대마 매출 H2 2025년 -28.5% 급락 — Penington Institute 보고서",
+    titleEn: "Australian medicinal cannabis sales plunge 28.5% in H2 2025 — Penington Institute report",
     summary: "Penington Institute 보고서에 따르면 호주 의료 대마 매출이 2025년 하반기에 전년 동기 대비 28.5% 급락했다. 규제 강화와 공급 과잉이 복합적으로 작용한 것으로 분석된다.",
+    summaryEn: "According to a Penington Institute report, Australian medicinal cannabis sales fell 28.5% year-on-year in the second half of 2025. The drop is attributed to a combination of tighter regulation and an oversupplied market.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-04",
@@ -148,7 +172,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 11,
     title: "Canopy Growth, Spectrum Therapeutics 의료 대마 포트폴리오 확장 발표",
+    titleEn: "Canopy Growth’s Spectrum Therapeutics Announces Expansion of Medical Cannabis Portfolio",
     summary: "Canopy Growth의 자회사 Spectrum Therapeutics가 의료 대마 제품 포트폴리오를 확장한다고 발표했다. 신규 처방 의약품 라인업 추가와 함께 유럽 시장 진출을 가속화할 계획이다.",
+    summaryEn: "Canopy Growth subsidiary Spectrum Therapeutics announced it will expand its medical cannabis product portfolio. The company plans to add a new lineup of prescription medicines and accelerate its expansion into the European market.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-09",
@@ -159,7 +185,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 12,
     title: "High Tide 독일 자회사 Remexian Pharma, 분기 7.6톤 의료 대마 판매 달성",
+    titleEn: "High Tide’s German Subsidiary Remexian Pharma Achieves 7.6 Tonnes of Medical Cannabis Sales in a Quarter",
     summary: "High Tide의 독일 자회사 Remexian Pharma가 분기 7.6톤의 의료 대마 판매를 달성했다고 밝혔다. 독일 의료대마 합법화 이후 급성장하는 시장에서 캐나다 LP들의 수출이 본격화되고 있다.",
+    summaryEn: "High Tide’s German subsidiary Remexian Pharma reported quarterly sales of 7.6 tonnes of medical cannabis. In the rapidly expanding market following Germany’s medical cannabis legalization, exports from Canadian licensed producers (LPs) are now ramping up.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-09",
@@ -170,7 +198,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 13,
     title: "Cannara Biotech, Medican Organic 인수 마무리 — Valleyfield 생산 시설 통합",
+    titleEn: "Cannara Biotech Completes Acquisition of Medican Organic — Integrates Valleyfield Production Facility",
     summary: "Cannara Biotech가 Medican Organic 인수를 마무리하고 Valleyfield 생산 시설을 통합했다. 이번 인수로 Cannara의 연간 생산 능력이 대폭 확대될 전망이다.",
+    summaryEn: "Cannara Biotech has completed its acquisition of Medican Organic and integrated the Valleyfield production facility. The deal is expected to significantly expand Cannara’s annual production capacity.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-09",
@@ -181,7 +211,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 14,
     title: "Organigram, Sanity Group 인수 마무리 — 250M 규모 EU 시장 통합 가속",
+    titleEn: "Organigram Completes Acquisition of Sanity Group — $250M Deal Accelerates EU Market Consolidation",
     summary: "Organigram이 독일 Sanity Group 인수를 마무리했다. 약 2억 5천만 달러 규모의 이번 거래로 Organigram은 유럽 의료대마 시장에서의 입지를 크게 강화하게 됐다.",
+    summaryEn: "Organigram has completed its acquisition of Germany’s Sanity Group. The roughly $250 million transaction significantly strengthens Organigram’s position in the European medical cannabis market.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-05",
@@ -192,7 +224,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 15,
     title: "Jushi Holdings, 160M 비희석화 부채 리파이낸싱 완료 — 280E 폐지 효과 반영",
+    titleEn: "Jushi Holdings Completes $160M Non-Dilutive Debt Refinancing — Reflects Impact of 280E Elimination",
     summary: "미국 MSO Jushi Holdings가 1억 6천만 달러 규모의 비희석화 부채 리파이낸싱을 완료했다. DEA Schedule III 재분류로 인한 280E 세금 폐지 효과가 재무 구조 개선에 기여한 것으로 분석된다.",
+    summaryEn: "U.S. MSO Jushi Holdings has completed a $160 million non-dilutive debt refinancing. Analysts say the improvement in its financial structure was aided by the anticipated elimination of the 280E tax following the DEA’s rescheduling of cannabis to Schedule III.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-06",
@@ -203,7 +237,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 16,
     title: "이스라엘 흡연 의료대마 폐지 권고 — 산업 충격 가시화",
+    titleEn: "Israel Recommends Phasing Out Smoked Medical Cannabis — Industry Shock Materializes",
     summary: "이스라엘 보건부의 흡연 의료대마 단계적 폐지 권고로 산업계에 충격이 가해지고 있다. 이스라엘은 전 세계 의료대마 수출 주요국 중 하나로, 이번 정책 변화가 글로벌 시장에도 영향을 미칠 전망이다.",
+    summaryEn: "The Israeli Ministry of Health's recommendation to phase out the smoking form of medical cannabis has sent shockwaves through the industry. As one of the world’s major exporters of medical cannabis, Israel’s policy shift is expected to have repercussions across the global market.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-04",
@@ -214,7 +250,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 17,
     title: "미국 Target, 헴프 THC 음료 판매 3개 주 추가 확장 — 11월 연방 금지 임박에도",
+    titleEn: "U.S. retailer Target expands sales of hemp-derived THC beverages to three additional states — despite federal ban looming in November",
     summary: "미국 대형 유통업체 Target이 헴프 THC 음료 판매를 3개 주에 추가 확장했다. 11월 연방 차원의 금지 조치가 임박한 상황에서도 판매를 확대하는 것이어서 주목된다.",
+    summaryEn: "Major U.S. retailer Target has expanded sales of hemp-derived THC beverages into three additional states. The move is notable because Target is widening distribution even as a federal prohibition on such products is expected to take effect in November.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-08",
@@ -225,7 +263,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 18,
     title: "캐나다 일간 대마 사용자 인구 5.7% — Statistics Canada 2023/24 데이터",
+    titleEn: "5.7% of Canadians Are Daily Cannabis Users — Statistics Canada 2023/24 Data",
     summary: "Statistics Canada의 2023/24년 데이터에 따르면 캐나다 성인 인구의 5.7%가 매일 대마를 사용하는 것으로 나타났다. 합법화 이후 일간 사용자 비율이 꾸준히 증가하는 추세다.",
+    summaryEn: "Statistics Canada's 2023/24 data show that 5.7% of the adult population in Canada uses cannabis daily. The proportion of daily users has been steadily rising since legalization.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-09",
@@ -236,7 +276,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 19,
     title: "미시간주, 1월 1일 시행 24% 도매 소비세 영향으로 1분기 매출 압박 가시화",
+    titleEn: "Michigan Sees First-Quarter Sales Pressure from 24% Wholesale Excise Tax Effective Jan. 1, 2026",
     summary: "미시간주에서 2026년 1월 1일부터 시행된 24% 도매 소비세의 영향으로 1분기 대마 매출 압박이 가시화되고 있다. 소매업체들의 마진 압축과 소비자 가격 상승이 동반되고 있다.",
+    summaryEn: "The 24% wholesale excise tax that took effect in Michigan on January 1, 2026 is beginning to put visible pressure on cannabis sales in the first quarter. Retailers are experiencing margin compression and consumer prices are rising.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-07",
@@ -247,7 +289,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 20,
     title: "캐나다→호주·이스라엘 의료 대마 수출 패러다임 변화 — 글로벌 의료 채널 강화",
+    titleEn: "Paradigm Shift in Medical Cannabis Exports from Canada to Australia and Israel — Strengthening Global Medical Channels",
     summary: "캐나다 LP(라이선스 생산자)들이 호주와 이스라엘 등 주요 의료대마 수입국으로의 수출 전략을 강화하고 있다. 각국의 규제 변화에 맞춘 맞춤형 제품 공급이 핵심 경쟁력으로 부상하고 있다.",
+    summaryEn: "Canadian licensed producers (LPs) are reinforcing export strategies to major medical cannabis importers such as Australia and Israel. Supplying tailored products that align with each country’s evolving regulatory requirements is emerging as a core competitive advantage.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-09",
@@ -259,7 +303,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 21,
     title: "Monash University 연구: 고용량 THC 의료 대마 부작용 50%+ 정신증상 포함",
+    titleEn: "Monash University Study: Over 50% of High‑Dose THC Medical Cannabis Users Experienced Adverse Effects, Including Psychotic Symptoms",
     summary: "호주 Monash University 연구팀이 고용량 THC 의료 대마 사용자의 50% 이상에서 정신증상을 포함한 부작용이 나타났다는 연구 결과를 발표했다. 적정 용량 관리의 중요성이 다시 부각되고 있다.",
+    summaryEn: "Researchers at Monash University in Australia report that more than 50% of users of high‑dose THC medical cannabis experienced adverse effects, including psychotic symptoms. The findings highlight the renewed importance of appropriate dosing and careful dose management for medical cannabis.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-04",
@@ -271,7 +317,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 23,
     title: "Bloomwell 독일 환자 2,500명 설문: 47.5% '약국 대마가 불법 시장보다 저렴' — 합법 시장 정착",
+    titleEn: "Bloomwell survey of 2,500 German patients: 47.5% say pharmacy cannabis is cheaper than illicit market — legal market taking hold",
     summary: "Bloomwell이 독일 의료대마 환자 2,500명 이상을 대상으로 실시한 설문에서 47.5%가 약국 대마가 불법 시장보다 저렴하다고 응답했다. 합법화 전 57%가 불법 시장을 이용했으나 현재는 82%가 약국이 더 안전하다고 인식한다.",
+    summaryEn: "In a survey of more than 2,500 German medical cannabis patients conducted by Bloomwell, 47.5% reported that cannabis purchased at pharmacies is cheaper than from the illicit market. Before legalization, 57% used the illicit market; now 82% perceive pharmacies as the safer option.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-07",
@@ -282,7 +330,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 24,
     title: "연구: 사이키델릭 1회 + 심리치료, 알코올 사용장애에 '안전하고 효과적' — Schedule III 후 시너지",
+    titleEn: "Study: Single Psilocybin Dose Plus Psychotherapy 'Safe and Effective' for Alcohol Use Disorder — Momentum After Schedule III",
     summary: "실로사이빈 1회 투여와 심리치료를 병행하는 치료법이 알코올 사용장애에 안전하고 효과적이라는 신규 연구 결과가 발표됐다. 32명 의원 연합의 FDA 검토 가속 촉구와 맞물려 사이키델릭·카나비스 정신건강 약물 모멘텀이 확산되고 있다.",
+    summaryEn: "A new study reports that a treatment combining a single administration of psilocybin with psychotherapy is safe and effective for alcohol use disorder. The finding comes as a 32-member group of lawmakers urges the FDA to accelerate reviews, fueling growing momentum for psychedelic and cannabis-based mental health medicines.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-07",
@@ -293,7 +343,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 25,
     title: "캐나다 정부 보고서: 대마 매출 증가 + 알코올 매출 감소 동시 진행 — Substitution Effect 확인",
+    titleEn: "Canadian Government Report: Cannabis Sales Increase While Alcohol Sales Decline — Substitution Effect Confirmed",
     summary: "캐나다 정부 보고서에서 대마 합법화 이후 대마 매출 증가와 알코올 매출 감소가 동시에 진행되는 대체 효과(Substitution Effect)가 확인됐다. 공중보건 관점에서 긍정적 신호로 해석된다.",
+    summaryEn: "A Canadian government report finds a substitution effect following cannabis legalization: cannabis sales have risen concurrently with declines in alcohol sales. This pattern is interpreted as a positive signal from a public health standpoint.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-08",
@@ -304,7 +356,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 26,
     title: "히브리대 후속 연구: CBD·CBG의 인포스포크레아틴/리소좀 메커니즘, 지방간 외 신경보호 가능성",
+    titleEn: "Hebrew University follow‑up study: CBD and CBG phosphocreatine/lysosomal mechanisms suggest potential neuroprotection beyond fatty liver",
     summary: "히브리대학교 연구팀이 CBD와 CBG가 인포스포크레아틴 및 리소좀 메커니즘을 통해 지방간 질환 개선 외에도 신경보호 효과를 나타낼 수 있다는 후속 연구 결과를 발표했다.",
+    summaryEn: "A research team at Hebrew University released follow‑up findings showing that CBD and CBG, via phosphocreatine and lysosomal mechanisms, may exert neuroprotective effects in addition to improving fatty liver disease.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-06",
@@ -316,7 +370,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 28,
     title: "체코 화학기술대학 후속 연구: CBDV + CBG/CBN 조합, 만성 장 염증에 시너지 효과",
+    titleEn: "Follow-up study from the Czech University of Chemistry and Technology: CBDV combined with CBG/CBN shows synergistic effects on chronic intestinal inflammation",
     summary: "체코 화학기술대학 연구팀이 CBDV와 CBG/CBN 조합이 만성 장 염증 치료에 시너지 효과를 나타낸다는 후속 연구 결과를 발표했다. 마이너 카나비노이드의 복합 활용 가능성이 주목받고 있다.",
+    summaryEn: "Researchers at the Czech University of Chemistry and Technology reported follow-up findings that combinations of CBDV with CBG/CBN produce synergistic effects in treating chronic intestinal inflammation. The potential for combined use of minor cannabinoids is drawing attention.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-06",
@@ -327,7 +383,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 29,
     title: "RAND·UCSF 연구진: Schedule III 후속 효과 — DEA Schedule I 유지 시 연구 제약 지속 경고",
+    titleEn: "RAND and UCSF Researchers: Post–Schedule III Implications — Warn Research Constraints Would Persist If DEA Keeps Cannabis on Schedule I",
     summary: "RAND와 UCSF 연구진이 DEA Schedule III 재분류 이후에도 일부 연구 제약이 지속될 수 있다고 경고했다. 완전한 연구 자유화를 위해서는 추가적인 규제 개혁이 필요하다는 입장이다.",
+    summaryEn: "RAND and UCSF researchers warn that even after a DEA reclassification to Schedule III, some research restrictions could remain. They argue that additional regulatory reforms will be required to achieve full research liberalization and remove lingering barriers to cannabis studies.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-05",
@@ -338,7 +396,9 @@ const ARTICLES_20260511: Article[] = [
   {
     id: 30,
     title: "PolitiFact 분석: 카나비스 사용장애(CUD) 약 30% 비율 — 합법화 시장의 공중보건 과제",
+    titleEn: "PolitiFact Analysis: Approximately 30% Prevalence of Cannabis Use Disorder (CUD) — A Public Health Challenge in Legalized Markets",
     summary: "PolitiFact 분석에 따르면 대마 사용자의 약 30%에서 카나비스 사용장애(CUD)가 나타나는 것으로 집계됐다. 합법화 시장 확대와 함께 공중보건 관리 체계 강화가 과제로 부상하고 있다.",
+    summaryEn: "PolitiFact's analysis indicates that roughly 30% of cannabis users are affected by Cannabis Use Disorder (CUD). As legalized markets expand, strengthening public health management and oversight has emerged as a key priority.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-04",
@@ -355,7 +415,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 31,
     title: "DEA Schedule III 재분류 연방관보 게재 — 4월 28일부 공식 발효",
+    titleEn: "DEA Rescheduling to Schedule III Published in the Federal Register — Officially Effective April 28",
     summary: "4월 27일 DOJ가 3건의 문서를 연방관보 공개검열페이지에 등록하고, 4월 28일 공식 게재로 Schedule III 재분류가 공식 발효됐다. 280E 즉시 폐지 및 의료 대마 사업자에게 60일 우선심사 신청 기회가 부여됐다.",
+    summaryEn: "On April 27 the Department of Justice posted three documents to the Federal Register public inspection page, and with formal publication on April 28 the rescheduling to Schedule III officially took effect. IRC Section 280E was repealed immediately, and medical cannabis operators were granted a 60-day opportunity to apply for priority review.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-04-28",
@@ -368,7 +430,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 34,
     title: "하원 세출소위, DOJ의 대마 재분류 권한 차단하는 예산안 조항 통과",
+    titleEn: "House Appropriations Subcommittee Approves Appropriations Provision Blocking DOJ’s Cannabis Rescheduling Authority",
     summary: "하원 세출소위원회가 DOJ의 대마 재분류 권한 행사를 차단하는 예산법안 조항을 통과시켰다. 의회 연구진은 재분류 명령이 주(州) 라이선스 사업자를 즉시 연방법 준수 상태로 만들지 않는다고 지적했다.",
+    summaryEn: "A House Appropriations subcommittee passed an appropriations-bill provision that would block the Department of Justice from exercising authority to reschedule cannabis. Congressional researchers noted that a rescheduling order would not immediately make state-licensed operators compliant with federal law.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-04-30",
@@ -379,7 +443,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 35,
     title: "아이다호 적극적 대마 합법화 반대 운동 — 청소년 보호 명분 후 자체 폐기",
+    titleEn: "Idaho's aggressive anti-cannabis legalization campaign — abandoned after citing youth protection",
     summary: "아이다호주에서 대마 합법화에 반대하는 적극적 운동이 전개됐으나 청소년 보호를 명분으로 내세운 뒤 자체 폐기됐다. 미국 내 대마 정책 논쟁의 복잡한 양상을 보여준다.",
+    summaryEn: "An active campaign in Idaho opposing cannabis legalization was launched but later discontinued by its organizers after invoking youth protection as its justification. The episode illustrates the complex dynamics of cannabis policy debates in the United States.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-04-30",
@@ -390,7 +456,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 36,
     title: "Florida·NJ·VA, 두 번째 성인용 대마 폐지 시도 무산 — 매사추세츠만 유일 남아",
+    titleEn: "Florida, New Jersey and Virginia: Second Attempts to Repeal Adult-Use Cannabis Fail — Only Massachusetts Remains",
     summary: "플로리다, 뉴저지, 버지니아에서 성인용 대마 합법화를 폐지하려는 두 번째 시도가 모두 무산됐다. 현재 미국에서 성인용 대마 폐지를 추진 중인 주는 매사추세츠만 남게 됐다.",
+    summaryEn: "Second efforts to repeal adult-use cannabis legalization in Florida, New Jersey and Virginia were unsuccessful. That leaves Massachusetts as the only state currently pursuing a repeal of adult-use cannabis.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-04-28",
@@ -401,7 +469,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 37,
     title: "UK 의료대마 이해관계자 연합, 해외여행 시 처방대마 휴대 가이드 발표",
+    titleEn: "UK medical cannabis stakeholder coalition publishes guide on carrying prescribed cannabis when travelling abroad",
     summary: "영국 의료대마 이해관계자 연합이 해외여행 시 처방 의료대마를 합법적으로 휴대하는 방법에 대한 공식 가이드를 발표했다. 환자들의 해외여행 시 법적 불확실성을 해소하기 위한 조치다.",
+    summaryEn: "The UK medical cannabis stakeholder coalition has published an official guide on how to legally carry prescribed medical cannabis while travelling abroad. The guidance is intended to remove legal uncertainty for patients when they travel overseas.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-04-29",
@@ -412,7 +482,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 38,
     title: "캘리포니아, Prop 64 합법화 10주년 — 누적 세수 약 70억 달러 달성",
+    titleEn: "California Marks 10th Anniversary of Prop 64 Legalization — Cumulative Tax Revenue Reaches About $7 Billion",
     summary: "캘리포니아주가 Prop 64 대마 합법화 10주년을 맞았다. 합법화 이후 누적 세수가 약 70억 달러에 달하는 것으로 집계됐으며, 불법 시장 축소와 사회적 형평성 프로그램 재원 마련에 기여했다.",
+    summaryEn: "California is marking the 10th anniversary of Prop 64 adult‑use cannabis legalization. Since enactment, cumulative tax revenue has totaled roughly $7 billion, contributing to reductions in the illicit market and funding social equity programs.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-04-29",
@@ -423,7 +495,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 39,
     title: "아리조나 SB 1725: 자기 집 마당에서 대마 흡연 시 최대 4개월 징역 — 5/3 전체회의 통과",
+    titleEn: "Arizona SB 1725: Up to Four Months' Imprisonment for Smoking Hemp on One's Own Yard — Passed Full Chamber May 3",
     summary: "아리조나주 SB 1725 법안이 5월 3일 전체회의를 통과했다. 이 법안은 자신의 집 마당에서 대마를 흡연할 경우 최대 4개월 징역에 처할 수 있도록 규정하고 있어 논란이 되고 있다.",
+    summaryEn: "Arizona's SB 1725 was approved by the full chamber on May 3. The bill stipulates that individuals who smoke hemp on their own residential property could face up to four months' imprisonment, a provision that has sparked controversy.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-04-30",
@@ -434,7 +508,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 40,
     title: "프랑스·스페인 신규 의료 대마 시장 — 플라워 없는 추출물·캡슐 중심 출범",
+    titleEn: "France and Spain Launch New Medical Cannabis Markets — Debut Focused on Extracts and Capsules, No Flower Products",
     summary: "프랑스와 스페인이 신규 의료 대마 시장을 출범시켰다. 두 나라 모두 플라워 제품 없이 추출물과 캡슐 형태의 의약품 중심으로 시장을 구성했다는 점이 특징이다.",
+    summaryEn: "France and Spain have launched new medical cannabis markets. Notably, both countries have structured their markets around extract- and capsule-based medicines, excluding flower products.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-01",
@@ -447,7 +523,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 42,
     title: "Tilray·Aurora·Canopy Growth: 재분류 호재에도 52주 고점 대비 67%, 46%, 48% 하락 — 구조적 약점 노출",
+    titleEn: "Tilray, Aurora, Canopy Growth: Despite Schedule III reclassification boost, stocks down 67%, 46%, 48% from 52‑week highs — structural weaknesses exposed",
     summary: "Schedule III 호재로 일시 급등했으나 Tilray($188M Q3 매출), Aurora, Canopy Growth 모두 흑자 미달성 상태다. 캘리포니아 매출 -11%, 가격 압축, 만성 적자 등 구조적 약점이 부각되고 있다.",
+    summaryEn: "Although shares popped briefly on the Schedule III reclassification news, Tilray (Q3 revenue $188M), Aurora and Canopy Growth have yet to achieve profitability. Structural weaknesses are increasingly evident: California sales down 11%, ongoing price compression and chronic losses.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-04-28",
@@ -459,7 +537,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 44,
     title: "Cornbread Hemp, Medicare CBD 파일럿 프로그램 독점 공급권 확보 — 6.8만 헬스케어 거점",
+    titleEn: "Cornbread Hemp Secures Exclusive Supply Rights for Medicare CBD Pilot — 68,000 Healthcare Sites",
     summary: "Cornbread Hemp가 GPO Alliant Purchasing(6.8만 헬스케어 거점)과 USDA 유기농 CBD 독점 공급 계약을 체결했다. 4월 출범 Medicare CBD 파일럿 프로그램의 첫 공급사로 선정됐으나 11월 헴프 재정의로 위협받고 있다.",
+    summaryEn: "Cornbread Hemp has signed an exclusive USDA-organic CBD supply agreement with GPO Alliant Purchasing covering 68,000 healthcare sites. The company was selected as the inaugural supplier for the Medicare CBD pilot program that launched in April, but its position is threatened by a November redefinition of hemp.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-04-30",
@@ -471,7 +551,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 46,
     title: "Cantourage Group, 베를린 발 의료 대마 'Fast Track' 유럽 공급망 구축 발표",
+    titleEn: "Cantourage Group Announces Berlin-Based 'Fast Track' Medical Cannabis Supply Chain for Europe",
     summary: "독일 Cantourage Group이 베를린을 거점으로 한 의료 대마 'Fast Track' 유럽 공급망 구축 계획을 발표했다. 독일 합법화 이후 유럽 의료대마 허브로서의 위상을 강화하려는 전략이다.",
+    summaryEn: "German company Cantourage Group has unveiled plans to establish a Berlin-based 'Fast Track' medical cannabis supply chain across Europe. The initiative is part of a strategy to bolster Germany’s standing as a European medical-cannabis hub following national legalization.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-04-30",
@@ -482,7 +564,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 47,
     title: "UK·독일 의료 대마 시장 2025년 두 배 성장 — Prohibition Partners 보고서",
+    titleEn: "UK and Germany medical cannabis markets to double in 2025 — Prohibition Partners report",
     summary: "Prohibition Partners 보고서에 따르면 영국과 독일의 의료 대마 시장이 2025년에 전년 대비 두 배 성장한 것으로 나타났다. 두 나라 모두 규제 완화와 처방 접근성 확대가 성장을 견인했다.",
+    summaryEn: "A Prohibition Partners report finds that the medical cannabis markets in the UK and Germany are projected to double year-on-year in 2025. In both countries, the growth has been driven by regulatory relaxation and expanded access to prescriptions.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-04-27",
@@ -493,7 +577,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 48,
     title: "Charlotte's Web, BAT와 거래: 채권 전환 + 10M 지분 투자로 재무 강화",
+    titleEn: "Charlotte's Web, BAT Deal: Bond Conversion and $10M Equity Investment Bolster Finances",
     summary: "Charlotte's Web이 영국 담배 대기업 BAT(British American Tobacco)와 채권 전환 및 1천만 달러 지분 투자 거래를 체결했다. 빅 담배 기업의 CBD 시장 진출이 본격화되는 신호로 해석된다.",
+    summaryEn: "Charlotte's Web has entered into an agreement with British American Tobacco (BAT) involving bond conversion and a $10 million equity investment. The transaction is being seen as a signal that major tobacco companies are accelerating their move into the CBD market.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-04-29",
@@ -504,7 +590,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 49,
     title: "이스라엘 2025년 의료 대마 매출 3.72억 달러 — 캐나다발 수입 30.1톤 사상 최대",
+    titleEn: "Israel's 2025 Medical Cannabis Sales Reach $372 Million — Canadian Imports Hit Record 30.1 Tonnes",
     summary: "이스라엘의 2025년 의료 대마 매출이 3억 7,200만 달러를 기록했다. 캐나다에서 수입한 의료대마가 30.1톤으로 사상 최대치를 달성했으며, 이스라엘이 주요 의료대마 수입국으로 자리매김했다.",
+    summaryEn: "Israel's medical cannabis sales in 2025 totaled $372 million. Imports of medical cannabis from Canada reached 30.1 tonnes, the highest on record, solidifying Israel's position as a major importer of medical cannabis.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-04-29",
@@ -515,7 +603,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 50,
     title: "브라질 2026년 의료 대마 시장 +45% 성장 — 신규 규정으로 확장 본격화",
+    titleEn: "Brazil's Medical Cannabis Market to Grow 45% in 2026 — Expansion Accelerates Under New Regulations",
     summary: "브라질 의료 대마 시장이 2026년에 전년 대비 45% 성장할 것으로 전망된다. 신규 규정 도입으로 처방 접근성이 확대되고 국내 생산이 허용되면서 시장 확장이 본격화되고 있다.",
+    summaryEn: "Brazil's medical cannabis market is forecast to grow 45% year‑on‑year in 2026. The introduction of new regulations expanding prescription access and permitting domestic cultivation is driving a pronounced acceleration in market expansion.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-01",
@@ -527,7 +617,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 51,
     title: "CED Clinic, 4월 29일 신규 임상 연구 다이제스트 발표 — 동료심사 연구 10편 큐레이션",
+    titleEn: "CED Clinic Releases April 29 Clinical Research Digest — Curating 10 Peer‑Reviewed Studies",
     summary: "CED Clinic이 임상 적용 가능한 4월 최신 동료심사 연구 10편을 큐레이션한 연구 다이제스트를 발표했다. 통증·수면·정신건강 등 다양한 영역을 다루며 4월 22일 게재본의 후속이다.",
+    summaryEn: "CED Clinic has published a research digest curating 10 clinically applicable, peer‑reviewed studies from April. The collection covers diverse areas including pain, sleep, and mental health, and serves as a follow‑up to the April 22 publication.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-04-29",
@@ -539,7 +631,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 53,
     title: "연구: 청소년 대마 합법화 우려와 달리 실제 청소년 사용량 감소 또는 안정",
+    titleEn: "Study: Contrary to Concerns, Youth Cannabis Use Decreased or Remained Stable After Legalization",
     summary: "대마 합법화 이후에도 청소년 소비량은 우려와 달리 폭증하지 않았음을 보여주는 신규 연구가 재확산되고 있다. SAMHSA·CDC 데이터 통합 분석 결과로, 합법화 정책 논의에서 주요 논거로 활용되고 있다.",
+    summaryEn: "A new study showing that adolescent cannabis use did not surge after legalization, contrary to fears, is being widely circulated. Based on an integrated analysis of SAMHSA and CDC data, the findings are being cited as a key argument in policy debates over legalization.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-04-28",
@@ -550,7 +644,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 54,
     title: "연구: 의료 대마 사용자, 오피오이드·수면제·항우울제 등 다른 약물 사용 감소",
+    titleEn: "Study: Medical Cannabis Users Reduce Use of Opioids, Sleep Medications and Antidepressants",
     summary: "의료 대마 사용이 오피오이드·수면제·항우울제 사용량 감소와 상관관계가 있음을 확인하는 신규 연구가 발표됐다. 만성통증 환자에서 가장 두드러진 약물 대체 효과가 나타났으며, Schedule III 이후 임상 연구 가속화가 기대된다.",
+    summaryEn: "A new study finds that medical cannabis use is associated with reductions in opioid, sleep medication and antidepressant use. The substitution effect was most pronounced among chronic pain patients, and researchers expect clinical research to accelerate following rescheduling to Schedule III.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-04-27",
@@ -563,7 +659,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 57,
     title: "UCLA JAMA 연구 재조명: 의료 대마, 불안·우울·PTSD에 효과 미흡 — 2,500편 메타분석",
+    titleEn: "UCLA–JAMA Study Revisited: Medical Cannabis Falls Short for Anxiety, Depression and PTSD — 2,500-Study Meta-Analysis",
     summary: "UCLA 연구팀이 JAMA에 발표한 2,500편 메타분석 연구가 재조명되고 있다. 의료 대마가 불안·우울·PTSD 치료에 기대만큼 효과적이지 않다는 결론으로, 과도한 기대에 대한 경고로 해석된다.",
+    summaryEn: "A UCLA research team's meta-analysis of 2,500 studies published in JAMA is being reexamined. The analysis concludes that medical cannabis is less effective than expected for treating anxiety, depression, and PTSD, and is being interpreted as a caution against inflated expectations.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-04-30",
@@ -574,7 +672,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 58,
     title: "Cochrane Review 2026 후속 분석: CBD 단독, 신경병증 통증 효과 미달 — 복합 처방 필요",
+    titleEn: "Cochrane Review 2026 Follow‑up Analysis: CBD Monotherapy Insufficient for Neuropathic Pain — Combination with THC Appears More Effective",
     summary: "Cochrane Review 2026 후속 분석에서 CBD 단독 투여는 신경병증 통증 치료에 효과가 미달한다는 결론이 나왔다. THC와의 복합 처방이 더 효과적이라는 근거가 축적되고 있다.",
+    summaryEn: "A follow‑up analysis to the Cochrane Review 2026 concluded that CBD administered alone does not demonstrate adequate efficacy for the treatment of neuropathic pain. Accumulating evidence indicates that combination therapies including THC are more effective than CBD monotherapy.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-04-28",
@@ -585,7 +685,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 59,
     title: "UCSD CMCR 만성 요통 임상 결과 후속: Cannabis sativa DKJ127 전임상 유효성 확인",
+    titleEn: "Follow-up to UCSD CMCR Chronic Low Back Pain Clinical Results: Preclinical Efficacy of Cannabis sativa Strain DKJ127 Confirmed",
     summary: "UCSD 대마 의학 연구센터(CMCR)의 만성 요통 임상 결과 후속으로 Cannabis sativa DKJ127 균주의 전임상 유효성이 확인됐다. 특정 균주의 표준화된 의약품 개발 가능성이 높아지고 있다.",
+    summaryEn: "As a follow-up to the chronic low back pain clinical findings from UCSD’s Center for Medicinal Cannabis Research (CMCR), preclinical efficacy of the Cannabis sativa strain DKJ127 has been confirmed. This increases the likelihood of developing a standardized medicinal product derived from a specific strain.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-01",
@@ -596,7 +698,9 @@ const ARTICLES_20260504: Article[] = [
   {
     id: 60,
     title: "프랑스 INSERM, Schedule III 후 미국과 EU 의료 대마 임상 데이터 공동 연구 제안",
+    titleEn: "France’s INSERM Proposes Joint US–EU Medical Cannabis Clinical Data Study Following U.S. Rescheduling to Schedule III",
     summary: "프랑스 국립보건의학연구원(INSERM)이 미국의 Schedule III 재분류 이후 미국과 EU의 의료 대마 임상 데이터를 공동 연구하는 방안을 제안했다. 대서양 양안의 연구 협력이 본격화될 전망이다.",
+    summaryEn: "The French National Institute of Health and Medical Research (INSERM) has proposed a collaborative study to analyze clinical data on medical cannabis from the United States and the European Union following the U.S. decision to reschedule to Schedule III. The move is expected to catalyze expanded transatlantic research cooperation.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-02",
@@ -612,7 +716,9 @@ const ARTICLES_DOMESTIC: Article[] = [
   {
     id: 61,
     title: "첨단 바이오소재 헴프 산업 중심지 부상 경북 북부권",
+    titleEn: "Northern Gyeongbuk Emerges as Hub for Advanced Biomaterials Hemp Industry",
     summary: "경북 북부권이 산업용 헴프(HEMP) 중심지로 자리매김하고 있다. 과거 삼베 생산에 머물렀던 대마 산업을 첨단 바이오소재 산업으로 전환해 국산 품종 개발부터 완제의약품 제조까지 전주기 가치사슬을 구축했다. 6월 신규 규제자유특구 지정 최종 절차를 앞두고 있다.",
+    summaryEn: "The northern region of North Gyeongsang Province (Gyeongbuk) is positioning itself as a center for industrial hemp (HEMP). Once limited to traditional sambe (hemp cloth) production, the hemp sector has been transformed into an advanced biomaterials industry, building a full value chain from domestic cultivar development to finished pharmaceutical manufacturing. The region is now awaiting the final steps toward designation as a new regulatory-free special zone in June.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-05-13",
@@ -624,7 +730,9 @@ const ARTICLES_DOMESTIC: Article[] = [
   {
     id: 62,
     title: "정부, 의료용 대마 CBD 국산화 첫발 — 농식품부 57억 규모 사업 착수",
+    titleEn: "Government takes first step to domesticize medical cannabis CBD — Ministry of Agriculture launches KRW 5.7 billion project",
     summary: "정부가 그간 해외 수입에 의존해온 의료용 대마 성분 칸나비디올(CBD) 원료의약품 국산화에 본격 착수했다. 네오켄바이오 주관 컨소시엄이 총 57억원 규모로 재배·추출·허가 전 과정을 수행하며, HLB생명과학R&D가 비임상·CMC·IND 준비를 맡는다.",
+    summaryEn: "The government has officially begun domestic production of the medical cannabis ingredient cannabidiol (CBD) active pharmaceutical ingredient (API), which had until now been largely imported. A NeoKenBio-led consortium will carry out the full cultivation, extraction and regulatory approval process under a KRW 5.7 billion program, while HLB Life Sciences R&D will be responsible for preclinical studies, CMC and IND preparation.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-04-25",
@@ -635,7 +743,9 @@ const ARTICLES_DOMESTIC: Article[] = [
   {
     id: 63,
     title: "강원대 최익영·엄태영 교수팀, 의료용 대마 CBD 생합성 조절 메커니즘 규명",
+    titleEn: "Gangwon National University Professors Ik‑Young Choi and Tae‑Young Eom Elucidate Regulatory Mechanism of CBD Biosynthesis in Medical Cannabis",
     summary: "강원대학교 공동연구팀이 의료용 대마의 주요 기능성 물질인 칸나비디올(CBD) 생합성 조절 메커니즘을 규명했다. 개화 단계와 품종에 따라 약 2,400개 이상의 유전자 발현 차이가 확인됐으며, 연구 성과는 농업학 분야 상위 5% 국제학술지 'Industrial Crops & Products'에 게재됐다.",
+    summaryEn: "A joint research team at Gangwon National University has identified the regulatory mechanism controlling biosynthesis of cannabidiol (CBD), a major bioactive compound in medical cannabis. The study found differential expression in more than 2,400 genes depending on flowering stage and cultivar. The findings were published in Industrial Crops & Products, an international journal ranked in the top 5% in the field of agricultural sciences.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-03-15",
@@ -646,7 +756,9 @@ const ARTICLES_DOMESTIC: Article[] = [
   {
     id: 79,
     title: "경북도, 의료용 헴프 산업기지 본격 추진 — CBD 원료의약품 GMP 시설 2027년 가동 목표",
+    titleEn: "Gyeongbuk Province to Advance Medical Hemp Industry Hub — GMP Facility for CBD API Targeted to Begin Operations in 2027",
     summary: "경북도가 북부권을 산업용 헴프(HEMP) 산업 거점으로 육성. 6월 신규 규제자유특구 최종 지정 여부 결정 전망. 네오켄바이오가 150억원 규모 CBD 원료의약품 GMP 제조시설 조성 중(2027년 가동 목표). 농림축산식품부 57억원 규모 공모사업 선정.",
+    summaryEn: "Gyeongbuk Province plans to develop the northern part of the province into an industrial hemp (HEMP) hub. A final decision on designation as a new regulation‑free special zone (regulatory sandbox) is expected in June. NeoKen Bio is building a GMP manufacturing facility for CBD active pharmaceutical ingredient (API) worth 15 billion won, targeting operation in 2027. The project was selected for a competitive grant from the Ministry of Agriculture, Food and Rural Affairs worth 5.7 billion won.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-05-13",
@@ -659,7 +771,9 @@ const ARTICLES_DOMESTIC: Article[] = [
   {
     id: 80,
     title: "식약처, 해외직구 마약류 의심 식품 정기 기획검사 착수 — CBD·THC 등 55종 검사",
+    titleEn: "MFDS launches regular targeted inspections of overseas direct‑purchase foods suspected of containing controlled substances — testing 55 substances including CBD and THC",
     summary: "식품의약품안전처가 대마 합법 국가의 온라인 쇼핑몰에서 판매되는 직구 젤리·음료 등 마약류 의심 제품에 대해 5~6월 기획검사 실시. 검사 항목은 CBD, THC 등 대마 성분과 암페타민·미트라지닌 등 55종.",
+    summaryEn: "The Ministry of Food and Drug Safety (MFDS) will conduct planned inspections in May–June of products suspected of containing narcotics, such as jellies and beverages purchased directly from online stores in countries where cannabis is legal. The testing panel comprises 55 substances, including cannabis constituents CBD and THC, and stimulants such as amphetamine and mitragynine.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-05-11",
@@ -672,7 +786,9 @@ const ARTICLES_DOMESTIC: Article[] = [
   {
     id: 105,
     title: "'대마 아닌 홉에서 추출한 CBD'…반려동물 헬스케어 새 시장 열리나",
+    titleEn: "CBD Extracted from Hops, Not Hemp — Could This Open a New Pet Healthcare Market?",
     summary: "대마가 아닌 홉(Hops)에서 추출한 CBD가 반려동물 헬스케어 분야의 새로운 소재로 주목받고 있다. 17일 국회의원회관에서 열린 '홉 유래 바이오산업 육성 포럼'에서 홉 유래 CBD의 과학적 특성과 산업적 활용 가능성이 소개됐다. 비대마 CBD 시장은 2030년 80조원 규모로 성장할 것으로 전망된다.",
+    summaryEn: "CBD extracted from hops (rather than hemp) is drawing attention as a new ingredient for pet healthcare. At the “Hops-derived Bioindustry Development Forum” held on the 17th at the National Assembly Members’ Office Building, the scientific properties of hops-derived CBD and its potential industrial applications were presented. The non-hemp CBD market is projected to grow to 80 trillion won by 2030.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-06-17",
@@ -685,7 +801,9 @@ const ARTICLES_DOMESTIC: Article[] = [
   {
     id: 121,
     title: "HLB생명과학R&D, 경북 산업용 헴프 규제자유특구 참여 — 미량 칸나비노이드 신약 개발 착수",
+    titleEn: "HLB Life Science R&D Joins Gyeongbuk Industrial Hemp Regulatory Free Zone — Launches Trace Cannabinoid Drug Development",
     summary: "HLB생명과학R&D가 중소벤처기업부·국무조정실 지정 '경북 산업용 헴프(대마) 규제자유특구' 공동 참여기관으로 선정돼 미량 칸나비노이드 기반 차세대 신약개발에 착수했다. 네오켄바이오·에이팩·엔비더팜·토포랩·아이엔지알 등이 공동 수행하며, KIST·경북바이오산업연구원 등과 함께 4년간 총 296억원을 투입한다. 기존 CBD 중심에서 CBG·CBC·CBN 등 미량 칸나비노이드로 실증 범위를 확대하는 것이 핵심으로, 국내 헴프 산업의 고도화를 보여주는 대표 사례다.",
+    summaryEn: "HLB Life Science R&D has been selected as a joint participant in the ‘Gyeongbuk Industrial Hemp (cannabis) Regulatory Free Zone,’ designated by the Ministry of SMEs and Startups and the Office for Government Policy Coordination, and has begun developing next‑generation drugs based on trace cannabinoids. The project is a consortium with Neoken Bio, A‑Pack, Envider Pharm, TopoLab, INGR and others, and — together with KIST and the Gyeongbuk Bioindustry Research Institute — will invest a total of KRW 29.6 billion over four years. The core objective is to expand validation efforts beyond CBD to include trace cannabinoids such as CBG, CBC and CBN, serving as a flagship case of technological advancement in South Korea’s hemp industry.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-07-06",
@@ -698,7 +816,9 @@ const ARTICLES_DOMESTIC: Article[] = [
   {
     id: 122,
     title: "서미화·김형동 의원·식약처, '대마 성분 의약품 도입 방안 정책 토론회' 개최 — CBD 국내 생산 필요성 공론화",
+    titleEn: "Lawmakers Seo Mi-hwa, Kim Hyeong-dong and MFDS Hold Policy Forum on Introducing Cannabis-Derived Medicines — Call for Domestic CBD Production Raised",
     summary: "서미화·김형동 의원과 식품의약품안전처가 7일 국회의원회관에서 '대마 성분 의약품 도입 방안 정책 토론회'를 공동 개최했다. 약물난치성 뇌전증 환자의 치료기회 확대를 위해 의료용 CBD(에피디올렉스) 국내 생산·공급체계 구축이 필요하다는 데 전문가들이 의견을 모았다. 현재 전량 해외 수입에 의존하는 구조의 한계와 복잡한 행정절차가 지적됐으며, 한의계는 대마 성분 한약제제 개발 기반 마련을 촉구했다. 식약처는 엄격한 안전관리를 전제로 입법 과정에 참여하겠다는 입장을 밝혔다.",
+    summaryEn: "Lawmakers Seo Mi-hwa and Kim Hyeong-dong and the Ministry of Food and Drug Safety (MFDS) jointly held a policy forum on July 7 at the National Assembly Members' Office Building to discuss measures for introducing cannabis-derived medicines. Experts agreed that establishing a domestic production and supply system for medical CBD (Epidiolex) is necessary to expand treatment opportunities for patients with drug‑resistant epilepsy. They highlighted the limitations of the current model, which relies entirely on imports, and criticized the complex administrative procedures. The Korean traditional medicine sector urged preparation of a development base for cannabis-containing herbal formulations. The MFDS said it would engage in the legislative process provided strict safety controls are ensured.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-07-07",
@@ -711,7 +831,9 @@ const ARTICLES_DOMESTIC: Article[] = [
   {
     id: 123,
     title: "신성범 의원, 'THC 0.3% 이하 헴프 대마 제외' 마약류관리법 개정안 대표발의 — 전 산업 활용 기반 마련",
+    titleEn: "Rep. Shin Seong-beom files amendment to exclude hemp with THC ≤0.3% from cannabis under Narcotics Control Act — lays groundwork for industry-wide use",
     summary: "국민의힙 신성범 의원이 7일 THC 함유량이 건조 중량 기준 0.3% 이하인 헴프(Hemp)를 대마의 범위에서 완전 제외하는 '마약류 관리에 관한 법률 일부개정안'을 대표발의했다. 의료용은 물론 기능성 식품·화장품·섬유·사료 등 다양한 산업 분야에서 헴프를 합법적으로 활용할 수 있는 제도적 기반을 마련하는 것이 핵심이다. 경북 헴프 규제자유특구에서 확인된 산업화 가능성을 전국적으로 확대하는 입법으로, 서미화·윤준병·김형동 의원에 이어 네 번째 대마 관련 법안 발의로 국회 입법 동력이 가속화되고 있다.",
+    summaryEn: "On the 7th, Rep. Shin Seong-beom (People Power Party) introduced, as lead sponsor, a partial amendment to the Act on the Control of Narcotics to fully exclude hemp (Hemp) containing 0.3% or less THC by dry weight from the scope of cannabis. The bill’s core aim is to create an institutional foundation permitting lawful use of hemp across a range of industries — including medical applications, functional foods, cosmetics, textiles and animal feed. The legislation seeks to scale nationwide the industrialization potential demonstrated in the Gyeongbuk hemp regulatory free zone, and is the fourth cannabis-related bill introduced in the National Assembly following proposals by Seo Mi-hwa, Yoon Jun-byung and Kim Hyung-dong, accelerating momentum for related lawmaking.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-07-08",
@@ -724,7 +846,9 @@ const ARTICLES_DOMESTIC: Article[] = [
   {
     id: 124,
     title: "경북 안동시, 의료용 대마 규제자유특구 추가 지정 — 미량 칸나비노이드 연구·생산 확대, 295억 투입",
+    titleEn: "Andong (North Gyeongsang) Designated as Additional Medical Hemp Regulatory Free Zone — Expanding Minor Cannabinoid R&D and Production with KRW 29.5 Billion Investment",
     summary: "중소벤처기업부가 6월 29일 '경북 산업용 대마 규제자유특구(추가)'를 최종 지정하면서 안동시가 글로벌 의료용 대마 산업 선도 거점으로 도약한다. 기존 CBD 중심 실증에서 CBG·CBC·CBN 등 희귀 미량 칸나비노이드로 연구·생산 범위를 확대하며, 스마트팜 재배기술과 블록체인 기반 전주기 이력관리 시스템을 활용한다. 2027~2030년 4년간 총사업비 295억 원(국비 147억·지방비 125억·민간 23억)이 투입되며, 풍산·임하·풍천 일원 21만 7920.6㎡uc5d0 대마 재배부터 원료의약품 생산·완제 의약품 개발까지 의료용 대마 전주기 공급망을 구축한다.",
+    summaryEn: "On June 29 the Ministry of SMEs and Startups granted final designation to the “Gyeongbuk industrial hemp regulatory free zone (additional),” positioning Andong as a global hub for the medical cannabis industry. The project will expand existing CBD-focused trials to include research and production of rare minor cannabinoids such as CBG, CBC and CBN, and will deploy smart‑farm cultivation technologies and a blockchain‑based full-cycle traceability system. From 2027–2030 a total project budget of KRW 29.5 billion (national KRW 14.7 billion · local KRW 12.5 billion · private KRW 2.3 billion) will be invested to establish an end‑to‑end medical cannabis supply chain—covering hemp cultivation across Pungsan, Imha and Pungcheon (approximately 217,920.6 m²)—through to production of active pharmaceutical ingredients and development of finished medicinal products.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-07-09",
@@ -743,7 +867,9 @@ const ARTICLES_20260525: Article[] = [
   {
     id: 84,
     title: "버지니아 Spanberger 주지사, 성인용 대마 판매 합법화 법안 거부권 행사",
+    titleEn: "Virginia Governor Spanberger vetoes bill to legalize adult-use cannabis retail sales",
     summary: "버지니아 Spanberger 주지사가 성인용 대마 소매 판매 합법화 법안에 거부권을 행사했다. 주지사는 현행 의료 대마 시스템 정비가 우선이라는 입장을 밝혔으며, 산업계는 즉각 반발했다.",
+    summaryEn: "Governor Spanberger vetoed legislation that would legalize retail sales of adult-use cannabis, saying reform of the existing medical cannabis system must take priority. The decision prompted immediate backlash from the industry.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-21",
@@ -756,7 +882,9 @@ const ARTICLES_20260525: Article[] = [
   {
     id: 85,
     title: "美 교통부(DOT): 트럭 운전사·조종사, DEA 재분류에도 의료 대마 사용 시 처벌",
+    titleEn: "U.S. DOT: Truck Drivers and Pilots Subject to Discipline for Medical Marijuana Use Despite DEA Rescheduling",
     summary: "미국 교통부(DOT)가 DEA의 대마 Schedule III 재분류 이후에도 트럭 운전사, 항공기 조종사 등 안전 민감 직종 종사자에 대한 대마 무관용 정책을 유지한다고 명확히 밝혔다. 연방 교통 안전 규정은 재분류와 무관하게 적용된다.",
+    summaryEn: "The U.S. Department of Transportation (DOT) clarified it will maintain a zero-tolerance marijuana policy for safety-sensitive employees — including truck drivers and aircraft pilots — even after the DEA reclassified marijuana to Schedule III. Federal transportation safety regulations apply regardless of the DEA’s rescheduling, and medical cannabis use can still lead to enforcement action.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-21",
@@ -769,7 +897,9 @@ const ARTICLES_20260525: Article[] = [
   {
     id: 86,
     title: "앨라배마 첫 의료 대마 판매점 개점 '며칠 앞으로' — 합법화 5년 만",
+    titleEn: "Alabama’s First Medical Cannabis Dispensary to Open Within Days — Five Years After Legalization",
     summary: "앨라배마주 최초의 의료 대마 판매점이 며칠 내 개점을 앞두고 있다. 2021년 합법화 이후 5년간의 규제 정비 끝에 드디어 환자들이 공식 채널을 통해 의료 대마를 구입할 수 있게 됐다.",
+    summaryEn: "Alabama’s first medical cannabis dispensary is set to open within days. After five years of regulatory work following legalization in 2021, patients will finally be able to purchase medical cannabis through official channels.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-05-21",
@@ -782,7 +912,9 @@ const ARTICLES_20260525: Article[] = [
   {
     id: 87,
     title: "FDA, VERTANICAL 전스펙트럼 대마 추출물에 혁신치료제 지정 — 만성 요통 비오피오이드 치료제",
+    titleEn: "FDA Designates VERTANICAL Full‑Spectrum Hemp Extract as Breakthrough Therapy — Non‑Opioid Treatment for Chronic Low Back Pain",
     summary: "FDA가 독일 VERTANICAL의 전스펙트럼 대마 추출물 VER-01에 혁신치료제(Breakthrough Therapy) 지정을 부여했다. 만성 요통 대상 동종 최초(first-in-class) 비오피오이드 치료제로, 대마 기반 의약품의 임상 개발에 중요한 이정표가 될 전망이다.",
+    summaryEn: "The FDA has granted Breakthrough Therapy designation to VER-01, a full‑spectrum hemp extract developed by German company VERTANICAL. As a first‑in‑class, non‑opioid therapy for chronic low back pain, VER-01 is expected to mark an important milestone in the clinical development of hemp/cannabis‑based pharmaceuticals.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-19",
@@ -795,7 +927,9 @@ const ARTICLES_20260525: Article[] = [
   {
     id: 88,
     title: "Whitney Economics·GCNC 글로벌 대마 보고서: 가격 압축이 신흥시장 재편",
+    titleEn: "Whitney Economics · GCNC Global Hemp Report: Price Compression Reshaping Emerging Markets",
     summary: "Whitney Economics와 GCNC가 발표한 글로벌 대마 산업 보고서에 따르면, 전 세계적인 대마 가격 하락이 신흥 시장의 경쟁 구도를 빠르게 재편하고 있다. 저비용 생산국의 부상과 기존 강자들의 마진 압박이 동시에 진행 중이다.",
+    summaryEn: "Whitney Economics and GCNC's global hemp industry report finds that falling hemp prices worldwide are rapidly reshaping competitive dynamics in emerging markets. The rise of low‑cost producers is occurring alongside mounting margin pressure on established players, accelerating market realignment.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-21",
@@ -808,7 +942,9 @@ const ARTICLES_20260525: Article[] = [
   {
     id: 89,
     title: "CBG, 류마티스 관절염 치료 가능성 — '항염 능력' 입증 (신규 연구)",
+    titleEn: "CBG Demonstrates Potential to Treat Rheumatoid Arthritis — Anti‑inflammatory Capacity Confirmed (New Study)",
     summary: "신규 연구에서 대마 성분 CBG(칸나비게롤)가 류마티스 관절염에서 '항염 능력과 호중구 매개 면역 조절 치료 잠재력'을 보유한 것으로 확인됐다. CBG가 염증 면역세포의 관절 유입을 제한하는 조절 효과를 발휘하며, CBD 이후 차세대 치료 성분으로 주목받고 있다.",
+    summaryEn: "A new study found that the hemp-derived compound cannabigerol (CBG) exhibits anti-inflammatory properties and neutrophil-mediated immune‑modulatory therapeutic potential in rheumatoid arthritis. CBG exerted regulatory effects that limit the infiltration of inflammatory immune cells into joints, highlighting it as a next‑generation therapeutic candidate following CBD.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-21",
@@ -821,7 +957,9 @@ const ARTICLES_20260525: Article[] = [
   {
     id: 90,
     title: "대마 합법화, 오피오이드 과다복용 '유의미한 감소'와 연관 — 1.075억명 분석 (연방 자금)",
+    titleEn: "Cannabis legalization associated with significant reduction in opioid overdoses — analysis of 107.5 million commercially insured adults (federally funded)",
     summary: "연방 자금 지원 신규 연구가 상업보험 가입 성인 1.075억명의 청구 데이터를 분석한 결과, 대마 합법화가 '비치명적 오피오이드 중독의 유의미한 감소'와 연관된 것으로 나타났다. 역대 최대 규모의 분석으로 대마의 오피오이드 대체 가능성을 강력히 시사한다.",
+    summaryEn: "A new federally funded study analyzing claims data from 107.5 million commercially insured adults found that cannabis legalization was associated with a significant reduction in nonfatal opioid overdoses. The largest analysis to date strongly suggests cannabis has potential as an opioid substitute.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-20",
@@ -834,7 +972,9 @@ const ARTICLES_20260525: Article[] = [
   {
     id: 92,
     title: "대마, 비만 퇴치에 역할 가능 — '게으른 스토너' 통념 반박 (연방 자금)",
+    titleEn: "Cannabis Could Help Combat Obesity — Refuting the 'Lazy Stoner' Stereotype (federally funded)",
     summary: "연방 자금 지원 신규 연구: 만성 카나비노이드 노출, 특히 대마 추출물이 식이유발 비만 마우스 모델에서 체중 감소, 혈당 항상성 개선, 지방조직 기능 정상화를 유도했다. THC 단독 투여군과 전스펙트럼 추출물 투여군 모두 체중·내장지방 감소를 확인하며, 식사량이나 운동량은 변화가 없었다. 대마의 '식욕 자극' 통념과 정반대되는 장기 대사 변화 메커니즘이 주목된다.",
+    summaryEn: "A new federally funded study found that chronic cannabinoid exposure, particularly cannabis-derived extracts, produced weight loss, improved glucose homeostasis, and normalized adipose tissue function in a diet-induced obesity mouse model. Both the THC-only group and the full-spectrum extract group showed reductions in body weight and visceral fat, despite no changes in food intake or activity. The findings draw attention to long-term metabolic mechanisms that run counter to the conventional view of cannabis as an appetite stimulant.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-19",
@@ -847,7 +987,9 @@ const ARTICLES_20260525: Article[] = [
   {
     id: 91,
     title: "대마 추출물, 식단·운동 없이 비만 쥐 체중·혈당 정상화 — UC 리버사이드 연구",
+    titleEn: "Hemp Extract Normalizes Body Weight and Blood Glucose in Obese Mice Without Diet or Exercise — UC Riverside Study",
     summary: "미국 캘리포니아대 리버사이드 연구팀이 비만 쥐에 대마 추출물을 30일간 투여한 결과, 식이 조절이나 운동 없이 체중 감소와 내장 지방·혈당 수치 정상화가 동시에 확인됐다. 전스펙트럼 추출물이 THC 단독보다 혈당 개선 효과가 더 뛰어났으며, 비만 치료의 새로운 대사 경로로 주목된다.",
+    summaryEn: "Researchers at the University of California, Riverside administered a hemp extract to obese mice for 30 days and observed simultaneous weight loss and normalization of visceral fat and blood glucose levels without dietary changes or exercise. The full-spectrum extract produced greater blood-glucose improvements than THC alone, highlighting a potential new metabolic pathway for obesity treatment.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-05-26",
@@ -1045,7 +1187,9 @@ const ARTICLES_20260518: Article[] = [
   {
     id: 81,
     title: "미국 3대 대마 기업(MSO) 대상 RICO 집단소송 제기 — '빅 토바코'식 유해성 은폐 의혹",
+    titleEn: "Three Major U.S. Cannabis MSOs Face RICO Class Action — Allegations of 'Big Tobacco'‑Style Concealment of Harms",
     summary: "Cresco Labs, Green Thumb Industries, Verano Holdings 등 미국 대형 대마 운영사들이 RICO(조직범죄방지법) 위반 혐의로 제소됐다. 12개 주 40여 명의 원고는 이들이 제품의 건강 유해성을 숨기고 유리한 연구만 후원하는 등 과거 담배 회사의 전략을 답습했다고 주장했다.",
+    summaryEn: "Cresco Labs, Green Thumb Industries, Verano Holdings and other large U.S. multi‑state cannabis operators (MSOs) have been sued under RICO (Racketeer Influenced and Corrupt Organizations Act). About 40 plaintiffs across 12 states allege the companies concealed the health risks of their products and funded only favorable research, allegedly replicating strategies once used by tobacco firms.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-18",
@@ -1058,7 +1202,9 @@ const ARTICLES_20260518: Article[] = [
   {
     id: 82,
     title: "독일 1분기 의료대마 수입량 50톤 돌파 — 캐나다산이 53% 점유",
+    titleEn: "Germany's Q1 medical cannabis imports top 50 tonnes — Canadian products capture 53% share",
     summary: "2026년 1분기 독일의 의료대마 꽃 수입량이 총 50,539kg을 기록하며 전년 동기 대비 34% 성장했다. 캐나다 생산자들이 26,753kg을 공급하며 시장의 절반 이상을 점유했으며, 포르투갈(10톤)과 덴마크(3.3톤)가 뒤를 이었다. 독일 합법화 이후 캐나다 LP들의 유럽 수출이 더욱 가속화되고 있다.",
+    summaryEn: "In Q1 2026, Germany imported 50,539 kg of medical cannabis flower, marking a 34% year‑over‑year increase. Canadian producers supplied 26,753 kg—just over half the market—while Portugal (≈10 tonnes) and Denmark (≈3.3 tonnes) followed. Since Germany's legalization, exports from Canadian licensed producers (LPs) to Europe have accelerated.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-18",
@@ -1071,7 +1217,9 @@ const ARTICLES_20260518: Article[] = [
   {
     id: 83,
     title: "UC 샌디에이고 연구: 청소년기 잦은 대마 사용, 인지 발달 저하와 연관성 확인",
+    titleEn: "UC San Diego study: Frequent cannabis use during adolescence linked to reduced cognitive development",
     summary: "UC 샌디에이고 연구팀이 11,000명 이상의 아동을 7년간 추적 조사한 결과, 빈번한 대마 사용이 언어 기억, 학습 능력, 시공간 기술의 발달 지연과 밀접한 관련이 있음을 밝혀냈다. 이번 연구는 모발 검사를 통해 사용 빈도를 정확히 측정했으며, 향후 대마 규제 프레임워크의 연령 제한 논의에 중요한 근거가 될 전망이다.",
+    summaryEn: "A UC San Diego research team followed more than 11,000 children for seven years and found that frequent cannabis use was closely associated with delayed development in verbal memory, learning ability, and visuospatial skills. The study measured use frequency using hair testing for greater accuracy and is expected to serve as important evidence in discussions about age limits within future cannabis regulatory frameworks.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-05-18",
@@ -1087,7 +1235,9 @@ const ARTICLES_20260608: Article[] = [
   {
     id: 93,
     title: "백악관 OMB, 의회에 헴프 CBD 합법 유지 촉구 — 광범위 금지법 수정 요청",
+    titleEn: "White House OMB Urges Congress to Maintain Legality of Hemp-Derived CBD — Seeks Amendments to Sweeping Ban",
     summary: "백악관 예산관리국(OMB)이 의회에 헴프 유래 CBD 제품의 법적 정의를 업데이트해 미국인이 전스펙트럼 CBD 제품에 접근할 수 있게 하되, 심각한 건강 위험을 초래하는 제품은 제한하라고 촉구했다.",
+    summaryEn: "The White House Office of Management and Budget (OMB) urged Congress to update the legal definition of hemp-derived CBD products so Americans can access full‑spectrum CBD, while imposing restrictions on products that pose serious health risks.",
     category: "policy",
     categoryLabel: "정책·규제",
     country: "미국",
@@ -1100,7 +1250,9 @@ const ARTICLES_20260608: Article[] = [
   {
     id: 94,
     title: "INCB 비공개 서한: 'CBD는 국제 마약 조약 적용 대상 아니다'",
+    titleEn: "INCB Confidential Letter: 'CBD Is Not Subject to International Drug Treaties'",
     summary: "국제마약통제위원회(INCB)가 비공개 서한에서 CBD는 국제 마약 조약의 적용을 받지 않으며, 비통제 카나비노이드 추출은 산업용 헴프 범주에 속한다고 밝혔다. 글로벌 CBD 산업에 중대한 법적 근거를 제공한다.",
+    summaryEn: "In a confidential letter, the International Narcotics Control Board (INCB) stated that CBD is not covered by international drug control treaties and that non-scheduled cannabinoid extracts fall within the category of industrial hemp. The ruling provides a significant legal foundation for the global CBD industry.",
     category: "global",
     categoryLabel: "글로벌",
     country: "국제",
@@ -1113,7 +1265,9 @@ const ARTICLES_20260608: Article[] = [
   {
     id: 95,
     title: "Trulieve, NYSE 상장 — Schedule III 후 대마 기업 메이저 거래소 입성 가속",
+    titleEn: "Trulieve Lists on NYSE — Major Exchange Entry for Cannabis Firms Accelerates After Schedule III Reclassification",
     summary: "Trulieve Cannabis Corp.가 뉴욕증권거래소(NYSE)에서 거래를 시작했다. Schedule III 재분류 이후 대마 기업의 메이저 미국 거래소 입성이 가속화되고 있다.",
+    summaryEn: "Trulieve Cannabis Corp. has begun trading on the New York Stock Exchange (NYSE). Following the federal reclassification of cannabis to Schedule III, the listing of cannabis companies on major U.S. exchanges is accelerating.",
     category: "global",
     categoryLabel: "글로벌",
     country: "미국",
@@ -1126,7 +1280,9 @@ const ARTICLES_20260608: Article[] = [
   {
     id: 96,
     title: "헴프 기반 플라스틱, 친환경 포장재 대안으로 유망 — 신규 연구",
+    titleEn: "Hemp-Based Plastics Show Promise as Eco-Friendly Packaging Alternative — New Study",
     summary: "신규 연구에서 헴프 기반 플라스틱이 전통 포장재의 환경 친화적 대안으로 유망함이 확인되었다. 산업용 헴프의 활용 범위가 식품·의약품을 넘어 소재 분야로 확대되고 있다.",
+    summaryEn: "A new study found hemp-based plastics to be a promising environmentally friendly alternative to conventional packaging materials. Industrial hemp’s applications are expanding beyond food and pharmaceuticals into the materials sector.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     country: "미국",
@@ -1139,7 +1295,9 @@ const ARTICLES_20260608: Article[] = [
   {
     id: 97,
     title: "대마 성분, 교모세포종 등 암에 '일관된' 항종양 효과 — 과학 리뷰",
+    titleEn: "Cannabis constituents show 'consistent' antitumor effects against glioblastoma and other cancers — scientific review",
     summary: "과학 리뷰에서 대마 성분이 교모세포종(glioblastoma) 및 기타 암에서 일관된 항종양 효과를 보인다는 결과가 발표되었다. 대마 기반 항암 치료제 개발의 과학적 근거가 축적되고 있다.",
+    summaryEn: "A scientific review reports that cannabis-derived constituents exhibit consistent antitumor effects in glioblastoma (GBM) and other cancers. The body of scientific evidence supporting the development of cannabis-based anticancer therapies is accumulating.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     country: "미국",
@@ -1155,7 +1313,9 @@ const ARTICLES_20260615: Article[] = [
   {
     id: 98,
     title: "버지니아 주지사·의원, 이달 통과 가능 대마 판매 합법화 타협안 논의",
+    titleEn: "Virginia governor and lawmakers discuss compromise to legalize adult-use cannabis sales that could pass this month",
     summary: "버지니아 의원들과 Spanberger(D) 주지사가 이달 예산안의 일부로 통과될 수 있는 성인용 대마 판매 합법화에 대해 '매우 생산적인' 타협안을 논의했다. 주지사 측은 '결승선을 함께 넘기를 고대한다'고 밝혔다.",
+    summaryEn: "Virginia lawmakers and Governor Spanberger (D) discussed a \"very productive\" compromise to legalize adult-use cannabis sales that could be passed this month as part of the budget. The governor's office said it \"looks forward to crossing the finish line together.\"",
     category: "policy",
     categoryLabel: "정책·규제",
     country: "미국",
@@ -1168,7 +1328,9 @@ const ARTICLES_20260615: Article[] = [
   {
     id: 99,
     title: "뉴저지 주지사, 대형 헴프 음료 허용·의료 대마 약국 기호용 판매 추가 법안 서명",
+    titleEn: "New Jersey Governor Sherrill Signs Bill Permitting Large-Format Hemp Beverages and Enabling Medical Cannabis Dispensaries to Add Adult-Use Sales",
     summary: "뉴저지 Sherrill(D) 주지사가 대용량 헴프 음료를 허용하고, 의료 대마 약국이 지역 승인 없이 기호용 판매를 추가할 수 있도록 하는 법안에 서명했다.",
+    summaryEn: "Governor Sherrill (D) signed a bill that permits large-format hemp beverages and allows medical cannabis dispensaries to add adult-use (recreational) sales without requiring local approval.",
     category: "policy",
     categoryLabel: "정책·규제",
     country: "미국",
@@ -1181,7 +1343,9 @@ const ARTICLES_20260615: Article[] = [
   {
     id: 100,
     title: "의료 대마 추출물, 암환자 증상 '의미있게' 개선 — 환자 50%에서 수면·불안 호전",
+    titleEn: "Medicinal cannabis extracts significantly improve symptoms in cancer patients — sleep and anxiety improved in 50% of patients",
     summary: "신규 연구에서 의료 대마 추출물이 환자 약 50%에서 암 관련 증상, 특히 수면 및 불안 증상에 의미있게 유익한 것으로 나타났다. THC·CBD·1:1 세 가지 추출물 모두 위약보다 유의하게 효과적이었다.",
+    summaryEn: "A new study found that medicinal cannabis extracts provided clinically meaningful benefits for cancer-related symptoms in about 50% of patients, particularly improving sleep and anxiety. All three extracts—THC, CBD, and a 1:1 THC:CBD formulation—were significantly more effective than placebo.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     country: "미국",
@@ -1194,7 +1358,9 @@ const ARTICLES_20260615: Article[] = [
   {
     id: 101,
     title: "WNBA, 금지약물 목록에서 대마 제외 — 헴프 CBD 선수 보증 규칙 설정",
+    titleEn: "WNBA Removes Cannabis from List of Banned Substances — Sets Rules for Players Endorsing Hemp CBD Products",
     summary: "WNBA가 금지약물 목록에서 대마를 제외하고 선수의 헴프 CBD 제품 보증에 대한 규칙을 설정했다. 프로 스포츠계의 대마 정책 변화를 상징하는 사례다.",
+    summaryEn: "The WNBA has removed cannabis from its list of banned substances and established rules governing players' endorsements of hemp-derived CBD products. The move represents a symbolic shift in cannabis policy within professional sports.",
     category: "global",
     categoryLabel: "글로벌",
     country: "미국",
@@ -1207,7 +1373,9 @@ const ARTICLES_20260615: Article[] = [
   {
     id: 102,
     title: "미주리, 5월 합법 대마 매출 $1.351억 — 사상 최대치 경신",
+    titleEn: "Missouri’s May legal cannabis sales reach $135.1 million — record high",
     summary: "미주리 소매업체들이 5월 합법 대마 제품 1억 3,510만 달러어치를 판매하며 사상 최대 기록을 경신했다. 합법화 2년 만에 연간 15억 달러 페이스에 도달했다.",
+    summaryEn: "Missouri retailers sold $135.1 million worth of legal cannabis products in May, setting an all-time monthly record. Two years after legalization, the market has reached an annualized pace of $1.5 billion.",
     category: "global",
     categoryLabel: "글로벌",
     country: "미국",
@@ -1220,7 +1388,9 @@ const ARTICLES_20260615: Article[] = [
   {
     id: 103,
     title: "콜로라도 주지사, 이보가인 연구 파일럿 프로그램 신설 법안 서명",
+    titleEn: "Colorado Governor Signs Bill Establishing Ibogaine Research Pilot Program",
     summary: "콜로라도 Polis(D) 주지사가 이보가인 연구 파일럿 프로그램을 신설하는 법안에 서명했다. 사이키델릭 기반 약물사용장애 치료 연구가 주 차원에서 공식화되었다.",
+    summaryEn: "Governor Polis (D) signed a bill creating an ibogaine research pilot program. Psychedelic-based research into treatments for substance use disorders is now formalized at the state level.",
     category: "policy",
     categoryLabel: "정책·규제",
     country: "미국",
@@ -1233,7 +1403,9 @@ const ARTICLES_20260615: Article[] = [
   {
     id: 104,
     title: "하원 세출위, 연방 공무원 산재보험 의료 대마 적용 차단 법안 승인",
+    titleEn: "House Appropriations Committee Approves Bill Blocking Medical Marijuana Coverage in Federal Employees' Workers' Compensation",
     summary: "하원 세출위원회가 대마 분류 변경과 무관하게 연방 산재보험 프로그램의 의료 대마 적용을 차단하는 조항이 포함된 법안을 승인했다. 재분류의 실질적 한계를 보여주는 사례다.",
+    summaryEn: "The House Appropriations Committee approved legislation containing a provision that bars the federal workers' compensation program from covering medical marijuana regardless of any reclassification (rescheduling) of cannabis. The move highlights the practical limits of rescheduling.",
     category: "policy",
     categoryLabel: "정책·규제",
     country: "미국",
@@ -1251,7 +1423,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 106,
     title: "美 연방대법원, 대마 사용자 총기 소지권 인정 — 만장일치로 정부 패소",
+    titleEn: "U.S. Supreme Court Recognizes Firearm Possession Rights of Marijuana Users — Government Loses Unanimously",
     summary: "미국 연방대법원이 만장일치로 대마 사용자의 총기 소지권을 인정하며 정부 측 패소 판결을 내렸다. 연방법상 대마 사용자의 총기 소지를 금지한 조항이 수정헌법 제2조에 위배된다는 취지로, 대마 관련 연방 규제의 헌법적 한계를 명확히 한 역사적 판결이다.",
+    summaryEn: "The U.S. Supreme Court issued a unanimous decision recognizing firearm possession rights for marijuana users and ruled against the government. The Court held that the federal statute barring firearm possession by marijuana users violates the Second Amendment, a landmark ruling clarifying the constitutional limits of federal marijuana-related regulation.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-06-19",
@@ -1264,7 +1438,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 107,
     title: "일리노이 Pritzker 주지사, 대마 종합 개정법 서명 — 소지한도 2배·헴프 THC 제한",
+    titleEn: "Illinois Gov. Pritzker Signs Comprehensive Cannabis Amendment — Adult Possession Limits Doubled; Hemp THC Restrictions Tightened",
     summary: "일리노이 주지사가 대마 종합 개정법에 서명했다. 성인 소지 한도를 2배로 늘리고, 헴프 유래 THC 제품에 대한 규제를 강화하는 내용을 담고 있다. 합법화 이후 시장 성숙에 따른 규제 정비 사례로 주목된다.",
+    summaryEn: "Illinois Governor J.B. Pritzker signed a comprehensive cannabis amendment that doubles adult possession limits and tightens regulations on hemp-derived THC products. The law increases oversight of products made from hemp with elevated THC and is being cited as a regulatory recalibration as the market matures following legalization.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-06-15",
@@ -1277,7 +1453,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 108,
     title: "우크라이나, 의료 대마 프로그램 공식 가동 — 첫 THC 제품 환자에 처방",
+    titleEn: "Ukraine Officially Launches Medical Cannabis Program — First THC Product Prescribed to Patient",
     summary: "우크라이나가 의료 대마 프로그램을 공식 가동하고 첫 THC 함유 제품을 환자에게 처방했다. 전쟁 중인 국가가 의료 대마를 도입한 이례적 사례로, 전쟁 부상자 및 PTSD 환자 치료 목적이 주요 배경으로 꼽힌다.",
+    summaryEn: "Ukraine has formally launched a medical cannabis program and has prescribed the first THC-containing product to a patient. The move is notable as a rare example of a country at war adopting medical cannabis; officials cite treatment of combat-related injuries and PTSD as the primary motivations.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-06-15",
@@ -1290,7 +1468,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 109,
     title: "DEA, 대마 재분류 청문회에 '반대 측만' 초청 — 공정성 논란",
+    titleEn: "DEA Invites Only Opponents to Cannabis Rescheduling Hearing — Fairness Controversy",
     summary: "DEA가 대마 Schedule III 재분류 관련 청문회 참가자를 선정하면서 재분류 반대 측 증인만 초청했다는 사실이 알려져 공정성 논란이 불거졌다. 재분류 지지 측은 절차적 편향을 강하게 비판하고 있다.",
+    summaryEn: "The DEA has been accused of unfairness after it emerged that the agency invited only witnesses opposed to rescheduling cannabis to Schedule III for an upcoming hearing. Supporters of rescheduling are sharply criticizing the selection process as procedurally biased.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-06-19",
@@ -1303,7 +1483,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 110,
     title: "약물검사 업계·제약사, 연방항소법원에 대마 재분류 차단 요청",
+    titleEn: "Drug‑Testing Industry and Pharmaceutical Firms Ask Federal Appeals Court to Block DEA’s Cannabis Rescheduling",
     summary: "약물검사 업계와 일부 제약사들이 DEA의 대마 Schedule III 재분류를 막기 위해 연방항소법원에 소송을 제기했다. 재분류가 자신들의 사업에 타격을 줄 것이라는 이유로, 재분류를 둘러싼 법적 공방이 본격화되고 있다.",
+    summaryEn: "The drug‑testing industry and several pharmaceutical companies have filed suit in a federal appeals court seeking to block the DEA’s plan to reclassify cannabis to Schedule III. They contend the rescheduling would damage their businesses, and legal battles over the reclassification are now intensifying.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-06-12",
@@ -1316,7 +1498,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 111,
     title: "미국 주(州)들, 성인용 대마 누적 세수 $284억 돌파 — 일부 주는 주류 추월",
+    titleEn: "U.S. States' Cumulative Adult-Use Cannabis Tax Revenue Tops $28.4 Billion — Some States Surpass Alcohol",
     summary: "Marijuana Policy Project(MPP) 신규 보고서에 따르면 미국 주들이 성인용 대마 판매로 누적 $284억(약 38조원)의 세수를 창출했다. 일부 주에서는 대마 세수가 주류 세수를 추월하기 시작했으며, 합법화의 재정적 효과가 가시화되고 있다.",
+    summaryEn: "A new report from the Marijuana Policy Project (MPP) finds that U.S. states have generated a cumulative $28.4 billion (about 38 trillion KRW) in tax revenue from adult-use cannabis sales. In several states, cannabis tax receipts have begun to exceed alcohol tax revenues, highlighting the visible fiscal effects of legalization.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-06-19",
@@ -1329,7 +1513,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 112,
     title: "미국 2025년 합법 대마 매출 사상 첫 감소 — 가격 압축·공급 과잉 원인",
+    titleEn: "U.S. Legal Cannabis Sales to Fall in 2025 for First Time — Price Compression and Oversupply Blamed",
     summary: "Vangst·Whitney Economics 보고서에 따르면 미국 합법 대마 시장이 2025년 사상 처음으로 매출 감소를 기록했다. 가격 압축과 공급 과잉이 주요 원인으로 지목됐으며, 시장 성숙에 따른 구조 재편이 본격화되고 있다는 분석이다.",
+    summaryEn: "A report from Vangst and Whitney Economics finds that the U.S. legal cannabis market posted its first-ever sales decline in 2025. The study points to price compression and an oversupply of product as the primary drivers, and concludes the market is entering a phase of structural realignment as it matures.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-06-19",
@@ -1342,7 +1528,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 113,
     title: "CBD, 척수손상 신경병증 통증 강도 유의미하게 감소 — The Lancet 게재",
+    titleEn: "CBD Significantly Reduces Neuropathic Pain Intensity in Spinal Cord Injury — Published in The Lancet eClinicalMedicine",
     summary: "척수손상 환자를 대상으로 한 임상 연구에서 CBD가 신경병증 통증 강도를 유의미하게 감소시키고 전반적으로 내약성이 좋았다는 결과가 나왔다. 해당 연구는 의학 분야 최고 권위 학술지 The Lancet eClinicalMedicine에 게재되어 CBD의 임상적 근거를 한층 강화했다.",
+    summaryEn: "A clinical study in patients with spinal cord injury found that cannabidiol (CBD) significantly reduced the intensity of neuropathic pain and was generally well tolerated. The study was published in The Lancet eClinicalMedicine, further strengthening the clinical evidence for CBD.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-06-16",
@@ -1355,7 +1543,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 114,
     title: "대마 수면 효과, THC보다 CBD·CBN이 핵심 — USF 간호대 연구",
+    titleEn: "Cannabis' sleep effects: CBD and CBN, not THC, are central — USF College of Nursing study",
     summary: "University of South Florida 간호대 연구진의 신규 연구에 따르면 대마의 수면 개선 효과에서 가장 강력한 근거는 CBD와 CBN, 그리고 둘의 조합과 연관되어 있으며, 주로 THC가 아닌 것으로 나타났다. 수면 분야에서 비(非)THC 카나비노이드의 중요성이 부각되고 있다.",
+    summaryEn: "A new study by researchers at the University of South Florida College of Nursing found that the strongest evidence for cannabis' sleep‑enhancing effects is linked to CBD and CBN — and their combination — rather than primarily to THC. The findings highlight the growing importance of non‑THC cannabinoids in sleep research.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-06-16",
@@ -1368,7 +1558,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 115,
     title: "대마 기반 의약품, 과가동성 만성 통증 환자에 지속적 개선 효과 확인",
+    titleEn: "Cannabis-based medicinal products linked to sustained improvement in hypermobility-related chronic pain",
     summary: "연구에 따르면 대마 기반 의약품 치료가 과가동성(hypermobility) 관련 만성 통증 환자의 증상에 지속적인 개선 효과와 연관되는 것으로 나타났다. 기존 진통제에 반응하지 않는 난치성 통증 환자군에서의 가능성을 제시한 연구로 주목받고 있다.",
+    summaryEn: "The study found that treatment with cannabis-based medicinal products was associated with sustained symptomatic improvement in patients with hypermobility-related chronic pain (hypermobility). The research is being noted for its potential relevance to treatment‑resistant pain populations that do not respond to conventional analgesics.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-06-15",
@@ -1381,7 +1573,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 116,
     title: "인도 히마찰프라데시주, 의료·과학 목적 대마 재배 허용 규정 정식 채택 — 인도 3번째 주",
+    titleEn: "Himachal Pradesh Officially Adopts Regulations Permitting Cannabis Cultivation for Medical and Scientific Purposes — India’s Third State",
     summary: "인도 히마찰프라데시주 당국이 의료·과학 목적의 대마 재배를 허용하는 규정을 정식 채택했다. 6월 내각 승인에 이어 7월 규정 채택이 완료되면서, 히마찰프라데시주는 인도에서 합법 대마 재배를 허용한 세 번째 주(州)가 됐다. 히말라야 산악 지대에 위치한 이 주는 전통적으로 대마 재배가 성행했던 지역으로, 이번 합법화로 농민들이 고부가가치 작물에 합법적으로 접근할 수 있게 됐다. 아시아 최대 민주주의 국가 인도에서 주 차원의 대마 합법화 움직임이 본격화되고 있다.",
+    summaryEn: "Himachal Pradesh authorities have officially adopted regulations permitting cultivation of cannabis for medical and scientific purposes. Following cabinet approval in June and formal adoption of the rules in July, the state has become the third in India to allow legal cannabis cultivation. Located in the Himalayan region, Himachal Pradesh has a long tradition of hemp cultivation; the new regulations will enable farmers to lawfully cultivate a high‑value crop. The move reflects growing momentum for state‑level cannabis reform across India, the world’s largest democracy.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-07-27",
@@ -1394,7 +1588,9 @@ const ARTICLES_20260622: Article[] = [
   {
     id: 117,
     title: "아일랜드 의회 마약사용위원회, 모든 마약 비범죄화 권고",
+    titleEn: "Irish Parliamentary Joint Committee on Drug Use Recommends Decriminalization of All Drugs",
     summary: "아일랜드 입법부의 마약사용 합동위원회(Joint Committee on Drugs Use)가 대마를 포함한 모든 마약의 비범죄화를 권고했다. 유럽에서 포르투갈의 전면 비범죄화 모델을 따르는 국가가 늘어나는 가운데, 아일랜드 의회 차원의 공식 권고가 나온 것은 이례적이다. 실제 입법으로 이어질지는 미지수이나, 유럽 대마 정책 흐름의 변화를 보여주는 상징적 사례로 평가된다.",
+    summaryEn: "The Joint Committee on Drug Use of Ireland's legislature has recommended decriminalizing all drugs, including cannabis. With more European countries adopting Portugal’s comprehensive decriminalization model, an official parliamentary-level recommendation from Ireland is unusual. Whether it will lead to actual legislation remains uncertain, but the move is being seen as a symbolic sign of shifting trends in European cannabis policy.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-06-25",
@@ -1412,7 +1608,9 @@ const ARTICLES_20260629: Article[] = [
   {
     id: 118,
     title: "백악관, 의회에 '헴프 공정 대우' 촉구 — 11월 재범죄화법 최소 연기 요청",
+    titleEn: "White House Urges Congress to Ensure Fair Treatment for Hemp — Seeks at Least a Delay of November Re‑criminalization Measure",
     summary: "백악관이 의회에 서한을 보내 11월 발효 예정인 광범위한 헴프 재범죄화법을 '최소한' 연기해 '헴프 제품의 공정한 대우를 보장'하라고 촉구했다. THC 제품을 합법 유지하되 규제를 추가하는 최근 수정안을 인용하며, 업계의 법적 불확실성 해소를 위한 유예 기간이 필요하다는 입장을 밝혔다. 이미 속보 배너에 등록된 OMB 촉구 서한의 후속 조치로, 행정부 차원의 헴프 보호 의지가 재확인됐다.",
+    summaryEn: "The White House sent a letter to Congress urging that the broad hemp re‑criminalization measure scheduled to take effect in November be deferred, at minimum, to ensure fair treatment of hemp products. Citing a recent amendment that would keep THC products legal while imposing additional regulation, the administration said a grace period is needed to resolve legal uncertainty for the industry. The move, following an OMB urging letter already posted in news banners, reaffirms the administration’s commitment to protecting hemp.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-06-25",
@@ -1425,7 +1623,9 @@ const ARTICLES_20260629: Article[] = [
   {
     id: 119,
     title: "DEA 재분류 청문회 첫날: DEA·FDA '대마가 알코올·오피오이드보다 안전' 증언 부각",
+    titleEn: "First Day of DEA Rescheduling Hearing: DEA, FDA Highlight Testimony That Cannabis Is Safer Than Alcohol and Opioids",
     summary: "DEA와 FDA 측 변호인이 대마 재분류 청문회 첫날 대마의 의학적 효용과 알코올·오피오이드 대비 상대적 안전성에 관한 증언을 부각했다. 초당파 의원들은 의회의 재분류 차단 시도가 성공하지 못할 것이라 전망했다. 이번 청문회는 미국 대마 정책 역사상 가장 중요한 공개 심리 중 하나로, DEA의 Schedule III 재분류 절차가 사실상 돌이킬 수 없는 단계에 접어들었다는 평가가 나온다.",
+    summaryEn: "On the first day of the DEA rescheduling hearing, counsel for the DEA and FDA emphasized testimony regarding cannabis’s medical benefits and its relative safety compared with alcohol and opioids. Bipartisan lawmakers predicted that congressional efforts to block the rescheduling would likely fail. Observers characterize the hearing as one of the most significant public proceedings in U.S. cannabis policy history, and say the DEA’s Schedule III reclassification process has effectively reached an irreversible stage.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-06-30",
@@ -1438,7 +1638,9 @@ const ARTICLES_20260629: Article[] = [
   {
     id: 120,
     title: "버지니아, 성인용 대마 판매 합법화 최종 통과 — 예산안에 포함되어 정식 발효",
+    titleEn: "Virginia Finalizes Legalization of Adult-Use Cannabis Sales — Enacted via Inclusion in Budget",
     summary: "버지니아 상·하원이 Spanberger(D) 주지사의 예산안 수정안을 수용하면서 성인용 대마 판매 합법화가 최종 확정됐다. 주지사의 추가 조치 없이 법률로 정식 발효되며 수년간의 법적 공백이 종료됐다. 앞서 주지사가 독립 법안에 거부권을 행사한 바 있으나, 예산안에 포함시키는 우회 전략으로 합법화가 성사됐다. 버지니아는 미국 동부 주요 주 중 성인용 대마 판매를 합법화한 최신 사례가 됐다.",
+    summaryEn: "Virginia’s House and Senate have accepted Gov. Spanberger (D)’s amended budget proposal, finalizing the legalization of adult-use cannabis sales. The provision will take effect as law without further action by the governor, ending years of legal uncertainty. Although the governor had earlier vetoed a standalone legalization bill, lawmakers used a budgetary workaround to secure enactment. Virginia is the latest major East Coast state to legalize adult-use cannabis sales.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-06-30",
@@ -1456,7 +1658,9 @@ const ARTICLES_20260727: Article[] = [
   {
     id: 125,
     title: "Barr·Craig 의원, 헴프 THC 제품 합법 유지 초당파 법안 발의 — 11월 전면 금지를 규제·과세 체계로 대체",
+    titleEn: "Reps. Barr and Craig Introduce Bipartisan Bill to Keep Hemp‑Derived THC Products Legal — Replace November Blanket Ban with Federal Regulatory and Tax Framework",
     summary: "Andy Barr(R-KY)·Angie Craig(D-MN) 의원이 11월 발효 예정인 헴프 THC 전면 금지를 신규 연방 규제·과세 체계로 대체하는 초당파 법안을 발의했다. Barr 의원실은 백악관이 지지한다고 밝혔으며, 주류 도매업계(WSWA)도 'THC 음료는 알코올처럼 취급해야 한다'며 지지 입장을 표명했다. 11월 전면 금지 시한이 다가오는 가운데 헴프 업계의 법적 불확실성을 해소하기 위한 핵심 입법으로 주목된다.",
+    summaryEn: "Reps. Andy Barr (R‑KY) and Angie Craig (D‑MN) have introduced a bipartisan bill to replace the full federal ban on hemp‑derived THC products scheduled to take effect in November with a new federal regulatory and taxation framework. Barr’s office said the White House supports the measure, and the Wine & Spirits Wholesalers of America (WSWA) has voiced support, arguing that THC beverages should be treated like alcohol. With the November prohibition deadline approaching, the bill is being viewed as a key piece of legislation to resolve legal uncertainty for the hemp industry.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-07-23",
@@ -1469,7 +1673,9 @@ const ARTICLES_20260727: Article[] = [
   {
     id: 126,
     title: "연방판사, 오하이오 헴프 THC 제품 규제 시행 차단 — 10개 기업 대상 예비 금지명령",
+    titleEn: "Federal Judge Blocks Enforcement of Ohio Hemp THC Regulation — Preliminary Injunction Against 10 Companies",
     summary: "연방판사가 소송이 진행되는 동안 오하이오의 헴프 THC 제품 규제를 특정 10개 기업에 대해 시행하지 못하도록 예비 금지명령을 발부했다. 미주리·플로리다에서도 유사 소송이 진행 중이며, 각 주의 헴프 규제 강화에 대한 업계의 법적 대응이 전국적으로 확산되고 있다.",
+    summaryEn: "A federal judge has issued a preliminary injunction preventing Ohio from enforcing its hemp-derived THC product regulation against ten specific companies while the lawsuit proceeds. Similar litigation is underway in Missouri and Florida, and the industry's legal challenges to tightened state hemp regulations are spreading nationwide.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-07-20",
@@ -1482,7 +1688,9 @@ const ARTICLES_20260727: Article[] = [
   {
     id: 127,
     title: "매사추세츠 대마 합법화 폐지 주민투표 서명 이의 기각 — 11월 투표 확정",
+    titleEn: "Massachusetts Challenge to Repeal of Cannabis Legalization Dismissed — November Vote Confirmed",
     summary: "매사추세츠 주 선거법위원회가 대마 합법화 폐지 발의안을 11월 투표에서 빼려는 막판 시도를 기각했다. 청원 서명 이의를 각하하며 투표 등재를 확정했다. 2008년 합법화 이후 처음으로 폐지 여부를 묻는 주민투표가 실시될 예정으로, 미국 대마 정책의 역주행 가능성을 가늠하는 중요한 시험대가 될 전망이다.",
+    summaryEn: "The Massachusetts Ballot Law Commission rejected a last‑minute effort to remove a repeal initiative from the November ballot, dismissing objections to the petition signatures and certifying the measure for the vote. If approved, the referendum would be the first public vote on rolling back legalization since the state legalized adult‑use cannabis in 2008, and is expected to serve as a key indicator of whether U.S. cannabis policy may shift toward reversal.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-07-22",
@@ -1495,7 +1703,9 @@ const ARTICLES_20260727: Article[] = [
   {
     id: 128,
     title: "독일 부분 합법화 1년, 청소년 대마 사용률에 즉각적 영향 없음 — 합법화 반대론 반박 근거",
+    titleEn: "One Year After Germany's Partial Legalization, No Immediate Effect on Youth Cannabis Use — Evidence Undermining Opposition Claims",
     summary: "독일 로베르트 코흐 연구소(RKI) 연구 결과, 2024년 부분 합법화 1년 후 독일 청소년의 대마 사용 유병률에 즉각적 영향의 증거가 없었다. 합법화가 청소년 사용 증가로 이어진다는 반대론의 핵심 주장을 정면으로 반박하는 실증 데이터로, 유럽 각국의 대마 정책 논의에 중요한 참고 자료가 될 전망이다.",
+    summaryEn: "A study by Germany’s Robert Koch Institute (RKI) found no evidence of an immediate change in the prevalence of cannabis use among German adolescents one year after the partial legalization in 2024. The empirical findings directly challenge the central argument of opponents that legalization leads to increased youth use and are likely to serve as an important reference in cannabis policy debates across European countries.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-07-22",
@@ -1508,7 +1718,9 @@ const ARTICLES_20260727: Article[] = [
   {
     id: 129,
     title: "대마, 오피오이드 소비 감소·금단 완화 — 연방 자금 지원 연구",
+    titleEn: "Cannabis Associated with Reduced Opioid Use and Eased Withdrawal — Federally Funded Study",
     summary: "연방 자금 지원 신규 연구에서 오피오이드 금단을 위한 대마 사용이 자가보고 오피오이드 사용 감소와 유의미하게 연관된 것으로 나타났다. 연구진은 합법 대마 접근성 개선이 특히 과다복용 고위험군에서 오피오이드 사용의 건강·사회적 피해를 줄일 수 있다고 결론지었다. 대마의 오피오이드 대체재 가능성을 뒷받침하는 연방 차원의 연구로 주목된다.",
+    summaryEn: "A new federally funded study found that cannabis use for opioid withdrawal was significantly associated with self-reported reductions in opioid use. The researchers concluded that improved legal access to cannabis could reduce the health and social harms of opioid use, particularly among populations at high risk of overdose. The study is notable as federal-level research supporting cannabis’s potential as an opioid substitute.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-07-24",
@@ -1521,7 +1733,9 @@ const ARTICLES_20260727: Article[] = [
   {
     id: 130,
     title: "THC·CBD, 알츠하이머 등 치매 환자 10명 중 9명의 초조(agitation) 증상 감소",
+    titleEn: "Hemp-derived THC and CBD Reduce Agitation in Nine of Ten Dementia Patients, Including Alzheimer’s",
     summary: "신규 연구에서 대마 유래 THC·CBD가 알츠하이머를 포함한 치매 환자 10명 중 9명에서 초조(agitation) 증상을 감소시키는 것으로 나타났다. 치매 관련 정신행동 증상(BPSD)에 대한 카나비노이드의 완화 가능성을 보여주는 임상적으로 의미 있는 결과로, 기존 항정신병 약물의 부작용 우려를 고려할 때 대안적 치료 옵션으로서의 가능성이 주목된다.",
+    summaryEn: "A new study found that hemp-derived THC and CBD reduced agitation symptoms in nine out of ten dementia patients, including those with Alzheimer’s disease. These clinically meaningful results indicate the potential for cannabinoids to alleviate behavioral and psychological symptoms of dementia (BPSD) and highlight their promise as an alternative treatment option given concerns over adverse effects associated with conventional antipsychotics.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-07-24",
@@ -1534,7 +1748,9 @@ const ARTICLES_20260727: Article[] = [
   {
     id: 131,
     title: "암 생존자 5명 중 1명, 증상 완화 위해 CBD 사용 — 통증·수면·스트레스·우울",
+    titleEn: "One in Five Cancer Survivors Use CBD for Symptom Relief — Pain, Sleep, Stress, Depression",
     summary: "암 생존자 대상 연구에서 약 5분의 1이 CBD를 사용했으며, 주로 스트레스·불안·우울 등 정신적 고통, 수면, 통증, 신경병증 완화를 위한 것으로 나타났다. 생존자 절반 이상이 각 증상에서 최소한의 효과를 보고했다. 암 치료 후 삶의 질 관리에서 CBD의 역할이 점차 확대되고 있음을 보여주는 실증 연구다.",
+    summaryEn: "In a study of cancer survivors, roughly one-fifth reported using CBD, primarily to relieve psychological distress (stress, anxiety, depression), improve sleep, and alleviate pain and neuropathy. More than half of survivors reported at least minimal benefit for each symptom. The findings provide empirical evidence that CBD’s role in post‑treatment quality‑of‑life management for cancer survivors is gradually expanding.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-07-24",
@@ -1547,7 +1763,9 @@ const ARTICLES_20260727: Article[] = [
   {
     id: 132,
     title: "CBD, 다양한 전임상 모델서 불안·우울 유사 행동 감소·인지 개선 — 네이처 리뷰",
+    titleEn: "CBD Reduces Anxiety- and Depression-like Behaviors and Improves Cognition Across Multiple Preclinical Models — Nature Review",
     summary: "네이처(Nature) 게재 리뷰 논문에서 CBD가 다양한 전임상 모델에서 불안 유사·우울 유사 행동을 감소시키고 인지 수행을 개선한다는 결론이 도출됐다. 기존 항불안·항우울제와 비교해 부작용 프로파일이 우수하다는 점에서 정신건강 분야 CBD 치료제 개발의 과학적 근거가 강화되고 있다.",
+    summaryEn: "A review published in Nature concluded that CBD reduces anxiety-like and depression-like behaviors and improves cognitive performance across various preclinical models. Its more favorable side-effect profile compared with conventional anxiolytics and antidepressants strengthens the scientific rationale for developing CBD-based therapeutics in mental health.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-07-20",
@@ -1560,7 +1778,9 @@ const ARTICLES_20260727: Article[] = [
   {
     id: 133,
     title: "하원, NDAA 사이키델릭 수정안 통과 — Trump 행정명령 법제화·군 연구 2033년까지 연장",
+    titleEn: "House Passes NDAA Psychedelics Amendment — Codifies Trump Executive Order, Extends Military Psychedelic Research Through 2033",
     summary: "미국 하원이 국방수권법(NDAA) 수정안을 통과시켜 군 사이키델릭 연구 프로그램을 6년 추가 연장(2033년까지)하고 Trump의 사이키델릭 행정명령 조항을 법제화했다. 사이키델릭 치료의 군·보훈 분야 적용이 제도적으로 확대되는 흐름 속에서, 카나비노이드를 포함한 대안적 치료제에 대한 연방 차원의 관심이 높아지고 있다.",
+    summaryEn: "The U.S. House of Representatives approved an amendment to the National Defense Authorization Act (NDAA) that extends the military’s psychedelic research program by six years, through 2033, and codifies provisions of former President Trump’s executive order on psychedelics. Amid institutional expansion of psychedelic therapies within military and Veterans Affairs settings, federal attention to alternative therapeutics — including cannabinoids — is rising.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-07-24",
@@ -1573,7 +1793,9 @@ const ARTICLES_20260727: Article[] = [
   {
     id: 134,
     title: "대마 기업들, Trump 연계 슈퍼PAC에 지난달 1,150만 달러 기부 — FEC 기록",
+    titleEn: "Cannabis Companies Donated $11.5 Million Last Month to Trump-Linked Super PAC — FEC Records",
     summary: "신규 연방선거관리위원회(FEC) 기록에 따르면 미국 최대 대마 기업 여러 곳이 지난달 농업 중심 정치위원회에 총 1,150만 달러를 기부했다. 이 위원회는 Trump 대통령의 슈퍼PAC과 동일한 회계담당자를 두고 있어 재분류 국면에서 대마 업계의 정치적 로비 전략이 주목된다.",
+    summaryEn: "New Federal Election Commission (FEC) filings show several of the United States’ largest cannabis companies contributed a combined $11.5 million last month to an agriculture-focused political committee. The committee shares the same treasurer as President Trump’s super PAC, drawing attention to the cannabis industry’s political lobbying strategy amid a reclassification process.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-07-20",
@@ -1591,7 +1813,9 @@ const ARTICLES_20260803: Article[] = [
   {
     id: 135,
     title: "헴프 THC 금지 연기 확정 — 미 상원, 예산안에 11월 12일→2월 11일 유예 조항 포함",
+    titleEn: "Hemp THC Ban Delay Confirmed — U.S. Senate Includes Provision in Spending Bill to Postpone Ban from Nov. 12 to Feb. 11",
     summary: "미 상원 세출위원회 지도부가 연방기관 예산을 12월 11일까지 연장하는 법안 본문을 공개하면서, 예정된 헴프 제품 금지도 12월 11일까지 연기하는 조항을 포함했다. 단 '대마초에서 자연적으로 생성될 수 없는' 합성 카나비노이드는 11월 12일 즉시 재범죄화되는 예외 조항이 존재한다. 하원이 통과한 기존 예산안에는 이 조항이 없어 추가 승인이 필요하며, Barr·Craig 의원의 헴프 합법화 법안과 함께 헴프 업계의 법적 불확실성을 해소하는 핵심 입법으로 주목된다.",
+    summaryEn: "Senate Appropriations leadership released draft language extending federal agency funding through December 11 and included a provision delaying the scheduled prohibition on hemp products until December 11. However, an exception would immediately re-criminalize synthetic cannabinoids 'that cannot be naturally produced in cannabis' as of November 12. The provision was not included in the House-passed spending bill and therefore requires additional approval; together with the hemp-legalization legislation introduced by Barr and Craig, it is being viewed as a key measure to resolve legal uncertainty for the hemp industry.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-08-02",
@@ -1604,7 +1828,9 @@ const ARTICLES_20260803: Article[] = [
   {
     id: 136,
     title: "연방 보고서: 미국인 일상적 대마 사용, 음주·흔연 추월 — 2,140만 명",
+    titleEn: "Federal report: Daily cannabis use in the U.S. surpasses daily drinking and smoking — 21.4 million",
     summary: "약물남용정신건강서비스청(SAMHSA) 신규 연방 보고서에 따르면 매일 또는 거의 매일 대마를 사용하는 미국인이 매일 음주하거나 흔연하는 사람 수를 추월했다. 2025년 기준 약 2,140만 명이 최근 30일 중 20일 이상 대마를 사용한 것으로 나타났다(매일 흔연 1,990만 명 상회). 대마가 알코올과 담배를 대체하는 주류 물질로 부상하고 있음을 보여주는 연방 차원의 실증 데이터로 주목된다.",
+    summaryEn: "A new federal report from the Substance Abuse and Mental Health Services Administration (SAMHSA) finds that the number of Americans who use cannabis daily or nearly daily has exceeded those who drink alcohol daily or smoke cigarettes daily. As of 2025, about 21.4 million people reported using cannabis on 20 or more of the past 30 days, surpassing roughly 19.9 million daily cigarette smokers. The findings are notable federal empirical evidence that cannabis is emerging as a primary substitute for alcohol and tobacco.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-07-29",
@@ -1617,7 +1843,9 @@ const ARTICLES_20260803: Article[] = [
   {
     id: 137,
     title: "텍사스, 7월 31일부터 델타-8 등 헴프 유래 향정 카나비노이드 판매 중단 — $55억 시장 타격",
+    titleEn: "Texas to Prohibit Sale and Possession of Hemp‑Derived Intoxicating Cannabinoids (Delta‑8, etc.) from July 31 — $5.5B Market Hit",
     summary: "텍사스 주대법원 판결로 부활한 규정에 따라 7월 31일부터 델타-8 THC 제품의 판매·소지가 불법화됐다. 델타-8·델타-10 등 흥연용 향정 카나비노이드가 대상이며, $55억 규모 텍사스 헴프 시장의 근간인 델타-9 THC(건조중량 0.3% 이하)는 제외된다. 비자연적 함량의 델타-8 등 합성 THC 유사체 소지·판매에는 형사처벌이 부과된다.",
+    summaryEn: "Following a Texas Supreme Court ruling that reinstated the regulation, sale and possession of Delta‑8 THC products will be illegal beginning July 31. The ban targets intoxicating hemp‑derived cannabinoids used for inhalation—such as Delta‑8 and Delta‑10—while excluding Delta‑9 THC that meets the federal hemp threshold (≤0.3% dry weight), which underpins Texas’s $5.5 billion hemp market. Criminal penalties will apply for possession or sale of synthetic THC analogs, including Delta‑8 present at non‑naturally occurring concentrations.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-07-31",
@@ -1630,7 +1858,9 @@ const ARTICLES_20260803: Article[] = [
   {
     id: 138,
     title: "Pete Buttigieg: '의료 대마가 참전용사·가족에게 분명한 변화 가져왔다' — 2028 대선 후보 거론",
+    titleEn: "Pete Buttigieg: 'Medical Cannabis Has Clearly Brought Change for Veterans and Their Families' — Mentioned as a 2028 Presidential Candidate",
     summary: "전 교통부 장관이자 2028년 대선 후보로 거론되는 Pete Buttigieg가 '의료 대마가 군에서 함께 복무한 사람들과 확대가족에게 분명히 변화를 가져왔다'고 발언했다. '미국 다수는 사람들이 이것에 접근할 수 있어야 한다고 인식한다'는 발언으로, 의료 대마에 대한 지지를 명확히 했다.",
+    summaryEn: "Former Transportation Secretary and 2028 presidential contender Pete Buttigieg said that \"medical cannabis has clearly brought change for those who served in the military and their extended families.\" He added that \"a majority of Americans recognize that people should have access to this,\" clearly signaling his support for medical cannabis.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-07-27",
@@ -1643,7 +1873,9 @@ const ARTICLES_20260803: Article[] = [
   {
     id: 139,
     title: "캐나다 보건부, 대마 수입·냄새 저감·헴프 정책 지침 개정",
+    titleEn: "Health Canada Revises Guidance on Cannabis Imports, Odour Mitigation and Hemp Policy",
     summary: "캐나다 당국이 대마 수입, 냄새 저감(odour mitigation), 헴프 정책에 관한 지침을 개정했다. 합법화 이후 지속적으로 제도를 정비하고 있는 캐나다의 대마 규제 업데이트 사례로, 헴프 정책 개정은 미국의 헴프 규제 논의와 함께 주목된다.",
+    summaryEn: "Canadian authorities have revised guidance covering cannabis imports, odour mitigation, and hemp policy. The changes are part of ongoing regulatory updates to Canada’s cannabis framework since legalization, and the hemp policy revisions are drawing attention alongside contemporaneous U.S. debates on hemp regulation.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-07-29",
@@ -1656,7 +1888,9 @@ const ARTICLES_20260803: Article[] = [
   {
     id: 140,
     title: "대마, 염증성 장질환(IBD) 증상 조절·의약품 의존 감소에 도움 — 삶의 질 개선 (IBD 연구)",
+    titleEn: "Cannabis May Improve Symptom Control and Reduce Medication Dependence in Inflammatory Bowel Disease — Quality of Life Improved (IBD Study)",
     summary: "연구에 따르면 '대마가 염증성 장질환 환자의 증상 조절과 의약품 의존 감소에 도움이 될 수 있으며, 삶의 질을 개선할 수 있다'. 크론병·크론성 대장염 등 염증성 장질환 환자에게 스테로이드 등 기존 약물의 부작용을 줄이는 대안적 옵션으로 주목된다.",
+    summaryEn: "The study suggests that cannabis may help control symptoms and lower reliance on medications in patients with inflammatory bowel disease (IBD), resulting in improved quality of life. It is being considered as an alternative option for IBD patients, including those with Crohn’s disease and ulcerative colitis, to reduce the side effects associated with conventional drugs such as steroids.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-07-29",
@@ -1669,7 +1903,9 @@ const ARTICLES_20260803: Article[] = [
   {
     id: 141,
     title: "CBD, 류마티스 관절염 쿠 모델서 관절 염증·혁관 신생·골 파괴 감소 (Phytomedicine 게재)",
+    titleEn: "CBD Reduces Joint Inflammation, Synovial Angiogenesis and Bone Destruction in a Rheumatoid Arthritis Ku Model (Phytomedicine)",
     summary: "Phytomedicine 게재 연구에서 CBD가 류마티스 관절염 쿠 모델에서 관절 염증, 비정상적 혁관 성장, 뉴 파괴를 감소시키는 것으로 나타났다. 후난중의약대학 연구진이 활막 혁관신생(synovial angiogenesis) 억제를 통한 진행 지연 여부를 검증했으며, CBD가 활막섬유아세포의 과활성을 직접 억제할 뜻 아니라 혁관내피세포와의 혁관신생 촉진 신호 전달을 차단한다는 점에서 질병 조절 항혁관신생 치료제로서의 가능성이 주목된다.",
+    summaryEn: "A study published in Phytomedicine found that CBD reduced joint inflammation, aberrant synovial angiogenesis and bone destruction in a rheumatoid arthritis Ku model. Researchers at Hunan University of Chinese Medicine examined whether inhibiting synovial angiogenesis could delay disease progression and report that CBD does not act primarily by directly suppressing synovial fibroblast hyperactivity; rather, it blocks pro‑angiogenic signaling between synovial cells and endothelial cells. These findings highlight CBD’s potential as a disease‑modifying, anti‑angiogenic therapeutic approach for rheumatoid arthritis.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-08-01",
@@ -1682,7 +1918,9 @@ const ARTICLES_20260803: Article[] = [
   {
     id: 142,
     title: "CBD 우세 대마 추출물, 아토피 피부염 모델서 염증·피부 병변 개선 (Nutrients 게재)",
+    titleEn: "CBD-dominant hemp extract reduces inflammation and improves skin lesions in an atopic dermatitis model (published in Nutrients)",
     summary: "Nutrients 게재 연구에서 CBD 우세 대마 추출물이 아토피 피부염 쿠 모델에서 염증을 줄이고 피부 병변을 개선했으며 피부 장벽 유지 단백질을 회복했다. 두 용량 모두 발적·건조·부기·손상을 감소시켰고, 고용량은 여러 측정에서 코르티코스테로이드(덱사메타손)에 필적하는 결과를 보였다. 연구진은 인체 임상시험이 필요하다고 밝혀 스테로이드 대체제로서의 가능성에 주목된다.",
+    summaryEn: "In a study published in Nutrients, a CBD-dominant hemp extract reduced inflammation and improved skin lesions in an atopic dermatitis model and restored proteins involved in skin barrier maintenance. Both tested doses decreased erythema, dryness, swelling and tissue damage, and the higher dose produced effects comparable to the corticosteroid dexamethasone on several measures. The investigators note that human clinical trials are required, highlighting the extract’s potential as a steroid alternative.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-07-28",
@@ -1695,7 +1933,9 @@ const ARTICLES_20260803: Article[] = [
   {
     id: 143,
     title: "헴프 쳊가 반려견 사료, 장 건강 개선 — 유익균 증진 (연구)",
+    titleEn: "Hemp‑Supplemented Dog Food Improves Gut Health — Boosts Beneficial Bacteria (Study)",
     summary: "신규 연구에서 반려견 사료에 헴프를 첨가하면 '특정 유익균을 증진해 미생물 조성을 변화시켜 개의 장 건강을 뒷받침'하는 것으로 나타났다. 결과는 '반려견 사료의 기능성 원료로서 안전한 포함에 대한 근거를 제공'한다. 헴프의 산업적 활용 범위가 애완동물 식품으로도 확대되고 있음을 보여주는 연구다.",
+    summaryEn: "A new study found that adding hemp to dog food changed the intestinal microbial composition by promoting specific beneficial bacterial taxa, thereby supporting canine gut health. The results provide evidence for the safe inclusion of hemp as a functional ingredient in pet food and indicate that industrial applications of hemp are expanding into the pet-food sector.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-07-27",
@@ -1708,7 +1948,9 @@ const ARTICLES_20260803: Article[] = [
   {
     id: 144,
     title: "Vireo Growth, Planet 13 전주식 인수 합병 — 15개 주 265개 매장 업계 최대 규모 MSO 등극",
+    titleEn: "Vireo Growth Acquires Planet 13 in All‑Stock Merger — Becomes One of the Largest MSOs with ~265 Stores across 15 States",
     summary: "Vireo Growth가 Planet 13 Holdings를 전주식(all-stock) 합병으로 인수했다. 네바다 라스베이거스 플래그십 슈퍼스토어·소비라운지, 플로리다 33개 판매점 및 재배·생산시설 2곳, 일리노이 1개 등 36개 판매점을 추가한다. 거래 종료 후 15개 주 약 265개 매장 운영 전망으로, 미국 대마 업계 최대 규모 다주주 운영사(MSO) 중 하나로 등극한다.",
+    summaryEn: "Vireo Growth has acquired Planet 13 Holdings through an all‑stock merger. The deal adds Planet 13’s Las Vegas flagship superstore and on‑site consumption lounge, 33 Florida retail locations plus two cultivation and production facilities, and one Illinois store — 36 retail outlets in total. Upon closing, Vireo is expected to operate roughly 265 stores across 15 states, making it one of the largest multi‑state operators (MSOs) in the U.S. cannabis industry.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-07-28",
@@ -1721,7 +1963,9 @@ const ARTICLES_20260803: Article[] = [
   {
     id: 145,
     title: "미국 대마 매출 사상 첫 전년 대비 감소 — $320억(2024) → $299.4억(2025), 원인은 가격 압축",
+    titleEn: "U.S. Cannabis Sales Fall Year‑over‑Year for First Time — $32.0B (2024) → $29.94B (2025); Cause: Price Compression",
     summary: "미국 대마 매출이 사상 처음으로 전년 대비 감소해 2024년 $320억에서 2025년 $299.4억으로 하락했다. 단 원인은 수요 약화가 아닌 가격 압축으로, 소비자는 더 많이 구매하면서 더 적게 지불하고 있다. 대마 시장의 성숙도를 보여주는 동시에, 가격 하락이 업계 수익성에 미치는 구조적 도전을 시사한다.",
+    summaryEn: "U.S. cannabis sales declined year‑over‑year for the first time on record, dropping from $32.0 billion in 2024 to $29.94 billion in 2025. The reduction stems not from weaker demand but from price compression: consumers are buying larger quantities while paying less. The trend reflects a maturing market and signals structural profitability challenges for the industry as prices continue to fall.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-07-27",
@@ -1737,7 +1981,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 146,
     title: "김형동 의원, '마약류관리법 개정안' 대표발의 — CBD 향정신성의약품 분류, 국내 제조 근거 마련",
+    titleEn: "Rep. Kim Hyeong-dong Introduces Amendment to Narcotics Control Act as Primary Sponsor — Classifies CBD as Psychotropic Pharmaceutical, Establishes Basis for Domestic Manufacture",
     summary: "김형동 의원(국민의힘)이 CBD 등 의료적 효용성이 입증된 대마 성분을 향정신성의약품으로 분류해 국내 제조·품목허가를 허용하는 마약류관리법 개정안을 대표발의했다. 안동 헴프 산업화를 지원하는 내용도 포함되어 있으며, 국가 주도 의료용 마약류 원료관리센터 설립을 통해 재배부터 제조까지 엄격히 관리하는 체계를 구축하는 것이 핵심이다.",
+    summaryEn: "Rep. Kim Hyeong-dong (People Power Party) has introduced, as the primary sponsor, an amendment to the Narcotics Control Act to classify hemp-derived components with proven medical efficacy, such as CBD, as psychotropic pharmaceuticals and permit domestic manufacturing and product approvals. The bill also includes measures to support hemp industrialization in Andong and proposes establishing a state-led Medical Narcotics Raw Materials Management Center to create a tightly controlled system from cultivation through manufacture.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-07-06",
@@ -1750,7 +1996,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 147,
     title: "식약처 기획관 \"CBD 의료용 활용 제도 정비 취지 공감\" — 국내 생산 논의 급물살",
+    titleEn: "MFDS Planning Director: 'I Support Regulatory Reforms for Medical Use of CBD' — Talks on Domestic Production Gain Momentum",
     summary: "채규한 식약처 기획관이 국회 정책 토론회에서 CBD의 의료용 활용을 위한 제도 정비 취지에 공감한다고 밝히며 국내 개발 확대 방향을 언급했다. '의약 주권' 확립을 위한 CBD 국산화 필요성이 제기되면서 국내 생산 논의가 급물살을 타고 있다.",
+    summaryEn: "Chae Gyu-han, planning director at the Ministry of Food and Drug Safety (MFDS), said at a National Assembly policy forum that he supports the intent to reform the regulatory framework for medical use of CBD and outlined directions for expanding domestic development. Calls to secure 'pharmaceutical sovereignty' by localizing CBD production have accelerated discussions on domestic manufacturing.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-07-07",
@@ -1763,7 +2011,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 148,
     title: "경북도, 미량 칸나비노이드(CBG·CBC·CBN) 실증 확대 규제자유특구 신규 지정",
+    titleEn: "Gyeongbuk Designated as New Regulatory Free Zone to Expand Demonstration of Minor Cannabinoids (CBG, CBC, CBN)",
     summary: "경상북도가 제18차 규제자유특구위원회에서 미량 칸나비노이드(CBG·CBC·CBN) 실증 확대를 위한 신규 규제자유특구로 지정됐다. 이번 지정으로 안동 헴프산업이 원료의약품 완제품 개발까지 가능해지며, 경북 헴프 산업화의 범위가 크게 확대된다.",
+    summaryEn: "At its 18th meeting, the Regulatory Free Zone Committee designated North Gyeongsang Province (Gyeongbuk) as a new regulatory free zone to expand demonstration projects for minor cannabinoids (CBG, CBC, CBN). The designation will enable the Andong hemp industry to develop finished pharmaceutical products from active pharmaceutical ingredients (APIs), substantially expanding the scope of hemp industrialization in Gyeongbuk.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-06-29",
@@ -1776,7 +2026,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 149,
     title: "네오켄바이오, CBD 원료의약품 국산화 국가과제 주관기관 선정 — 57억원 규모",
+    titleEn: "Neoken Bio Selected as Lead for National CBD API Localization Project — KRW 5.7 Billion",
     summary: "네오켄바이오가 농림축산식품부의 '농생명자원 기반 국가필수의약품 원료공급망' 사업 주관기관으로 선정됐다. 57억원 규모로 2026년 4월부터 2030년 12월까지 진행되며, CBD 원료의약품의 국내 자급화를 목표로 한다.",
+    summaryEn: "Neoken Bio has been chosen by the Ministry of Agriculture, Food and Rural Affairs to serve as the lead institution for the “Agricultural Bioresources‑based National Essential Medicines Raw Material Supply Chain” program. The KRW 5.7 billion project will run from April 2026 through December 2030 and aims to achieve domestic self‑sufficiency in CBD active pharmaceutical ingredients (APIs).",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-04-13",
@@ -1789,7 +2041,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 150,
     title: "네오켄바이오, 150억원 규모 CBD 완제의약품 제조시설 구축 중 — 2027년 가동 목표",
+    titleEn: "NeoKen Bio establishing KRW 15 billion CBD finished‑pharmaceutical manufacturing facility — aiming to be operational by 2027",
     summary: "네오켄바이오가 150억원 규모의 CBD 완제의약품 제조시설을 구축 중이다. 2027년 가동을 목표로 하며, 지역 헴프 재배부터 성분 추출·완제의약품 제조까지 전주기 공급망을 구축하는 것이 핵심이다. 국내 CBD 의약품 자급화의 핵심 인프라로 주목받고 있다.",
+    summaryEn: "NeoKen Bio is building a CBD finished‑pharmaceutical manufacturing facility valued at KRW 15 billion. Targeted to be operational in 2027, the project’s core objective is to create an end‑to‑end supply chain—from regional hemp cultivation through ingredient extraction to finished drug production. The facility is being positioned as key infrastructure for domestic self‑sufficiency in CBD pharmaceuticals.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-05-13",
@@ -1802,7 +2056,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 151,
     title: "유한양행-인벤티지랩, CBD 기반 장기지속형 주사제 공동 개발 착수",
+    titleEn: "Yuhan Corporation and InventiGelab Begin Joint Development of CBD-Based Long‑Acting Injectable",
     summary: "유한양행과 인벤티지랩이 CBD 기반 장기지속형 주사제를 공동 개발하고 있다. 유한건강생활이 주도하며, 기존 경구 제형 대비 투약 편의성을 크게 개선하는 방향으로 개발이 진행 중이다. 국내 대형 제약사가 CBD 의약품 개발에 직접 참여한다는 점에서 주목된다.",
+    summaryEn: "Yuhan Corporation and InventiGelab are jointly developing a CBD‑based long‑acting injectable formulation. The project is being led by Yuhan’s consumer health division and is focused on significantly improving dosing convenience compared with existing oral formulations. The collaboration is notable because a major domestic pharmaceutical company is directly participating in the development of a CBD medicine.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-05-13",
@@ -1815,7 +2071,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 152,
     title: "한국디스펜서리, 고려대·원광대와 마약류학술연구자 허가 기반 카나비노이드 연구 수행",
+    titleEn: "Korean Dispensary Conducts Cannabinoid Research with Korea University and Wonkwang University Under Controlled‑Substances Academic Researcher Permit",
     summary: "한국디스펜서리가 고려대학교, 원광대학교와 협력해 마약류학술연구자 허가를 기반으로 카나비노이드 연구를 진행하고 있다. 국내에서 보기 드문 마약류 연구 수행 민간기업으로, 성분 수입·분석·응용 인프라를 구축하며 국내 카나비노이드 연구 생태계 형성에 기여하고 있다.",
+    summaryEn: "Korean Dispensary is collaborating with Korea University and Wonkwang University to carry out cannabinoid research based on a permit for academic researchers working with controlled substances. As a rare private company in Korea conducting research on controlled substances, it is building infrastructure for importing, analyzing, and applying cannabinoid constituents and contributing to the development of a domestic cannabinoid research ecosystem.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-06-29",
@@ -1828,7 +2086,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 153,
     title: "미국 상원, 연방 헴프 THC 규제 시행 4주 추가 유예 조항 통과 — Ted Cruz 지지",
+    titleEn: "U.S. Senate Passes 4-Week Delay for Federal Hemp THC Rule Implementation — Backed by Ted Cruz",
     summary: "미국 상원이 연방 헴프 THC 규제 시행을 4주 추가 유예하는 조항을 통과시켰다. Ted Cruz 상원의원이 지지를 표명했으며, 상원 규정담당관은 50표로 통과 가능하다고 판정했다. 앞서 12월 11일까지 유예된 헴프 THC 규제 시행이 추가로 연장되며 헴프 업계의 숨통이 트이고 있다.",
+    summaryEn: "The U.S. Senate approved a provision delaying enforcement of the federal hemp THC rule for an additional four weeks. Senator Ted Cruz voiced his support, and the Senate parliamentarian ruled the measure could be approved with 50 votes. The rule, previously delayed until December 11, has been extended again, providing temporary relief to the hemp industry.",
     category: "policy",
     categoryLabel: "정책·규제",
     date: "2026-08-06",
@@ -1841,7 +2101,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 154,
     title: "일본, 성분 기반 THC 잔류 기준으로 헴프 규제 체계 전환 — 업계 90% 폐업 우려",
+    titleEn: "Japan switches hemp rules to component-based residual-THC standard — industry warns 90% could shut down",
     summary: "일본이 헴프 규제 체계를 성분 기반 THC 잔류 기준으로 전환했다. CBD 오일 0.001% 미만 등 사실상 제로(zero)-THC 기준을 적용하면서 업계의 90%가 폐업할 수 있다는 우려가 나오고 있다. 아시아 주요국인 일본의 규제 강화는 역내 헴프 산업 전반에 영향을 미칠 것으로 전망된다.",
+    summaryEn: "Japan has shifted its hemp regulatory framework to a component-based residual-THC standard. By imposing an effectively zero-THC threshold — for example, requiring THC in CBD oil to be below 0.001% — the change has sparked concerns that as much as 90% of the industry could be forced to close. As a major market in Asia, Japan's tightening of rules is expected to impact the region's hemp sector broadly.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-05-15",
@@ -1854,7 +2116,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 155,
     title: "태국, 카나비스 꽃 라이선스 신규 규정 시행 — 의료시설 중심 사업 재편 요구",
+    titleEn: "Thailand Implements New Cannabis Flower Licensing Regulations — Pushes for Business Reorganization Around Medical Facilities",
     summary: "태국이 카나비스 꽃 관련 신규 규정(Regulation No.2)을 시행하며 카나비스 병원·클리닉 등 의료시설 중심으로 사업 재편을 요구하고 있다. 왕실관보에 게재된 이번 규정은 태국의 카나비스 합법화 이후 의료 목적 중심으로 규제를 재정비하는 방향을 보여준다.",
+    summaryEn: "Thailand has enacted new rules (Regulation No.2) for cannabis flower licensing, requiring businesses to refocus operations around medical facilities such as cannabis hospitals and clinics. Published in the Royal Gazette, the regulation signals a post‑legalization policy shift to tighten controls and reorganize the country’s cannabis framework to prioritize medical use.",
     category: "global",
     categoryLabel: "글로벌",
     date: "2026-04-30",
@@ -1867,7 +2131,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 156,
     title: "Dronabinol(THC), PTSD 악몽 빈도·강도 유의미하게 감소 — 171명 무작위 임상시험 성공",
+    titleEn: "Dronabinol (THC) Significantly Reduces Frequency and Intensity of PTSD Nightmares — Successful Randomized Clinical Trial in 171 Participants",
     summary: "THC 성분의 의약품 Dronabinol이 PTSD 환자의 악몽 빈도와 강도를 유의미하게 감소시키는 것으로 나타났다. 171명을 대상으로 한 무작위 임상시험에서 성공적인 결과를 거두며 PTSD 치료제로서의 잠재력을 확인했다.",
+    summaryEn: "Dronabinol, a THC-containing pharmaceutical, significantly reduced the frequency and intensity of nightmares in patients with PTSD. In a randomized clinical trial involving 171 participants, the drug produced positive results, supporting its potential as a therapeutic option for PTSD.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-08-05",
@@ -1880,7 +2146,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 157,
     title: "양동화 고려대구로병원 교수 \"난치성 소아 뇌전증서 CBD, 발작 감소·삶의 질 향상\"",
+    titleEn: "Professor Yang Dong-hwa of Korea University Guro Hospital: 'CBD Reduces Seizures and Improves Quality of Life in Treatment‑Resistant Pediatric Epilepsy'",
     summary: "양동화 고려대구로병원 교수가 에피디올렉스(CBD 의약품)의 난치성 소아 뇌전증 치료에서의 임상적 역할과 치료 접근성을 발표했다. 발작 감소와 삶의 질 향상 효과를 강조하면서도 국내 수입 절차의 한계를 지적해, CBD 의약품 국내 접근성 개선의 필요성을 재확인했다.",
+    summaryEn: "Professor Yang Dong-hwa of Korea University Guro Hospital presented on the clinical role and treatment accessibility of Epidiolex (a CBD medication) for treatment‑resistant pediatric epilepsy. He highlighted its effects in reducing seizures and improving quality of life, while pointing out limitations in domestic import procedures and reaffirming the need to improve access to CBD medicines in the country.",
     category: "domestic",
     categoryLabel: "국내",
     date: "2026-07-07",
@@ -1893,7 +2161,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 158,
     title: "고용량 CBD(800mg/일), 척수손상 신경통 감소 — Phase 2 이중맹검 임상 성공",
+    titleEn: "High-dose CBD (800 mg/day) Reduces Neuropathic Pain After Spinal Cord Injury — Phase 2 Double‑Blind Trial Successful",
     summary: "호주 시드니에서 진행된 Phase 2 이중맹검 교차설계 임상시험에서 고용량 CBD(800mg/일)가 척수손상 환자의 신경통을 유의미하게 감소시키는 것으로 나타났다. 안전성도 확인되어 대규모 임상시험의 정당성을 확보했다.",
+    summaryEn: "A Phase 2 double‑blind, randomized crossover trial conducted in Sydney, Australia found that high‑dose cannabidiol (CBD; 800 mg/day) produced a statistically significant reduction in neuropathic pain in people with spinal cord injury. Safety and tolerability were confirmed, supporting the rationale for larger‑scale clinical trials.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-06-22",
@@ -1906,7 +2176,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 160,
     title: "CBD, 라식 수술 후 통증 완화 효과가 코데인-아세트아미노펜과 유사 — 임상시험",
+    titleEn: "CBD Provides Post-LASIK Pain Relief Comparable to Codeine–Acetaminophen — Clinical Trial",
     summary: "임상시험 결과 CBD가 라식(LASIK) 수술 후 통증 완화에 코데인-아세트아미노펜 복합제와 유사한 효과를 보이는 것으로 나타났다. 안과 수술 후 통증 관리의 새로운 옵션으로 주목받으며, 마약성 진통제를 대체할 수 있는 가능성을 제시한다.",
+    summaryEn: "A clinical trial found that CBD produced pain relief after LASIK comparable to a codeine–acetaminophen combination. The result highlights CBD as a potential new option for ophthalmic postoperative pain management and suggests it may serve as an alternative to opioid analgesics.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-08-03",
@@ -1919,7 +2191,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 161,
     title: "튀르키예 Ege University, 헴프 미생물 공정 기술 개발 — 성분 활용 최적화",
+    titleEn: "Ege University (Türkiye) Develops Microbial Processing Technology for Hemp — Optimizes Component Utilization",
     summary: "튀르키예 에게대학교(Ege University)가 제어된 미생물 발효 프로세스를 통해 헴프 성분 활용을 최적화하는 공정 기술을 개발했다. 헴프 바이오테크 분야에서 새로운 가능성을 열어주는 연구로, 산업용 헴프의 부가가치를 높이는 데 기여할 것으로 기대된다.",
+    summaryEn: "Ege University in Türkiye has developed a process technology that optimizes the utilization of hemp constituents through controlled microbial fermentation. The research opens new possibilities in hemp biotechnology and is expected to help increase the value of industrial hemp by improving extraction and conversion of target components.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-08-04",
@@ -1932,7 +2206,9 @@ const ARTICLES_20260810: Article[] = [
   {
     id: 159,
     title: "영국, 세계 최대 규모 CBD 불면증 임상시험 승인",
+    titleEn: "UK Approves World’s Largest CBD Clinical Trial for Insomnia",
     summary: "영국에서 세계 최대 규모의 CBD 불면증 임상시험이 승인됐다. 이번 임상시험은 CBD의 불면증 치료 효과에 대한 표준화된 대규모 데이터를 확보할 것으로 기대되며, CBD 의약품 허가의 근거 자료로 활용될 전망이다.",
+    summaryEn: "The UK has approved the world’s largest clinical trial evaluating CBD for insomnia. The study is expected to produce robust, standardized, large-scale data on CBD’s therapeutic effects for insomnia and could serve as supporting evidence for regulatory approval of CBD medicinal products.",
     category: "rnd",
     categoryLabel: "R&D·기술",
     date: "2026-07-13",
