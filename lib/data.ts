@@ -2218,6 +2218,21 @@ const ARTICLES_20260810: Article[] = [
     source: "Business of Cannabis 7/13",
     featured: false,
   },
+  {
+    id: 162,
+    title: "한국, 미량 칸나비노이드 의약품 개발에 296억원 투자 — 경북 헴프 특구 상용화 단계 진입",
+    titleEn: "South Korea Puts $21 Million Behind Minor Cannabinoids for Medical Hemp Products",
+    summary: "한국이 경북 안동 산업용 헴프 규제자유특구를 새로운 상용화 단계로 전환하기 위해 296억원(약 2,100만 달러)을 투자한다. 4년 프로젝트로 CBG·CBC·CBN 등 미량 칸나비노이드 상용화를 목표로 하며, 네오켄바이오·HLB생명과학R&D 등 6개사가 KIST·경북바이오산업연구원과 협력해 재배부터 완제의약품 제조까지 전주기 공급망을 구축한다. 글로벌 헴프 전문 미디어 HempToday가 한국의 의료 헴프 전략을 집중 보도했다.",
+    summaryEn: "South Korea is investing 29.6 billion won (about $21 million) to move its pioneering industrial hemp program into a new commercialization phase, signaling that medical applications remain the government's top priority for the crop. The four-year project will expand the Andong Industrial Hemp Special Zone in North Gyeongsang Province, aiming to commercialize minor cannabinoids such as CBG, CBC and CBN. Participating companies include Neoken Bio and HLB Life Science R&D, working alongside KIST to build a full pharmaceutical value chain from cultivation to finished medicines.",
+    category: "global",
+    categoryLabel: "글로벌",
+    date: "2026-07-23",
+    country: "한국",
+    link: "https://hemptoday.net/south-korea-puts-21-million-behind-minor-cannabinoids-for-medical-hemp-products/",
+    image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800&q=80",
+    source: "HempToday 7/23",
+    featured: false,
+  },
 ];
 
 // ── 입법동향 데이터 ──────────────────────────────────────────────────────
