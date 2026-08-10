@@ -114,7 +114,7 @@ export default function EnHomePage() {
                 {cat.labelEn}
               </span>
               <span className="text-[10px] text-gray-400 mt-0.5 uppercase tracking-wide">
-                {cat.slug}
+                {EN_CATEGORY_LABELS[cat.slug] || cat.labelEn}
               </span>
             </Link>
           ))}

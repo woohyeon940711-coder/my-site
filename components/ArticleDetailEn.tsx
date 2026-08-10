@@ -3,6 +3,25 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+const COUNTRY_MAP: Record<string, string> = {
+  "미국": "USA",
+  "영국": "UK",
+  "독일": "Germany",
+  "캐나다": "Canada",
+  "호주": "Australia",
+  "이스라엘": "Israel",
+  "인도": "India",
+  "일본": "Japan",
+  "태국": "Thailand",
+  "아일랜드": "Ireland",
+  "그리스": "Greece",
+  "콜롬비아": "Colombia",
+  "한국": "South Korea",
+  "튀르키예": "Türkiye",
+  "국제": "International",
+  "EU": "EU",
+};
+
 function extractDomain(url: string): string {
   try {
     const hostname = new URL(url).hostname.replace(/^www\./, "");
@@ -63,7 +82,7 @@ export default function ArticleDetailEn({ category, id }: Props) {
             </span>
             {article.country && (
               <span className="text-xs text-gray-400 border border-gray-200 px-2 py-0.5 rounded-sm">
-                {article.country}
+                {COUNTRY_MAP[article.country ?? ''] || article.country}
               </span>
             )}
             <span className="text-xs text-gray-400">{article.date}</span>
@@ -128,7 +147,7 @@ export default function ArticleDetailEn({ category, id }: Props) {
             </span>
             {article.country && (
               <span className="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full">
-                #{article.country}
+                #{COUNTRY_MAP[article.country ?? ''] || article.country}
               </span>
             )}
             <span className="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full">#Cannabis</span>
