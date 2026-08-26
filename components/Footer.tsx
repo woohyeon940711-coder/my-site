@@ -88,10 +88,10 @@ export default function Footer() {
             </p>
             <p>Email: contact@cannabisinsight.kr</p>
             <div className="flex gap-3 mt-3">
-              <Link href="/terms" className="hover:text-[#52b788] transition-colors">
+              <Link href={`${base}/terms`} className="hover:text-[#52b788] transition-colors">
                 {isEn ? "Terms of Use" : "이용약관"}
               </Link>
-              <Link href="/privacy" className="hover:text-[#52b788] transition-colors">
+              <Link href={`${base}/privacy`} className="hover:text-[#52b788] transition-colors">
                 {isEn ? "Privacy Policy" : "개인정보처리방침"}
               </Link>
             </div>

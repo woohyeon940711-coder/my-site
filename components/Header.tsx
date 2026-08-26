@@ -58,7 +58,7 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      router.push(`${isEn ? "/en/search" : "/search"}?q=${encodeURIComponent(searchQuery.trim())}`);
       setSearchOpen(false);
       setSearchQuery("");
     }
