@@ -2459,7 +2459,7 @@ const ARTICLES_20260817: Article[] = [
     date: "2026-08-14",
     country: "캐나다",
     link: "https://themarijuanaherald.com/2026/08/study-finds-cbd-inhibits-dental-plaque-bacteria-and-biofilm-formation/",
-    image: "https://images.unsplash.com/photo-1606265752439-1f18756aa2ef?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80",
     source: "The Marijuana Herald 8/14",
     featured: false,
   },

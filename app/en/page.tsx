@@ -2,23 +2,23 @@ import ArticleCardEn from "@/components/ArticleCardEn";
 import { ARTICLES, CATEGORIES } from "@/lib/data";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/SeoEnhancements";
+import { alternatesFor, DEFAULT_OG_IMAGE, websiteJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "CannabisInsight — Korea's Cannabis & Hemp Industry News",
-  description: "CannabisInsight delivers the latest cannabis and hemp industry news, policy updates, R&D breakthroughs, and global market trends. Korea's leading cannabis media.",
+  title: "Korea's Cannabis & Hemp Industry News",
+  description: "CannabisInsight covers Korean and global cannabis and hemp policy, market, R&D and business news.",
   keywords: ["cannabis", "hemp", "CBD", "THC", "cannabis news", "hemp industry", "CannabisInsight", "Korea cannabis"],
   openGraph: {
     title: "CannabisInsight — Korea's Cannabis & Hemp Industry News",
-    description: "The latest cannabis and hemp industry news, policy, R&D, and global trends.",
+    description: "Korean and global cannabis and hemp policy, market, R&D and business news.",
     url: "https://www.cannabisinsight.kr/en",
     siteName: "CannabisInsight",
     locale: "en_US",
     type: "website",
+    images: [{ url: DEFAULT_OG_IMAGE, width: 512, height: 512, alt: "CannabisInsight" }],
   },
-  alternates: {
-    canonical: "https://www.cannabisinsight.kr/en",
-    languages: { "ko": "https://www.cannabisinsight.kr" },
-  },
+  alternates: alternatesFor("/", "en"),
 };
 
 const EN_CATEGORY_LABELS: Record<string, string> = {
@@ -42,7 +42,9 @@ export default function EnHomePage() {
   const topNews = ARTICLES.filter((a) => !usedIds.has(a.id)).slice(0, 5);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6">
+    <>
+      <JsonLd data={websiteJsonLd("en")} />
+      <div className="max-w-7xl mx-auto px-4 py-6">
       {/* Featured + Side */}
       <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
         <div className="lg:col-span-2">
@@ -52,8 +54,9 @@ export default function EnHomePage() {
           {sideArticles.map((article) => (
             <Link
               key={article.id}
-              href={`/en/${article.category}/${article.id}`}
-              className="group flex gap-3 border-b border-gray-100 pb-4 last:border-0"
+                href={`/en/${article.category}/${article.id}`}
+                prefetch={false}
+                className="group flex gap-3 border-b border-gray-100 pb-4 last:border-0"
             >
               <div className="flex-1 min-w-0">
                 <span className="text-[11px] font-semibold text-[#2d6a4f] uppercase tracking-wide">
@@ -120,6 +123,7 @@ export default function EnHomePage() {
           ))}
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

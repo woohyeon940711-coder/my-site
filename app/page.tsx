@@ -2,6 +2,8 @@ import BreakingNewsBanner from "@/components/BreakingNewsBanner";
 import ArticleCard from "@/components/ArticleCard";
 import { ARTICLES, CATEGORIES } from "@/lib/data";
 import Link from "next/link";
+import { JsonLd } from "@/components/SeoEnhancements";
+import { websiteJsonLd } from "@/lib/seo";
 
 export default function HomePage() {
   // 1. 피처드 기사: 전체 최신 기사 자동 선정 (날짜 역순 정렬이므로 첫 번째)
@@ -21,6 +23,7 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={websiteJsonLd("ko")} />
       <BreakingNewsBanner />
       <div className="max-w-7xl mx-auto px-4 py-6">
         {/* Featured + Side */}
@@ -33,6 +36,7 @@ export default function HomePage() {
               <Link
                 key={article.id}
                 href={`/${article.category}/${article.id}`}
+                prefetch={false}
                 className="group flex gap-3 border-b border-gray-100 pb-4 last:border-0"
               >
                 <div className="flex-1 min-w-0">

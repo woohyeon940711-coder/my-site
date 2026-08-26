@@ -13,13 +13,14 @@ export default function ArticleCard({ article, variant = "card", rank }: Props) 
 
   if (variant === "featured") {
     return (
-      <Link href={href} className="group block">
+      <Link href={href} prefetch={false} className="group block">
         <div className="relative w-full aspect-[16/9] overflow-hidden rounded-sm bg-gray-100">
           {article.image && (
             <Image
               src={article.image}
               alt={article.title}
               fill
+              priority
               className="object-cover group-hover:scale-105 transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, 60vw"
             />
@@ -42,7 +43,7 @@ export default function ArticleCard({ article, variant = "card", rank }: Props) 
 
   if (variant === "list") {
     return (
-      <Link href={href} className="group flex items-start gap-3 py-3 border-b border-gray-100 last:border-0">
+      <Link href={href} prefetch={false} className="group flex items-start gap-3 py-3 border-b border-gray-100 last:border-0">
         <span className="shrink-0 text-2xl font-black text-[#2d6a4f] w-7 leading-none mt-0.5">
           {rank}
         </span>
@@ -61,7 +62,7 @@ export default function ArticleCard({ article, variant = "card", rank }: Props) 
 
   // default: card
   return (
-    <Link href={href} className="group flex flex-col">
+    <Link href={href} prefetch={false} className="group flex flex-col">
       <div className="relative w-full aspect-[16/10] overflow-hidden rounded-sm bg-gray-100">
         {article.image && (
           <Image

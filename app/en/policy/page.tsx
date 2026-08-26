@@ -1,26 +1,9 @@
-import CategoryPageEn from "@/components/CategoryPageEn";
 import type { Metadata } from "next";
+import CategoryPageEn from "@/components/CategoryPageEn";
+import { categoryMetadata } from "@/lib/seo";
 
-const EN_LABELS: Record<string, string> = {
-  policy: "Policy & Regulation",
-  global: "Global",
-  rnd: "R&D & Tech",
-  domestic: "Korea",
-  industry: "Industry",
-  hemp: "Hemp Guide",
-  insight: "Insight",
-  guide: "Guide",
-};
+export const metadata: Metadata = categoryMetadata("policy", "en");
 
-export const metadata: Metadata = {
-  title: `${EN_LABELS["policy"]} | CannabisInsight`,
-  description: `Latest cannabis and hemp ${EN_LABELS["policy"].toLowerCase()} news from CannabisInsight.`,
-  alternates: {
-    canonical: `https://www.cannabisinsight.kr/en/policy`,
-    languages: { "ko": `https://www.cannabisinsight.kr/policy` },
-  },
-};
-
-export default function EnCategoryPage() {
+export default function EnCategoryRoute() {
   return <CategoryPageEn slug="policy" />;
 }

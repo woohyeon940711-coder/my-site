@@ -1,5 +1,7 @@
 import ArticleDetail from "@/components/ArticleDetail";
+import { JsonLd } from "@/components/SeoEnhancements";
 import { ARTICLES } from "@/lib/data";
+import { articleJsonLd, articleMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -8,37 +10,26 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return ARTICLES.filter((a) => a.category === "insight").map((a) => ({
-    id: String(a.id),
+  return ARTICLES.filter((article) => article.category === "insight").map((article) => ({
+    id: String(article.id),
   }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const article = ARTICLES.find((a) => a.id === Number(id) && a.category === "insight");
-  if (!article) return {};
-  const description = article.summary.slice(0, 155) + (article.summary.length > 155 ? "…" : "");
-  return {
-    title: `${article.title} | CannabisInsight`,
-    description,
-    keywords: ["대마 인사이트", "헴프 분석", "CBD 시장", "카나비스인사이트", "CannabisInsight"],
-    openGraph: {
-      title: `${article.title} | CannabisInsight`,
-      description,
-      url: `https://www.cannabisinsight.kr/insight/${article.id}`,
-      siteName: "CannabisInsight",
-      locale: "ko_KR",
-      type: "article",
-      publishedTime: article.date,
-      images: article.image ? [{ url: article.image, width: 800, height: 450 }] : undefined,
-    },
-    alternates: { canonical: `https://www.cannabisinsight.kr/insight/${article.id}` },
-  };
+  const article = ARTICLES.find((item) => item.id === Number(id) && item.category === "insight");
+  return article ? articleMetadata(article, "ko") : {};
 }
 
-export default async function Page({ params }: Props) {
+export default async function ArticlePage({ params }: Props) {
   const { id } = await params;
-  const numId = Number(id);
-  if (isNaN(numId)) notFound();
-  return <ArticleDetail category="insight" id={numId} />;
+  const article = ARTICLES.find((item) => item.id === Number(id) && item.category === "insight");
+  if (!article) notFound();
+
+  return (
+    <>
+      <JsonLd data={articleJsonLd(article, "ko")} />
+      <ArticleDetail category="insight" id={article.id} />
+    </>
+  );
 }

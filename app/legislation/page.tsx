@@ -1,5 +1,10 @@
 import { LEGISLATIONS, ARTICLES, LegislationStatus } from "@/lib/data";
 import Link from "next/link";
+import type { Metadata } from "next";
+import { JsonLd } from "@/components/SeoEnhancements";
+import { legislationJsonLd, legislationMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = legislationMetadata("ko");
 
 const STATUS_STEPS: LegislationStatus[] = [
   "접수",
@@ -73,7 +78,9 @@ export default function LegislationPage() {
   const latestArticles = ARTICLES.slice(0, 5);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <>
+      <JsonLd data={legislationJsonLd("ko")} />
+      <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
       <nav className="text-xs text-gray-400 mb-4 flex items-center gap-1">
         <Link href="/" className="hover:text-[#2d6a4f] transition-colors">
@@ -242,6 +249,7 @@ export default function LegislationPage() {
           </div>
         </aside>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

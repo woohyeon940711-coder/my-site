@@ -1,5 +1,7 @@
 import ArticleDetailEn from "@/components/ArticleDetailEn";
+import { JsonLd } from "@/components/SeoEnhancements";
 import { ARTICLES } from "@/lib/data";
+import { articleJsonLd, articleMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -8,41 +10,26 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return ARTICLES.filter((a) => a.category === "guide").map((a) => ({
-    id: String(a.id),
+  return ARTICLES.filter((article) => article.category === "guide").map((article) => ({
+    id: String(article.id),
   }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const article = ARTICLES.find((a) => a.id === Number(id) && a.category === "guide");
-  if (!article) return {};
-  const title = article.titleEn || article.title;
-  const description = (article.summaryEn || article.summary).slice(0, 155) + "…";
-  return {
-    title: `${title} | CannabisInsight`,
-    description,
-    keywords: ["cannabis", "hemp", "CBD", "CannabisInsight"],
-    openGraph: {
-      title: `${title} | CannabisInsight`,
-      description,
-      url: `https://www.cannabisinsight.kr/en/guide/${article.id}`,
-      siteName: "CannabisInsight",
-      locale: "en_US",
-      type: "article",
-      publishedTime: article.date,
-      images: article.image ? [{ url: article.image, width: 800, height: 450 }] : undefined,
-    },
-    alternates: {
-      canonical: `https://www.cannabisinsight.kr/en/guide/${article.id}`,
-      languages: { "ko": `https://www.cannabisinsight.kr/guide/${article.id}` },
-    },
-  };
+  const article = ARTICLES.find((item) => item.id === Number(id) && item.category === "guide");
+  return article ? articleMetadata(article, "en") : {};
 }
 
-export default async function Page({ params }: Props) {
+export default async function EnArticlePage({ params }: Props) {
   const { id } = await params;
-  const numId = Number(id);
-  if (isNaN(numId)) notFound();
-  return <ArticleDetailEn category="guide" id={numId} />;
+  const article = ARTICLES.find((item) => item.id === Number(id) && item.category === "guide");
+  if (!article) notFound();
+
+  return (
+    <>
+      <JsonLd data={articleJsonLd(article, "en")} />
+      <ArticleDetailEn category="guide" id={article.id} />
+    </>
+  );
 }

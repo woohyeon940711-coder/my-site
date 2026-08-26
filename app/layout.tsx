@@ -4,6 +4,8 @@ import "./globals.css";
 import HeaderWrapper from "@/components/HeaderWrapper";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
+import { DocumentLanguage, JsonLd } from "@/components/SeoEnhancements";
+import { organizationJsonLd } from "@/lib/seo";
 
 const notoSansKR = Noto_Sans_KR({
   variable: "--font-noto-sans-kr",
@@ -56,6 +58,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.cannabisinsight.kr",
+    languages: {
+      ko: "https://www.cannabisinsight.kr",
+      en: "https://www.cannabisinsight.kr/en",
+      "x-default": "https://www.cannabisinsight.kr",
+    },
   },
   verification: {
     other: {
@@ -72,6 +79,8 @@ export default function RootLayout({
   return (
     <html lang="ko" className={`${notoSansKR.variable} h-full`}>
       <body className="min-h-full flex flex-col bg-white font-[var(--font-noto-sans-kr)] antialiased">
+        <DocumentLanguage />
+        <JsonLd data={organizationJsonLd()} />
         <HeaderWrapper />
         <main className="flex-1">{children}</main>
         <Footer />

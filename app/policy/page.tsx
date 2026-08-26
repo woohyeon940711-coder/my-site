@@ -1,5 +1,9 @@
+import type { Metadata } from "next";
 import CategoryPage from "@/components/CategoryPage";
+import { categoryMetadata } from "@/lib/seo";
 
-export default function Page() {
+export const metadata: Metadata = categoryMetadata("policy", "ko");
+
+export default function CategoryRoute() {
   return <CategoryPage slug="policy" />;
 }

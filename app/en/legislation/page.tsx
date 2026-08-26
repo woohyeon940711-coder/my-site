@@ -1,15 +1,10 @@
 import { LEGISLATIONS, ARTICLES, LegislationStatus } from "@/lib/data";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/SeoEnhancements";
+import { legislationJsonLd, legislationMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Korean Cannabis Legislation | CannabisInsight",
-  description: "Track the status of Korean cannabis and hemp-related bills in the National Assembly — bill proposals, committee reviews, and legislative progress.",
-  alternates: {
-    canonical: "https://www.cannabisinsight.kr/en/legislation",
-    languages: { "ko": "https://www.cannabisinsight.kr/legislation" },
-  },
-};
+export const metadata: Metadata = legislationMetadata("en");
 
 const STATUS_STEPS: LegislationStatus[] = [
   "접수",
@@ -92,7 +87,9 @@ export default function EnLegislationPage() {
   const latestArticles = ARTICLES.slice(0, 5);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <>
+      <JsonLd data={legislationJsonLd("en")} />
+      <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
       <nav className="text-xs text-gray-400 mb-4 flex items-center gap-1">
         <Link href="/en" className="hover:text-[#2d6a4f] transition-colors">
@@ -261,6 +258,7 @@ export default function EnLegislationPage() {
           </div>
         </aside>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
