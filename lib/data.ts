@@ -2503,15 +2503,20 @@ export interface Legislation {
   id: number;
   billNo: string;
   title: string;
+  titleEn?: string;
   proposer: string;
   proposerCount: number;
   committee: string;
+  committeeEn?: string;
   proposedDate: string;
   status: LegislationStatus;
   summary: string;
+  summaryEn?: string;
   keyPoints: string[];
+  keyPointsEn?: string[];
   link: string;
   tags: string[];
+  tagsEn?: string[];
 }
 
 export const LEGISLATIONS: Legislation[] = [
@@ -2519,78 +2524,119 @@ export const LEGISLATIONS: Legislation[] = [
     id: 1,
     billNo: "2217773",
     title: "마약류 관리에 관한 법률 일부개정법률안",
+    titleEn: "Partial Amendment to the Act on the Control of Narcotics",
     proposer: "서미화의원",
     proposerCount: 10,
     committee: "보건복지위원회",
+    committeeEn: "Health and Welfare Committee",
     proposedDate: "2026-03-26",
     status: "위원회 심사",
     summary: "CBD 등 의료적 효용성이 있는 대마 성분을 향정신성의약품으로 분류하여 국내 제조·품목허가를 허용하고, 의료용 목적 대마 재배자 허가 제도를 신설하는 법안. 대법원 판례(2022두60776)에 따라 대마 정의를 명확히 하고, 의료용 마약류 원료 관리 지원센터 지정 근거를 마련한다.",
+    summaryEn: "This bill would classify cannabis-derived components with medical utility, including CBD, as psychotropic medicines, enabling domestic manufacture and marketing authorization. It would also create a licensing framework for cannabis cultivation for medical purposes, clarify the statutory definition of cannabis in line with Supreme Court case 2022du60776, and establish a designated raw-material management support center for medical narcotics.",
     keyPoints: [
       "CBD 등 대마 성분을 향정신성의약품으로 분류 → 국내 의약품 제조·품목허가 가능",
       "의료용 목적 대마 재배자 정의 확대 및 식약처 허가 절차 신설",
       "의료용 마약류 원료 관리 지원센터 지정 (전담기관)",
       "대법원 판례 반영: CBD도 대마 정의에 포함 명확화",
     ],
+    keyPointsEn: [
+      "Classifies CBD and other cannabis-derived components as psychotropic medicines, allowing domestic drug manufacture and marketing authorization",
+      "Expands the definition of medical-purpose cannabis cultivators and creates an MFDS licensing procedure",
+      "Creates a designated raw-material management support center for medical narcotics",
+      "Clarifies that CBD falls within the legal definition of cannabis, reflecting Supreme Court precedent",
+    ],
     link: "https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_B2Z6Y0G3H2F0E0D9Z5A7Y4X0V7M3N8",
     tags: ["CBD", "의료대마", "마약류관리법", "국내제조"],
+    tagsEn: ["CBD", "Medical Cannabis", "Act on the Control of Narcotics", "Domestic Manufacturing"],
   },
   {
     id: 2,
     billNo: "2217027",
     title: "헴프산업 육성 및 헴프 안전관리에 관한 특별법안",
+    titleEn: "Special Act on Fostering the Hemp Industry and Ensuring Hemp Safety",
     proposer: "윤준병의원",
     proposerCount: 11,
     committee: "농림축산식품해양수산위원회",
+    committeeEn: "Agriculture, Food, Rural Affairs, Oceans and Fisheries Committee",
     proposedDate: "2026-02-25",
     status: "위원회 심사",
     summary: "유해성분(THC) 농도가 낙은 대마를 '험프'로 명확히 정의하고, 헴프의 재배·가공·유통·판매 전 과정에 대한 안전관리 체계를 마련하는 헴프 전용 특별법. 의료·식품·산업용 등 다양한 분야에서의 헴프 활용 근거를 마련하고, 헴프산업진흥원 설립 및 헴프산업 클러스터 지정 등 산업 진흥 인프라를 구축한다.",
+    summaryEn: "A dedicated hemp statute that would define cannabis below a specified THC threshold as hemp and establish a safety-management framework for cultivation, processing, distribution and sale. It would create a legal basis for hemp applications in medical, food and industrial sectors, while building industry infrastructure through a Hemp Industry Promotion Institute and designated hemp clusters.",
     keyPoints: [
-      "'\ud5d8\ud504' 정의 신설 — THC 농도 기준 이하 대마를 마약류와 구분하여 별도 관리",
+      "'헴프' 정의 신설 — THC 농도 기준 이하 대마를 마약류와 구분하여 별도 관리",
       "헴프 재배·육종·제조·판매업 허가제 도입 (농식품부·식약처 이중 허가)",
       "헴프산업진흥원 설립 및 5년 단위 종합계획 수립",
       "헴프산업 클러스터 지정 제도 도입 (시·도지사 신청)",
       "헴프 추적관리시스템 구축·운영 (식약처 주관)",
     ],
+    keyPointsEn: [
+      "Defines hemp separately from narcotics for cannabis below the statutory THC threshold",
+      "Introduces licensing for hemp cultivation, breeding, manufacturing and sales, involving both agriculture and food-safety authorities",
+      "Establishes a Hemp Industry Promotion Institute and a five-year comprehensive plan",
+      "Creates a designation system for regional hemp industry clusters",
+      "Builds a hemp traceability-management system led by the Ministry of Food and Drug Safety",
+    ],
     link: "https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_L2J6K0G2G1F2D1E3C1C2L0L2J1I8I8",
     tags: ["헴프", "헴프특별법", "산업육성", "재배허가", "헴프산업진흥원"],
+    tagsEn: ["Hemp", "Hemp Special Act", "Industry Promotion", "Cultivation License", "Hemp Industry Promotion Institute"],
   },
   {
     id: 3,
     billNo: "2219769",
     title: "마약류 관리에 관한 법률 일부개정법률안",
+    titleEn: "Partial Amendment to the Act on the Control of Narcotics",
     proposer: "김형동의원",
     proposerCount: 13,
     committee: "보건복지위원회",
+    committeeEn: "Health and Welfare Committee",
     proposedDate: "2026-07-06",
     status: "위원회 심사",
     summary: "CBD 등 의료적 효용성이 있는 대마 성분을 향정신성의약품으로 분류하여 국내 제조를 허용하고, 의료용 대마 재배자 허가 제도를 신설하는 법안. 국가 주도의 의료용 마약류 원료관리센터를 설립하여 재배부터 추출·제조·원료 배정까지 엄격히 관리하는 체계를 구축한다.",
+    summaryEn: "This bill would classify medically useful cannabis-derived components, including CBD, as psychotropic medicines and permit domestic manufacture. It would create a licensing framework for medical cannabis cultivators and establish a state-led raw-material management center for medical narcotics, overseeing the supply chain from cultivation through extraction, manufacturing and allocation.",
     keyPoints: [
       "CBD 등 대마 성분을 향정신성의약품으로 분류 → 국내 의약품 제조·품목허가 가능",
       "의료용 목적 대마 재배자 허가 제도 신설 (식약처 허가)",
       "의료용 마약류 원료관리센터 설립 (국가 주도 공급망 구축)",
       "재배 단계부터 추출·정제·제조·원료 배정까지 국가 주도 관리 체계",
     ],
+    keyPointsEn: [
+      "Classifies CBD and other cannabis-derived components as psychotropic medicines, allowing domestic drug manufacture and marketing authorization",
+      "Creates an MFDS licensing framework for medical-purpose cannabis cultivation",
+      "Establishes a state-led raw-material management center for medical narcotics",
+      "Sets up state oversight from cultivation and extraction through manufacturing and raw-material allocation",
+    ],
     link: "https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_O2N6C0Z5M2J2I0F9N5M4L2K6R6P3L9",
     tags: ["CBD", "의료대마", "마약류관리법", "국내제조", "원료관리센터"],
+    tagsEn: ["CBD", "Medical Cannabis", "Act on the Control of Narcotics", "Domestic Manufacturing", "Raw-Material Management Center"],
   },
   {
     id: 4,
     billNo: "2219780",
     title: "마약류 관리에 관한 법률 일부개정법률안",
+    titleEn: "Partial Amendment to the Act on the Control of Narcotics",
     proposer: "신성범의원",
     proposerCount: 10,
     committee: "보건복지위원회",
+    committeeEn: "Health and Welfare Committee",
     proposedDate: "2026-07-06",
     status: "위원회 심사",
     summary: "THC 함유량이 건조 중량 기준 0.3% 이하인 헴프(Cannabis sativa L)를 대마의 범위에서 완전 제외하여 의료용은 물론 기능성 식품·화장품·섬유·사료 등 다양한 산업 분야에서 합법적으로 활용할 수 있도록 하는 법안. WHO 권고와 UN 마약위원회의 대마 고위험 마약류 제외 결정을 반영하며, 경북 헴프 규제자유특구에서 확인된 산업화 가능성을 전국적으로 확대하는 것이 핵심이다.",
+    summaryEn: "This bill would exclude hemp containing no more than 0.3% THC by dry weight from the statutory definition of cannabis, enabling lawful use across medical, functional-food, cosmetics, textile and feed sectors. It reflects WHO recommendations and the UN Commission on Narcotic Drugs decision on cannabis scheduling, while extending the industrialization model demonstrated in the Gyeongbuk Hemp Regulatory Free Zone nationwide.",
     keyPoints: [
       "THC 0.3% 이하 헴프를 대마 범위에서 완전 제외 (마약류관리법 제2조 개정)",
       "의료용·기능성 식품·화장품·섬유·사료 등 전 산업 분야 합법 활용 가능",
       "WHO 권고 및 UN 마약위원회 결정 국내법 반영",
       "경북 헴프 규제자유특구 성과를 전국 제도화로 확대",
     ],
+    keyPointsEn: [
+      "Excludes hemp containing no more than 0.3% THC from the statutory definition of cannabis",
+      "Allows lawful use in medical, functional-food, cosmetics, textile, feed and other sectors",
+      "Reflects WHO recommendations and the UN Commission on Narcotic Drugs decision in domestic law",
+      "Extends the Gyeongbuk Hemp Regulatory Free Zone model into a nationwide framework",
+    ],
     link: "https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_J2K6J0H7X0Y3W1E3D3E0D2B0J8I2J3",
     tags: ["헴프", "THC0.3%", "마약류관리법", "대마제외", "산업화"],
+    tagsEn: ["Hemp", "THC 0.3%", "Act on the Control of Narcotics", "Cannabis Exclusion", "Industrialization"],
   },
 ];
 

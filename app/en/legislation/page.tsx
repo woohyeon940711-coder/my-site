@@ -42,6 +42,8 @@ const STATUS_BADGE: Record<LegislationStatus, string> = {
   "공포": "bg-green-100 text-[#2d6a4f]",
 };
 
+const representativeName = (proposer: string) => proposer.replace(/의원$/, "");
+
 function ProgressBar({ status }: { status: LegislationStatus }) {
   const currentIdx = STATUS_STEPS.indexOf(status);
   return (
@@ -144,10 +146,10 @@ export default function EnLegislationPage() {
                       )}
                     </div>
                     <h2 className="text-lg font-black text-gray-900 leading-snug">
-                      {law.title}
+                      {law.titleEn || law.title}
                     </h2>
                     <p className="text-sm text-gray-500 mt-0.5">
-                      Rep. {law.proposer} et al. ({law.proposerCount} co-sponsors) &middot; Proposed {law.proposedDate} &middot; {law.committee}
+                      Rep. {representativeName(law.proposer)} et al. ({law.proposerCount} co-sponsors) &middot; Proposed {law.proposedDate} &middot; {law.committeeEn || law.committee}
                     </p>
                   </div>
                   <a
@@ -165,7 +167,7 @@ export default function EnLegislationPage() {
 
                 {/* Summary */}
                 <p className="text-sm text-gray-700 leading-relaxed mt-4 mb-4">
-                  {law.summary}
+                  {law.summaryEn || law.summary}
                 </p>
 
                 {/* Key points */}
@@ -174,7 +176,7 @@ export default function EnLegislationPage() {
                     Key Provisions
                   </h3>
                   <ul className="space-y-1.5">
-                    {law.keyPoints.map((point, i) => (
+                    {(law.keyPointsEn || law.keyPoints).map((point, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
                         <span className="text-[#2d6a4f] font-bold mt-0.5 shrink-0">✓</span>
                         <span>{point}</span>
@@ -185,7 +187,7 @@ export default function EnLegislationPage() {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1.5 mt-4">
-                  {law.tags.map((tag) => (
+                  {(law.tagsEn || law.tags).map((tag) => (
                     <span
                       key={tag}
                       className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full"
@@ -225,7 +227,7 @@ export default function EnLegislationPage() {
             <ul className="space-y-2">
               {LEGISLATIONS.map((law) => (
                 <li key={law.id} className="flex items-center justify-between text-xs text-gray-600 py-1 border-b border-gray-50 last:border-0">
-                  <span className="truncate mr-2">{law.proposer}</span>
+                  <span className="truncate mr-2">Rep. {representativeName(law.proposer)}</span>
                   <span className={`shrink-0 text-xs font-semibold px-1.5 py-0.5 rounded-full ${STATUS_BADGE[law.status]}`}>
                     {STATUS_STEPS_EN[law.status]}
                   </span>
