@@ -12,6 +12,7 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.cannabisinsight.kr"),
   title: {
     default: "CannabisInsight — 대한민국 대마 산업·정책 미디어",
     template: "%s | CannabisInsight",
