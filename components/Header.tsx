@@ -13,7 +13,7 @@ const NAV_ITEMS = [
     label: c.label,
     labelEn: c.labelEn,
   })),
-  { hrefKr: "/legislation", hrefEn: "/legislation", label: "입법동향", labelEn: "Legislation" },
+  { hrefKr: "/legislation", hrefEn: "/en/legislation", label: "입법동향", labelEn: "Legislation" },
   ...CATEGORIES.slice(domesticIdx + 1).map((c) => ({
     hrefKr: `/${c.slug}`,
     hrefEn: `/en/${c.slug}`,
