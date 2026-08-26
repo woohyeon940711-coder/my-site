@@ -40,11 +40,27 @@ export default function Header({ lang = "KR" }: { lang?: "KR" | "EN" }) {
 
   // KR/EN 전환 시 현재 경로 기반으로 상대 경로 계산
   const switchToKr = () => {
-    if (pathname.startsWith("/en")) {
-      router.push(pathname.replace(/^\/en/, "") || "/");
-    } else {
+    if (!pathname.startsWith("/en")) {
       router.push("/");
+      return;
     }
+
+    const koreanPath = pathname.replace(/^\/en/, "") || "/";
+    const hasKoreanCounterpart = [
+      "/",
+      "/domestic",
+      "/global",
+      "/policy",
+      "/rnd",
+      "/insight",
+      "/guide",
+      "/legislation",
+      "/privacy",
+      "/terms",
+      "/search",
+    ].some((route) => koreanPath === route || koreanPath.startsWith(`${route}/`));
+
+    router.push(hasKoreanCounterpart ? koreanPath : "/");
   };
 
   const switchToEn = () => {
