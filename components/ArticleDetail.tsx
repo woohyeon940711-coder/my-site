@@ -2,6 +2,7 @@ import { ARTICLES, CATEGORIES, Category } from "@/lib/data";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { CURATION_NOTICE } from "@/lib/editorial";
 
 // URL에서 도메인(언론사명) 추출 헬퍼
 function extractDomain(url: string): string {
@@ -105,7 +106,7 @@ export default function ArticleDetail({ category, id }: Props) {
                   {extractDomain(article.link)}
                 </p>
                 <p className="text-xs text-gray-400 mt-1">
-                  본 콘텐츠는 위 출처의 기사를 바탕으로 CannabisInsight가 요약·편집한 것입니다. 원문의 저작권은 해당 언론사에 있습니다.
+                  {CURATION_NOTICE.ko}
                 </p>
               </div>
               {/* 원문 보기 버튼 */}

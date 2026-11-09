@@ -4,14 +4,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/SeoEnhancements";
 import { alternatesFor, DEFAULT_OG_IMAGE, websiteJsonLd } from "@/lib/seo";
+import { SITE_INTRO_EN } from "@/lib/editorial";
+import { formatDateEn } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Korea's Cannabis & Hemp Industry News",
-  description: "CannabisInsight covers Korean and global cannabis and hemp policy, market, R&D and business news.",
+  description: "Korea-based cannabis and hemp news curation, with Korean and English summaries covering policy, industry developments and research.",
   keywords: ["cannabis", "hemp", "CBD", "THC", "cannabis news", "hemp industry", "CannabisInsight", "Korea cannabis"],
   openGraph: {
     title: "CannabisInsight — Korea's Cannabis & Hemp Industry News",
-    description: "Korean and global cannabis and hemp policy, market, R&D and business news.",
+    description: "Korea-based cannabis and hemp news curation, with Korean and English summaries covering policy, industry developments and research.",
     url: "https://www.cannabisinsight.kr/en",
     siteName: "CannabisInsight",
     locale: "en_US",
@@ -34,6 +36,7 @@ const EN_CATEGORY_LABELS: Record<string, string> = {
 
 export default function EnHomePage() {
   const featured = ARTICLES[0];
+  const latestArticleDate = ARTICLES.reduce((latest, article) => article.date > latest ? article.date : latest, "");
   const usedIds = new Set([featured.id]);
   const sideArticles = ARTICLES.filter((a) => !usedIds.has(a.id)).slice(0, 3);
   sideArticles.forEach((a) => usedIds.add(a.id));
@@ -45,6 +48,11 @@ export default function EnHomePage() {
     <>
       <JsonLd data={websiteJsonLd("en")} />
       <div className="max-w-7xl mx-auto px-4 py-6">
+      <section aria-labelledby="site-introduction" className="mb-6 border-b border-gray-100 pb-5">
+        <h1 id="site-introduction" className="text-lg font-bold text-gray-900 mb-2">Korean &amp; global cannabis news</h1>
+        <p className="max-w-4xl text-sm text-gray-600 leading-relaxed">{SITE_INTRO_EN}</p>
+        <p className="text-xs text-gray-500 mt-2">Latest article date: <time dateTime={latestArticleDate}>{formatDateEn(latestArticleDate)}</time></p>
+      </section>
       {/* Featured + Side */}
       <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
         <div className="lg:col-span-2">
@@ -114,9 +122,6 @@ export default function EnHomePage() {
               className="flex flex-col items-center justify-center py-5 border border-gray-200 rounded-sm hover:border-[#2d6a4f] hover:bg-[#f0faf4] transition-colors group"
             >
               <span className="text-sm font-bold text-gray-700 group-hover:text-[#2d6a4f] transition-colors">
-                {cat.labelEn}
-              </span>
-              <span className="text-[10px] text-gray-400 mt-0.5 uppercase tracking-wide">
                 {EN_CATEGORY_LABELS[cat.slug] || cat.labelEn}
               </span>
             </Link>

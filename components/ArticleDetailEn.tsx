@@ -2,25 +2,8 @@ import { ARTICLES, CATEGORIES, Category } from "@/lib/data";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-
-const COUNTRY_MAP: Record<string, string> = {
-  "미국": "USA",
-  "영국": "UK",
-  "독일": "Germany",
-  "캐나다": "Canada",
-  "호주": "Australia",
-  "이스라엘": "Israel",
-  "인도": "India",
-  "일본": "Japan",
-  "태국": "Thailand",
-  "아일랜드": "Ireland",
-  "그리스": "Greece",
-  "콜롬비아": "Colombia",
-  "한국": "South Korea",
-  "튀르키예": "Türkiye",
-  "국제": "International",
-  "EU": "EU",
-};
+import { countryNameEn } from "@/lib/i18n";
+import { CURATION_NOTICE } from "@/lib/editorial";
 
 function extractDomain(url: string): string {
   try {
@@ -82,7 +65,7 @@ export default function ArticleDetailEn({ category, id }: Props) {
             </span>
             {article.country && (
               <span className="text-xs text-gray-400 border border-gray-200 px-2 py-0.5 rounded-sm">
-                {COUNTRY_MAP[article.country ?? ''] || article.country}
+                {countryNameEn(article.country)}
               </span>
             )}
             <span className="text-xs text-gray-400">{article.date}</span>
@@ -121,7 +104,7 @@ export default function ArticleDetailEn({ category, id }: Props) {
                 <p className="text-xs text-gray-500 mb-1 font-semibold uppercase tracking-wide">Source</p>
                 <p className="text-sm text-gray-700 font-medium">{extractDomain(article.link)}</p>
                 <p className="text-xs text-gray-400 mt-1">
-                  This content is a summary and editorial by CannabisInsight based on the above source. Copyright of the original article belongs to the respective publisher.
+                  {CURATION_NOTICE.en}
                 </p>
               </div>
               <div className="p-4 border border-gray-200 rounded-sm bg-gray-50 flex items-center justify-between">
@@ -147,7 +130,7 @@ export default function ArticleDetailEn({ category, id }: Props) {
             </span>
             {article.country && (
               <span className="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full">
-                #{COUNTRY_MAP[article.country ?? ''] || article.country}
+                #{countryNameEn(article.country)}
               </span>
             )}
             <span className="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full">#Cannabis</span>

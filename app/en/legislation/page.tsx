@@ -105,9 +105,6 @@ export default function EnLegislationPage() {
       <div className="border-b-2 border-[#2d6a4f] pb-3 mb-8">
         <h1 className="text-2xl font-black text-gray-900">
           Korean Cannabis Legislation
-          <span className="ml-2 text-sm font-normal text-gray-400 uppercase tracking-widest">
-            입법동향
-          </span>
         </h1>
         <p className="text-sm text-gray-500 mt-1">
           Tracking cannabis, hemp, and CBD-related bills in the Korean National Assembly — proposal status and committee review progress.

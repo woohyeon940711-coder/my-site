@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CATEGORIES } from "@/lib/data";
+import { CURATION_NOTICE, SITE_INTRO_EN } from "@/lib/editorial";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -46,19 +47,15 @@ export default function Footer() {
             </span>
             <p className="text-xs leading-5 max-w-xs">
               {isEn ? (
-                <>Korea&apos;s trusted media for cannabis industry, policy &amp; science.</>
+                <>{SITE_INTRO_EN}</>
               ) : (
                 <>
-                  대한민국 대마 산업·정책·과학의 신뢰할 수 있는 미디어.
-                  <br />
-                  Korea&apos;s leading cannabis business &amp; policy media.
+                  한국과 세계의 대마·헴프 정책, 산업, 연구 소식을 선별하는 뉴스 큐레이션 플랫폼입니다. 한국어·영어 요약과 원문 링크를 제공합니다.
                 </>
               )}
             </p>
             <p className="text-[10px] text-gray-600 mt-1 leading-relaxed max-w-xs">
-              {isEn
-                ? "Copyright of external article summaries belongs to the respective publishers. CannabisInsight cites sources and uses content for informational purposes only."
-                : "본 사이트에 게재된 외부 기사 요약의 저작권은 원 언론사에 있으며, CannabisInsight는 출처를 명시하고 정보 제공 목적으로 인용합니다."}
+              {CURATION_NOTICE[isEn ? "en" : "ko"]}
             </p>
           </div>
 
@@ -86,7 +83,9 @@ export default function Footer() {
             <p className="text-white font-semibold mb-3">
               {isEn ? "Contact" : "안내"}
             </p>
-            <p>Email: contact@cannabisinsight.kr</p>
+            <p>
+              Email: <a href="mailto:contact@cannabisinsight.kr" className="hover:text-[#52b788] focus-visible:underline transition-colors">contact@cannabisinsight.kr</a>
+            </p>
             <div className="flex gap-3 mt-3">
               <Link href={`${base}/terms`} className="hover:text-[#52b788] transition-colors">
                 {isEn ? "Terms of Use" : "이용약관"}
@@ -108,14 +107,14 @@ export default function Footer() {
             )}
           </p>
           <p className="text-gray-500">
-            Email: contact@cannabisinsight.kr
+            Email: <a href="mailto:contact@cannabisinsight.kr" className="hover:text-[#52b788] focus-visible:underline transition-colors">contact@cannabisinsight.kr</a>
           </p>
           <p className="text-gray-600 text-[10px] mt-1">
             {isEn
               ? "※ Cannabis Insight is operated as a separate business entity. NeoCannBio supports website linkage and information dissemination."
               : "※ Cannabis Insight는 별도 사업자가 운영하며, 네오켄바이오는 홈페이지 연계 및 정보 확산을 지원합니다."}
           </p>
-          <p className="text-gray-600 mt-2">© {new Date().getFullYear()} CannabisInsight. All rights reserved.</p>
+          <p className="text-gray-600 mt-2">© {new Date().getFullYear()} CannabisInsight. {isEn ? "Site branding and original summaries." : "사이트 브랜드 및 자체 작성 요약."}</p>
           <p className="text-gray-600">
             {isEn
               ? "This site is operated for informational purposes only. Compliance with cannabis-related laws is the sole responsibility of the user."
