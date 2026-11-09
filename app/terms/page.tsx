@@ -1,8 +1,20 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import { alternatesFor, DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/seo";
 
-export const metadata = {
-  title: "이용약관 | CannabisInsight",
+export const metadata: Metadata = {
+  title: "이용약관",
   description: "CannabisInsight 이용약관",
+  alternates: alternatesFor("/terms", "ko"),
+  openGraph: {
+    title: "이용약관 | CannabisInsight",
+    description: "CannabisInsight 뉴스 큐레이션 서비스 이용약관입니다.",
+    url: `${SITE_URL}/terms`,
+    siteName: "CannabisInsight",
+    locale: "ko_KR",
+    type: "website",
+    images: [{ url: DEFAULT_OG_IMAGE, width: 512, height: 512, alt: "CannabisInsight" }],
+  },
 };
 
 export default function TermsPage() {

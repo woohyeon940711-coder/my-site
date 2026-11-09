@@ -1,8 +1,20 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import { alternatesFor, DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/seo";
 
-export const metadata = {
-  title: "개인정보처리방침 | CannabisInsight",
+export const metadata: Metadata = {
+  title: "개인정보처리방침",
   description: "CannabisInsight 개인정보처리방침",
+  alternates: alternatesFor("/privacy", "ko"),
+  openGraph: {
+    title: "개인정보처리방침 | CannabisInsight",
+    description: "CannabisInsight의 개인정보 처리와 연락 방법을 안내합니다.",
+    url: `${SITE_URL}/privacy`,
+    siteName: "CannabisInsight",
+    locale: "ko_KR",
+    type: "website",
+    images: [{ url: DEFAULT_OG_IMAGE, width: 512, height: 512, alt: "CannabisInsight" }],
+  },
 };
 
 export default function PrivacyPage() {
