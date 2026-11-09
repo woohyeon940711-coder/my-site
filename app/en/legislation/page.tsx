@@ -122,6 +122,7 @@ export default function EnLegislationPage() {
             LEGISLATIONS.map((law) => (
               <div
                 key={law.id}
+                id={`bill-${law.billNo}`}
                 className="border border-gray-200 rounded-sm p-6 hover:border-[#2d6a4f] transition-colors"
               >
                 {/* Top row */}
@@ -146,7 +147,7 @@ export default function EnLegislationPage() {
                       {law.titleEn || law.title}
                     </h2>
                     <p className="text-sm text-gray-500 mt-0.5">
-                      Rep. {representativeName(law.proposer)} et al. ({law.proposerCount} co-sponsors) &middot; Proposed {law.proposedDate} &middot; {law.committeeEn || law.committee}
+                      Rep. {representativeName(law.proposer)} et al. ({law.proposerCount} lawmakers in total) &middot; Proposed {law.proposedDate} &middot; {law.committeeEn || law.committee}
                     </p>
                   </div>
                   <a
@@ -161,6 +162,12 @@ export default function EnLegislationPage() {
 
                 {/* Progress bar */}
                 <ProgressBar status={law.status} />
+                {law.statusDetailEn && (
+                  <p className="text-xs text-gray-500 leading-relaxed mt-3">
+                    {law.statusDetailEn}
+                    {law.statusCheckedDate && <> Checked: <time dateTime={law.statusCheckedDate}>{law.statusCheckedDate}</time>.</>}
+                  </p>
+                )}
 
                 {/* Summary */}
                 <p className="text-sm text-gray-700 leading-relaxed mt-4 mb-4">
@@ -193,6 +200,15 @@ export default function EnLegislationPage() {
                     </span>
                   ))}
                 </div>
+                {law.relatedArticleId && (
+                  <Link
+                    href={`/en/domestic/${law.relatedArticleId}`}
+                    prefetch={false}
+                    className="inline-block mt-4 text-xs font-semibold text-[#2d6a4f] hover:underline"
+                  >
+                    View related news summary →
+                  </Link>
+                )}
               </div>
             ))
           )}

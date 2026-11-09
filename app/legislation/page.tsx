@@ -114,6 +114,7 @@ export default function LegislationPage() {
             LEGISLATIONS.map((law) => (
               <div
                 key={law.id}
+                id={`bill-${law.billNo}`}
                 className="border border-gray-200 rounded-sm p-6 hover:border-[#2d6a4f] transition-colors"
               >
                 {/* Top row */}
@@ -153,6 +154,12 @@ export default function LegislationPage() {
 
                 {/* Progress bar */}
                 <ProgressBar status={law.status} />
+                {law.statusDetail && (
+                  <p className="text-xs text-gray-500 leading-relaxed mt-3">
+                    {law.statusDetail}
+                    {law.statusCheckedDate && <> 확인일: <time dateTime={law.statusCheckedDate}>{law.statusCheckedDate}</time>.</>}
+                  </p>
+                )}
 
                 {/* Summary */}
                 <p className="text-sm text-gray-700 leading-relaxed mt-4 mb-4">
@@ -185,6 +192,15 @@ export default function LegislationPage() {
                     </span>
                   ))}
                 </div>
+                {law.relatedArticleId && (
+                  <Link
+                    href={`/domestic/${law.relatedArticleId}`}
+                    prefetch={false}
+                    className="inline-block mt-4 text-xs font-semibold text-[#2d6a4f] hover:underline"
+                  >
+                    관련 뉴스 요약 보기 →
+                  </Link>
+                )}
               </div>
             ))
           )}

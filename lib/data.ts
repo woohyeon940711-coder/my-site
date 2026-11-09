@@ -2519,9 +2519,48 @@ export interface Legislation {
   link: string;
   tags: string[];
   tagsEn?: string[];
+  relatedArticleId?: number;
+  statusDetail?: string;
+  statusDetailEn?: string;
+  statusCheckedDate?: string;
 }
 
 export const LEGISLATIONS: Legislation[] = [
+  {
+    id: 5,
+    billNo: "2221952",
+    title: "헴프산업 진흥 및 지원에 관한 특별법안",
+    titleEn: "Special Bill on the Promotion and Support of the Hemp Industry",
+    proposer: "박지원의원",
+    proposerCount: 10,
+    committee: "농림축산식품해양수산위원회",
+    committeeEn: "Agriculture, Food, Rural Affairs, Oceans and Fisheries Committee",
+    proposedDate: "2026-10-19",
+    status: "위원회 심사",
+    statusDetail: "2026-10-22 소관위원회 회부. 확인 당시 상정일·처리일·처리결과 미기재. 입법예고 기간: 2026-10-26~2026-11-09.",
+    statusDetailEn: "Referred to the competent committee on 22 October 2026. No agenda date, decision date or decision result was listed when checked. Public consultation period: 26 October–9 November 2026.",
+    statusCheckedDate: "2026-11-09",
+    summary: "건조중량 기준 델타-9 THC 0.3% 이하 칸나비스속 식물 또는 그 부위를 헴프로 정의하고, 농식품부의 산업진흥·재배허가와 식약처의 제품허가·안전심사·원료기준을 결합하는 제정안이다. 박지원 의원 등 10인이 발의했으며 소관위원회에 회부된 상태다. 재배·판매가 이미 허용되거나 법률이 제정·시행된 것은 아니다.",
+    summaryEn: "The bill would define hemp as Cannabis-genus plants or their parts containing no more than 0.3% delta-9 THC by dry weight. It combines MAFRA-led industry development and cultivation licensing with MFDS product licensing, safety review and ingredient standards. Introduced by 박지원 and nine other lawmakers, it remains pending at committee stage. It does not establish enacted cultivation or sales permissions.",
+    keyPoints: [
+      "헴프 정의: 건조중량 기준 델타-9 THC 0.3% 이하 — 총 THC 기준과 구분",
+      "농식품부의 5년 기본계획·연간 시행계획, 헴프산업진흥원·안전관리센터 및 이력관리정보시스템 마련",
+      "식약처와 협의한 안전관리지역에서 농식품부 허가에 따른 재배·육종, 출하 전 성분검사와 생산·폐기 보고",
+      "식약처의 제품 제조·수입·판매 등 허가와 품목별 안전성·품질 심사, 수출 신고 및 원료 기준·규격 관리",
+      "의약품·식품·화장품 등 최종 제품에는 각 관계 법률 적용 — 무조건적인 제품 판매 허용 아님",
+    ],
+    keyPointsEn: [
+      "Defines hemp using a dry-weight delta-9 THC threshold of 0.3%, not a total-THC threshold",
+      "Provides five-year and annual MAFRA plans, industry and safety institutions, and a traceability information system",
+      "Requires MAFRA cultivation and breeding licences in designated safety areas, composition testing before shipment, and production and disposal reporting",
+      "Requires MFDS licensing and product-level safety and quality review, with export declarations and ingredient standards",
+      "Keeps medicines, foods and cosmetics subject to their respective laws; it is not blanket permission to sell finished products",
+    ],
+    link: "https://likms.assembly.go.kr/bill/bi/billDetailPage.do?billId=PRC_N2O6M0M9U0T7T1R2S1Q2R1Z7A3Y7W3",
+    relatedArticleId: 215,
+    tags: ["헴프", "헴프특별법", "델타-9 THC 0.3%", "산업진흥", "안전관리", "이력관리"],
+    tagsEn: ["Hemp", "Hemp Special Bill", "Delta-9 THC 0.3%", "Industry Promotion", "Safety Regulation", "Traceability"],
+  },
   {
     id: 1,
     billNo: "2217773",

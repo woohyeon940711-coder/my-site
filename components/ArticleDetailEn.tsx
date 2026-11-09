@@ -1,4 +1,4 @@
-import { ARTICLES, CATEGORIES, Category } from "@/lib/data";
+import { ARTICLES, CATEGORIES, Category, LEGISLATIONS } from "@/lib/data";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -42,6 +42,7 @@ export default function ArticleDetailEn({ category, id }: Props) {
   const related = ARTICLES.filter(
     (a) => a.category === category && a.id !== id
   ).slice(0, 4);
+  const relatedLaw = LEGISLATIONS.find((law) => law.relatedArticleId === article.id);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -97,6 +98,19 @@ export default function ArticleDetailEn({ category, id }: Props) {
               For the full article, please visit the original source link below. CannabisInsight curates and summarizes key news from the global cannabis and hemp industry.
             </p>
           </div>
+
+          {relatedLaw && (
+            <div className="mt-6 p-4 border border-gray-200 rounded-sm bg-gray-50">
+              <p className="text-xs text-gray-500 mb-1">Related bill · Bill No. {relatedLaw.billNo}</p>
+              <Link
+                href={`/en/legislation#bill-${relatedLaw.billNo}`}
+                prefetch={false}
+                className="text-sm font-semibold text-[#2d6a4f] hover:underline"
+              >
+                View legislative progress →
+              </Link>
+            </div>
+          )}
 
           {article.link && article.link !== "None" && (
             <div className="mt-8 space-y-3">

@@ -1,4 +1,4 @@
-import { ARTICLES, CATEGORIES, Category } from "@/lib/data";
+import { ARTICLES, CATEGORIES, Category, LEGISLATIONS } from "@/lib/data";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -28,6 +28,7 @@ export default function ArticleDetail({ category, id }: Props) {
   const related = ARTICLES.filter(
     (a) => a.category === category && a.id !== id
   ).slice(0, 4);
+  const relatedLaw = LEGISLATIONS.find((law) => law.relatedArticleId === article.id);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -95,6 +96,19 @@ export default function ArticleDetail({ category, id }: Props) {
               이 기사의 전문은 원문 링크에서 확인하실 수 있습니다. CannabisInsight는 글로벌 대마 산업·정책 관련 주요 뉴스를 큐레이션하여 제공합니다.
             </p>
           </div>
+
+          {relatedLaw && (
+            <div className="mt-6 p-4 border border-gray-200 rounded-sm bg-gray-50">
+              <p className="text-xs text-gray-500 mb-1">관련 법안 · 의안번호 {relatedLaw.billNo}</p>
+              <Link
+                href={`/legislation#bill-${relatedLaw.billNo}`}
+                prefetch={false}
+                className="text-sm font-semibold text-[#2d6a4f] hover:underline"
+              >
+                입법동향에서 심사 현황 보기 →
+              </Link>
+            </div>
+          )}
 
           {/* Source / Copyright notice */}
           {article.link && article.link !== "None" && (
